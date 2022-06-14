@@ -97,40 +97,40 @@ local function constructNew_frmOurFichaL5R4e()
     obj.dataLink12:setName("dataLink12");
 
 
-	local function TrocarAba(a)
-		if(a == 'F') then
-			self.layFrente.visible = true;
-			self.layMecanicas.visible = false;
-			self.layMagias.visible = false;
-			self.layBG.visible = false;
-			self.layNote.visible = false;
-		elseif(a == 'M') then
-			self.layFrente.visible = false;
-			self.layMecanicas.visible = true;
-			self.layMagias.visible = false;
-			self.layBG.visible = false;
-			self.layNote.visible = false;
-		elseif(a == 'S') then
-			self.layFrente.visible = false;
-			self.layMecanicas.visible = false;
-			self.layMagias.visible = true;
-			self.layBG.visible = false;
-			self.layNote.visible = false;
-		elseif(a == 'H') then
-			self.layFrente.visible = false;
-			self.layMecanicas.visible = false;
-			self.layMagias.visible = false;
-			self.layBG.visible = true;
-			self.layNote.visible = false;
-		elseif(a == 'A') then
-			self.layFrente.visible = false;
-			self.layMecanicas.visible = false;
-			self.layMagias.visible = false;
-			self.layBG.visible = false;
-			self.layNote.visible = true;
-		end;
-	end;
-
+			local function TrocarAba(a)
+				if(a == 'F') then
+					self.layFrente.visible = true;
+					self.layMecanicas.visible = false;
+					self.layMagias.visible = false;
+					self.layBG.visible = false;
+					self.layNote.visible = false;
+				elseif(a == 'M') then
+					self.layFrente.visible = false;
+					self.layMecanicas.visible = true;
+					self.layMagias.visible = false;
+					self.layBG.visible = false;
+					self.layNote.visible = false;
+				elseif(a == 'S') then
+					self.layFrente.visible = false;
+					self.layMecanicas.visible = false;
+					self.layMagias.visible = true;
+					self.layBG.visible = false;
+					self.layNote.visible = false;
+				elseif(a == 'H') then
+					self.layFrente.visible = false;
+					self.layMecanicas.visible = false;
+					self.layMagias.visible = false;
+					self.layBG.visible = true;
+					self.layNote.visible = false;
+				elseif(a == 'A') then
+					self.layFrente.visible = false;
+					self.layMecanicas.visible = false;
+					self.layMagias.visible = false;
+					self.layBG.visible = false;
+					self.layNote.visible = true;
+				end;
+			end;
+		
 
 
     obj.image1 = GUI.fromHandle(_obj_newObject("image"));
@@ -138,7 +138,7 @@ local function constructNew_frmOurFichaL5R4e()
     obj.image1:setField("URLImagemFundo");
     obj.image1:setAlign("client");
     obj.image1:setStyle("autoFit");
-    obj.image1:setSRC("/Frames/blur.png");
+    obj.image1:setSRC("");
     obj.image1:setName("image1");
 
     obj.scrollBox1 = GUI.fromHandle(_obj_newObject("scrollBox"));
@@ -1407,9 +1407,9 @@ local function constructNew_frmOurFichaL5R4e()
     obj.label38 = GUI.fromHandle(_obj_newObject("label"));
     obj.label38:setParent(obj.rectangle7);
     obj.label38:setAlign("left");
-    obj.label38:setWidth(254);
+    obj.label38:setWidth(240);
     obj.label38:setText("PERÍCIAS");
-    obj.label38:setMargins({left=5});
+    obj.label38:setMargins({left=2});
     obj.label38:setName("label38");
     obj.label38:setFontColor("white");
     lfm_setPropAsString(obj.label38, "fontStyle",  "bold");
@@ -1418,8 +1418,9 @@ local function constructNew_frmOurFichaL5R4e()
     obj.label39 = GUI.fromHandle(_obj_newObject("label"));
     obj.label39:setParent(obj.rectangle7);
     obj.label39:setAlign("left");
-    obj.label39:setWidth(70);
+    obj.label39:setWidth(65);
     obj.label39:setText("TIPOS");
+    obj.label39:setMargins({left=2});
     obj.label39:setName("label39");
     obj.label39:setFontColor("white");
     lfm_setPropAsString(obj.label39, "fontStyle",  "bold");
@@ -1428,8 +1429,9 @@ local function constructNew_frmOurFichaL5R4e()
     obj.label40 = GUI.fromHandle(_obj_newObject("label"));
     obj.label40:setParent(obj.rectangle7);
     obj.label40:setAlign("left");
-    obj.label40:setWidth(57);
+    obj.label40:setWidth(50);
     obj.label40:setText("RANK");
+    obj.label40:setMargins({left=2});
     obj.label40:setName("label40");
     obj.label40:setFontColor("white");
     lfm_setPropAsString(obj.label40, "fontStyle",  "bold");
@@ -1440,6 +1442,7 @@ local function constructNew_frmOurFichaL5R4e()
     obj.label41:setAlign("left");
     obj.label41:setWidth(90);
     obj.label41:setText("ATRIBUTO");
+    obj.label41:setMargins({left=2});
     obj.label41:setName("label41");
     obj.label41:setFontColor("white");
     lfm_setPropAsString(obj.label41, "fontStyle",  "bold");
@@ -1448,8 +1451,9 @@ local function constructNew_frmOurFichaL5R4e()
     obj.label42 = GUI.fromHandle(_obj_newObject("label"));
     obj.label42:setParent(obj.rectangle7);
     obj.label42:setAlign("left");
-    obj.label42:setWidth(105);
+    obj.label42:setWidth(110);
     obj.label42:setText("ROLAGEM");
+    obj.label42:setMargins({left=2});
     obj.label42:setName("label42");
     obj.label42:setFontColor("white");
     lfm_setPropAsString(obj.label42, "fontStyle",  "bold");
@@ -4691,13 +4695,13 @@ local function constructNew_frmOurFichaL5R4e()
 
     obj._e_event21 = obj.rclSkills:addEventListener("onCompare",
         function (_, nodeA, nodeB)
-            if((nodeA.MarcadorSkillEscola or false) == false and (nodeB.MarcadorSkillEscola or false) == true) then
-            														return 1;
-            													elseif((nodeA.MarcadorSkillEscola or false) == true and (nodeB.MarcadorSkillEscola or false) == false) then
-            														return -1;
-            													else
-            														return Utils.compareStringPtBr(nodeA.nomeSkill, nodeB.nomeSkill);
-            													end;
+            if(nodeA.MarcadorSkillEscola == false and nodeB.MarcadorSkillEscola == true) then
+            								return 1;
+            							elseif(nodeA.MarcadorSkillEscola == true and nodeB.MarcadorSkillEscola == false) then
+            								return -1;
+            							else
+            								return Utils.compareStringPtBr(nodeA.nomeSkill, nodeB.nomeSkill);
+            							end;
         end, obj);
 
     obj._e_event22 = obj.btnImagemFundo:addEventListener("onClick",

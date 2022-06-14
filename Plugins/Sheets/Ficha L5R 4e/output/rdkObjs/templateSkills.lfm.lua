@@ -54,7 +54,7 @@ local function constructNew_templateSkills()
     obj.edit1:setParent(obj.layout1);
     obj.edit1:setField("nomeSkill");
     obj.edit1:setAlign("left");
-    obj.edit1:setWidth(225);
+    obj.edit1:setWidth(210);
     obj.edit1:setMargins({right=2});
     obj.edit1:setFontColor("white");
     obj.edit1:setFontSize(13);
@@ -72,7 +72,7 @@ local function constructNew_templateSkills()
     obj.rectangle1:setParent(obj.layout1);
     obj.rectangle1:setColor("#212121");
     obj.rectangle1:setAlign("left");
-    obj.rectangle1:setWidth(79);
+    obj.rectangle1:setWidth(74);
     obj.rectangle1:setMargins({right=2});
     obj.rectangle1:setName("rectangle1");
 
@@ -114,7 +114,7 @@ local function constructNew_templateSkills()
     obj.rectangle2:setParent(obj.layout1);
     obj.rectangle2:setColor("#212121");
     obj.rectangle2:setAlign("left");
-    obj.rectangle2:setWidth(94);
+    obj.rectangle2:setWidth(90);
     obj.rectangle2:setMargins({right=2});
     obj.rectangle2:setName("rectangle2");
 
@@ -132,9 +132,9 @@ local function constructNew_templateSkills()
 
     obj.edit3 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit3:setParent(obj.layout1);
-    obj.edit3:setField("ROLAGEM");
+    obj.edit3:setField("rolagem");
     obj.edit3:setAlign("left");
-    obj.edit3:setWidth(80);
+    obj.edit3:setWidth(50);
     obj.edit3:setMargins({right=2});
     obj.edit3:setName("edit3");
     obj.edit3:setFontFamily("Cambria");
@@ -144,8 +144,20 @@ local function constructNew_templateSkills()
     obj.dataLink4 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink4:setParent(obj.layout1);
     obj.dataLink4:setDefaultValue("xky");
-    obj.dataLink4:setField("ROLAGEM");
+    obj.dataLink4:setFields({'rankSkill',  'atributoSkill', 'stamina', 'willpower', 'strength', 'perception', 'reflexes', 'awareness', 'agility', 'intelligence', 'void'});
     obj.dataLink4:setName("dataLink4");
+
+    obj.edit4 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit4:setParent(obj.layout1);
+    obj.edit4:setField("bonus");
+    obj.edit4:setAlign("left");
+    obj.edit4:setWidth(60);
+    obj.edit4:setMargins({right=2});
+    obj.edit4:setTextPrompt("+xky");
+    obj.edit4:setTransparent(false);
+    obj.edit4:setName("edit4");
+    obj.edit4:setFontFamily("Cambria");
+    obj.edit4:setFontColor("#cdcdcd");
 
     obj.popUp_Enfases = GUI.fromHandle(_obj_newObject("popup"));
     obj.popUp_Enfases:setParent(obj.layout1);
@@ -368,7 +380,35 @@ local function constructNew_templateSkills()
     obj.dataLink7:setField("rankSkill");
     obj.dataLink7:setName("dataLink7");
 
-    obj._e_event0 = obj.dataLink5:addEventListener("onChange",
+    obj._e_event0 = obj.dataLink4:addEventListener("onChange",
+        function (_, field, oldValue, newValue)
+            require ("ndb.lua");
+            					local node = NDB.getRoot(sheet);
+            					local trait = 0;
+            					if(sheet.atributoSkill == 'StaminON') then
+            						trait = node.stamina;
+            					elseif(sheet.atributoSkill == 'WillpoweON') then
+            						trait = node.willpower;
+            					elseif(sheet.atributoSkill == 'StrengtON') then
+            						trait = node.strength;
+            					elseif(sheet.atributoSkill == 'PerceptioON') then
+            						trait = node.perception;
+            					elseif(sheet.atributoSkill == 'ReflexeON') then
+            						trait = node.reflexes;
+            					elseif(sheet.atributoSkill == 'AwarenesON') then
+            						trait = node.awareness;
+            					elseif(sheet.atributoSkill == 'AgilitON') then
+            						trait = node.agility;
+            					elseif(sheet.atributoSkill == 'IntelligencON') then
+            						trait = node.intelligence;
+            					elseif(sheet.atributoSkill == 'VoiON') then
+            						trait = node.void;
+            					end;
+            
+            					sheet.rolagem = tonumber(tonumber(sheet.rankSkill) + tonumber(trait)) .."k" ..trait
+        end, obj);
+
+    obj._e_event1 = obj.dataLink5:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             if(sheet == nil) then return; end;
             						if(sheet.enfasesSkill == nil or sheet.enfasesSkill == "—") then
@@ -380,7 +420,7 @@ local function constructNew_templateSkills()
             						end;
         end, obj);
 
-    obj._e_event1 = obj.btnMaestria1:addEventListener("onClick",
+    obj._e_event2 = obj.btnMaestria1:addEventListener("onClick",
         function (_)
             local pop = self:findControlByName("popUp_Maestrias");
             				
@@ -392,7 +432,7 @@ local function constructNew_templateSkills()
             				end;
         end, obj);
 
-    obj._e_event2 = obj.btnMaestria2:addEventListener("onClick",
+    obj._e_event3 = obj.btnMaestria2:addEventListener("onClick",
         function (_)
             local pop = self:findControlByName("popUp_Maestrias");
             				
@@ -404,7 +444,7 @@ local function constructNew_templateSkills()
             				end;
         end, obj);
 
-    obj._e_event3 = obj.dataLink6:addEventListener("onChange",
+    obj._e_event4 = obj.dataLink6:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             if(sheet == nil) then return; end;
             							if(	(sheet.maestria3Skill == nil or sheet.maestria3Skill == "—") and
@@ -418,12 +458,12 @@ local function constructNew_templateSkills()
             							end;
         end, obj);
 
-    obj._e_event4 = obj.button1:addEventListener("onClick",
+    obj._e_event5 = obj.button1:addEventListener("onClick",
         function (_)
             NDB.deleteNode(sheet);
         end, obj);
 
-    obj._e_event5 = obj.dataLink7:addEventListener("onChange",
+    obj._e_event6 = obj.dataLink7:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             if sheet ~= nil then
             					local node = NDB.getRoot(sheet);
@@ -439,6 +479,7 @@ local function constructNew_templateSkills()
         end, obj);
 
     function obj:_releaseEvents()
+        __o_rrpgObjs.removeEventListenerById(self._e_event6);
         __o_rrpgObjs.removeEventListenerById(self._e_event5);
         __o_rrpgObjs.removeEventListenerById(self._e_event4);
         __o_rrpgObjs.removeEventListenerById(self._e_event3);
@@ -459,6 +500,7 @@ local function constructNew_templateSkills()
         if self.rectangle5 ~= nil then self.rectangle5:destroy(); self.rectangle5 = nil; end;
         if self.textEditor4 ~= nil then self.textEditor4:destroy(); self.textEditor4 = nil; end;
         if self.button1 ~= nil then self.button1:destroy(); self.button1 = nil; end;
+        if self.edit4 ~= nil then self.edit4:destroy(); self.edit4 = nil; end;
         if self.label1 ~= nil then self.label1:destroy(); self.label1 = nil; end;
         if self.label3 ~= nil then self.label3:destroy(); self.label3 = nil; end;
         if self.label4 ~= nil then self.label4:destroy(); self.label4 = nil; end;

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout name="layMecanicas" align="client" visible="false">
+								<flowLayout align="top" autoHeight="true" horzAlign="center">
+									<flowPart name="fpEsquerdaMec" minWidth="300" maxWidth="650" height="1500" vertAlign="leading">
+									<AsTabs />
+										<!-- VANTAGENS -->
+										<Divisor texto="V A N T A G E N S" largura="163" topo="10" />
+										<rectangle align="top" height="30" xradius="5" yradius="5" cornerType="round" color="#212121" margins="{left=20, right=10}">
+                        					<label align="left" width="466" text="NOME DAS VANTAGENS" margins="{left=5}"/>
+											<label align="left" width="72" text="TIPO"/>
+											<label align="left" text="CUSTO"/>
+											<button align="right" text="🞦" width="30" onClick='self.rclVantagens:append(); self.fpEsquerdaMec:needRepaint();'/>
+										</rectangle>
+										
+										<recordList name="rclVantagens" field="vantagens" templateForm="templateVantagens" align="top" autoHeight="true"
+										margins="{left=20, right=10}" onSelect="self.rclVantagens:sort();" onItemRemoved="self.fpEsquerdaMec:needRepaint();">
+											<event name="onCompare">
+												return Utils.compareStringPtBr(nodeA.aqq, nodeB.aqq);
+											</event>
+										</recordList>
+										
+										<!-- DESVANTAGENS -->
+										<Divisor texto="D E S V A N T A G E N S" largura="215" topo="40"/>
+										<rectangle align="top" height="30" xradius="5" yradius="5" cornerType="round" color="#212121" margins="{left=20, right=10}">
+                        					<label align="left" width="466" text="NOME DAS DESVANTAGENS" margins="{left=5}"/>
+											<label align="left" width="72" text="TIPO"/>
+											<label align="left" text="CUSTO"/>
+											<button align="right" text="🞦" width="30" onClick='self.rclDesVantagens:append(); self.fpEsquerdaMec:needRepaint();'/>
+										</rectangle>
+
+										<recordList name="rclDesVantagens" field="desvantagens" templateForm="templateDesVantagens" align="top" autoHeight="true" 
+										margins="{left=20, right=10}" onSelect="self.rclDesVantagens:sort();" onItemRemoved="self.fpEsquerdaMec:needRepaint();">
+											<event name="onCompare">
+												return Utils.compareStringPtBr(nodeA.aqq, nodeB.aqq);
+											</event>
+										</recordList>
+                        
+										<!-- TÉCNICAS -->
+										<Divisor texto="T É C N I C A S" largura="137" topo="40"/>
+										<rectangle align="top" height="30" xradius="5" yradius="5" cornerType="round" color="#212121" margins="{left=20, right=10}">
+											<label align="left" text="NOME" margins="{left=5}" width="280"/>
+											<label align="left" text="NV." width="27"/>
+											<label align="left" text="AFINIDADE" width="82"/>
+											<label align="left" text="DEFICIÊNCIA"/>
+											<button align="right" text="🞦" width="30" onClick='self.rclTecnicas:append(); self.fpEsquerdaMec:needRepaint();'/>
+										</rectangle>
+
+										<recordList name="rclTecnicas" field="tecnicas" templateForm="templateTecnicas" minQt="1" align="top" autoHeight="true" 
+										margins="{left=20, right=10}" onItemRemoved="self.fpEsquerdaMec:needRepaint();"/>
+										
+									</flowPart>
+									<flowPart name="fpDireitaMec" minWidth="100" maxWidth="350" height="1600">
+										<rectangle width="300" height="1530" color="#202020" />
+										<rectangle width="320" height="1530" color="#202020" xradius="20" yradius="20" cornerType="bevel" />
+										
+										<!-- KATA/KIHO -->
+										<DivisorD texto="K A T A S   🙵   K I H O S" largura="220" topo="60"/>
+										<rectangle align="top" height="30" xradius="5" yradius="5" cornerType="round" color="black" margins="{left=10, right=20}">
+											<label align="left" text="NOME" margins="{left=5}" width="195"/>
+											<label align="left" text="NV."/>
+											<button align="right" text="🞦" width="30" onClick='self.rclKata:append(); self.fpDireitaMec:needRepaint();'/>
+										</rectangle>
+										<recordList name="rclKata" field="kata" templateForm="templateKata" align="top" autoHeight="true" margins="{left=10, right=20}" onItemRemoved="self.fpDireitaMec:needRepaint();"/>
+										
+										<!-- ARMAS -->
+										<DivisorD texto="A R M A S" largura="100" topo="40"/>
+										<rectangle align="top" height="30" xradius="5" yradius="5" cornerType="round" color="black" margins="{left=10, right=20}">
+											<label align="left" text="NOME DAS ARMAS" width="200" margins="{left=5}"/>
+											<button align="right" text="🞦" width="30" onClick='self.rclArmas:append(); self.fpDireitaMec:needRepaint();'/>
+										</rectangle>
+
+										<recordList name="rclArmas" field="armas" templateForm="templateArmas" align="top" autoHeight="true" margins="{left=10, right=20}" onItemRemoved="self.fpDireitaMec:needRepaint();"/>
+										
+										<!-- INVENTÁRIO -->
+										<DivisorD texto="I N V E N T Á R I O" largura="180" topo="40"/>
+										<rectangle align="top" height="30" xradius="5" yradius="5" cornerType="round" color="black" margins="{left=10, right=20}">
+											<label align="left" text="Koku:" margins="{left=5}" width="40"/>
+											<edit align="left" field="koku" width="55" type="number" margins="{right=2}"/>
+											<dataLink defaultValue="0" field="koku" />
+											
+											<label align="left" text="Bu:" width="40"/>
+											<edit align="left" field="bu" width="55" type="number" margins="{right=2}"/>
+											<dataLink defaultValue="0" field="bu" />
+											
+											<label align="left" text="Zeni:" width="40"/>
+											<edit align="left" field="zeni" width="55" type="number" margins="{right=2}"/>
+											<dataLink defaultValue="0" field="zeni" />
+										</rectangle>
+										<rectangle align="client" margins="{left=10, top=10, right=20, bottom=50}" color="#272727" xradius="5" yradius="5" cornerType="round">
+											<textEditor align="client" margins="{left=5, top=5, right=5, bottom=5}" field="inventario" fontColor="#cdcdcd" fontFamily="Cambria" transparent="true" fontSize="13"/>
+										</rectangle>
+										
+										<image url="/Frames/logo.png" height="135" style="proportional" align="bottom" margins="{bottom=80}"/>
+									</flowPart>
+								</flowLayout>
+							</layout>

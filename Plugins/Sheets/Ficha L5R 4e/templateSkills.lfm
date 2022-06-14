@@ -12,28 +12,60 @@ edit{
 	fontColor: #cdcdcd;
 }
 </style>    
+
 	<layout align="top" height="30">
 		<checkBox field="MarcadorSkillEscola" align="left" width="20" margins="{left=23}" hint="Perícia de Escola" />
 		<dataLink field="MarcadorSkillEscola" defaultValue="false" />
 		
-		<edit field="nomeSkill" align="left" width="225" margins="{right=2}" fontColor="white" fontSize= "13"/>
+		<edit field="nomeSkill" align="left" width="210" margins="{right=2}" fontColor="white" fontSize= "13"/>
 		<dataLink defaultValue="—" field="nomeSkill" />
 		
-		<rectangle color="#212121" align="left" width="79" margins="{right=2}">
+		<rectangle color="#212121" align="left" width="74" margins="{right=2}">
 			<comboBox align="client" field="tipoSkill" items="{'Alta', 'Baixa', 'Bugei', 'Mercante'}" values="{'Alta', 'Baixa', 'Bugei', 'Mercante'}" margins="{right=2, left=2}"/>
 		</rectangle>
 		
 		<edit field="rankSkill" align="left" width="42" margins="{right=2}" horzTextAlign="center" type="number" min="0" max="10" fontStyle="bold" fontColor="white"/>
 		<dataLink defaultValue="1" field="rankSkill" />
 		
-		<rectangle color="#212121" align="left" width="94" margins="{right=2}">
+		<rectangle color="#212121" align="left" width="90" margins="{right=2}">
 			<comboBox align="client" margins="{right=2, left=2}" items="{'Vigor', 'Vontade', 'Força', 'Percepção', 'Reflexos', 'Astúcia', 'Agilidade', 'Inteligência', 'Vazio'}"
 			field="atributoSkill" values="{'StaminON', 'WillpoweON', 'StrengtON', 'PerceptioON', 'ReflexeON', 'AwarenesON', 'AgilitON', 'IntelligencON', 'VoiON'}"/>
 		</rectangle>
 		
-		<edit field="ROLAGEM" align="left" width="80" margins="{right=2}"/>
-		<dataLink defaultValue="xky" field="ROLAGEM" />
-		
+		<edit field="rolagem" align="left" width="50" margins="{right=2}"/>
+		<dataLink defaultValue="xky" fields = "{'rankSkill',  'atributoSkill', 'stamina', 'willpower', 'strength', 'perception', 'reflexes', 'awareness', 'agility', 'intelligence', 'void'}">
+			<event name = "onChange">
+				<![CDATA[
+					require ("ndb.lua");
+					local node = NDB.getRoot(sheet);
+					local trait = 0;
+					if(sheet.atributoSkill == 'StaminON') then
+						trait = node.stamina;
+					elseif(sheet.atributoSkill == 'WillpoweON') then
+						trait = node.willpower;
+					elseif(sheet.atributoSkill == 'StrengtON') then
+						trait = node.strength;
+					elseif(sheet.atributoSkill == 'PerceptioON') then
+						trait = node.perception;
+					elseif(sheet.atributoSkill == 'ReflexeON') then
+						trait = node.reflexes;
+					elseif(sheet.atributoSkill == 'AwarenesON') then
+						trait = node.awareness;
+					elseif(sheet.atributoSkill == 'AgilitON') then
+						trait = node.agility;
+					elseif(sheet.atributoSkill == 'IntelligencON') then
+						trait = node.intelligence;
+					elseif(sheet.atributoSkill == 'VoiON') then
+						trait = node.void;
+					end;
+
+					sheet.rolagem = tonumber(tonumber(sheet.rankSkill) + tonumber(trait)) .."k" ..trait
+				]]>
+			</event>	
+		</dataLink>
+
+		<edit field="bonus" align="left" width="60" margins="{right=2}" textPrompt = "+xky" transparent = "false"/>
+
 		<popup name="popUp_Enfases" width="200" height="150" backOpacity="0" drawContainer="false">
 			<rectangle align="client" color="#0e0e0e" padding="{top=10, left=10, bottom=10, right=10}" xradius= "10" yradius="10" cornerType="bevel">
 				<label align="top" text="Ê N F A S E S" margins="{bottom=5}" fontStyle="bold" fontFamily="Constantia"/>
