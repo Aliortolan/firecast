@@ -127,6 +127,27 @@ local function constructNew_frmACN5_2()
     obj.textEditor3:setMargins({left=10,right=10,bottom=10});
     obj.textEditor3:setName("textEditor3");
 
+    obj.rectangle4 = GUI.fromHandle(_obj_newObject("rectangle"));
+    obj.rectangle4:setParent(obj.rectangle3);
+    obj.rectangle4:setAlign("bottom");
+    obj.rectangle4:setHeight(380);
+    obj.rectangle4:setColor("DimGray");
+    obj.rectangle4:setXradius(5);
+    obj.rectangle4:setYradius(5);
+    obj.rectangle4:setCornerType("innerLine");
+    obj.rectangle4:setMargins({left=10,right=10,bottom=10});
+    obj.rectangle4:setStrokeColor("white");
+    obj.rectangle4:setStrokeSize(1);
+    obj.rectangle4:setName("rectangle4");
+
+    obj.image1 = GUI.fromHandle(_obj_newObject("image"));
+    obj.image1:setParent(obj.rectangle4);
+    obj.image1:setAlign("client");
+    obj.image1:setField("anotacoesPic6");
+    obj.image1:setEditable(true);
+    obj.image1:setStyle("autoFit");
+    obj.image1:setName("image1");
+
     function obj:_releaseEvents()
     end;
 
@@ -141,10 +162,12 @@ local function constructNew_frmACN5_2()
 
         if self.textEditor3 ~= nil then self.textEditor3:destroy(); self.textEditor3 = nil; end;
         if self.label1 ~= nil then self.label1:destroy(); self.label1 = nil; end;
+        if self.rectangle4 ~= nil then self.rectangle4:destroy(); self.rectangle4 = nil; end;
         if self.rectangle2 ~= nil then self.rectangle2:destroy(); self.rectangle2 = nil; end;
         if self.rectangle3 ~= nil then self.rectangle3:destroy(); self.rectangle3 = nil; end;
         if self.label3 ~= nil then self.label3:destroy(); self.label3 = nil; end;
         if self.textEditor1 ~= nil then self.textEditor1:destroy(); self.textEditor1 = nil; end;
+        if self.image1 ~= nil then self.image1:destroy(); self.image1 = nil; end;
         if self.layout3 ~= nil then self.layout3:destroy(); self.layout3 = nil; end;
         if self.textEditor2 ~= nil then self.textEditor2:destroy(); self.textEditor2 = nil; end;
         if self.layout1 ~= nil then self.layout1:destroy(); self.layout1 = nil; end;
