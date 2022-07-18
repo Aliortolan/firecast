@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module sdkVersion="3.6_prealfa_1">
+<module sdkVersion="3.6">
     <id>Ambesek.Auto.Updater</id>
-    <version>1.0.1</version>
+    <version>1.1.1</version>
     <settings>
         <automaticStringLocalization>true</automaticStringLocalization>
     </settings>
@@ -13,4 +13,8 @@
         <site>http://pt-br.rpgmeister.wikia.com/wiki/Main_Page</site>
         <contact>vinnyrpgmeister@gmail.com</contact>
     </info>
+    
+    <info lang="en">        
+        <description>Check your plugins and find which ones have updates available in Firecast git. It also allows access to not installed git plugins.</description>            
+    </info>    
 </module>
