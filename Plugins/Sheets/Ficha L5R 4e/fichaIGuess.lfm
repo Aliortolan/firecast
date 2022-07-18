@@ -399,49 +399,7 @@
 		}
 	</style>
 
-<<<<<<< HEAD
-	<script>
-		<![CDATA[
-			local function TrocarAba(a)
-				if(a == 'F') then
-					self.layFrente.visible = true;
-					self.layMecanicas.visible = false;
-					self.layMagias.visible = false;
-					self.layBG.visible = false;
-					self.layNote.visible = false;
-				elseif(a == 'M') then
-					self.layFrente.visible = false;
-					self.layMecanicas.visible = true;
-					self.layMagias.visible = false;
-					self.layBG.visible = false;
-					self.layNote.visible = false;
-				elseif(a == 'S') then
-					self.layFrente.visible = false;
-					self.layMecanicas.visible = false;
-					self.layMagias.visible = true;
-					self.layBG.visible = false;
-					self.layNote.visible = false;
-				elseif(a == 'H') then
-					self.layFrente.visible = false;
-					self.layMecanicas.visible = false;
-					self.layMagias.visible = false;
-					self.layBG.visible = true;
-					self.layNote.visible = false;
-				elseif(a == 'A') then
-					self.layFrente.visible = false;
-					self.layMecanicas.visible = false;
-					self.layMagias.visible = false;
-					self.layBG.visible = false;
-					self.layNote.visible = true;
-				end;
-			end;
-		]]>
-	</script>
-
-	<image field="URLImagemFundo" align="client" style="autoFit" src=""/>
-=======
 	<image field="URLImagemFundo" align="client" style="autofit" src=""/>
->>>>>>> c8763874edddc413bf918f608f84a820bc36d320
 	<scrollBox align="client">
 		<flowLayout align="top" autoHeight="true" horzAlign="center" maxControlsPerLine="3">
 			
@@ -452,10 +410,6 @@
 							 <!-- ABA FRENTE -->
 							<import file = "layoutFrente.xml"/>
 
-<<<<<<< HEAD
-							<!-- ABA MECÂNICA -->
-							<import file = "layoutMecanica.xml"/>
-=======
 								<AsTabs />								
 									<!-- CABEÇALHO -->
 									<Divisor texto="P E R S O N A G E M" largura="190" topo="10" />
@@ -869,15 +823,10 @@
 								</flowPart>
 							</flowLayout>
 							</layout>
->>>>>>> c8763874edddc413bf918f608f84a820bc36d320
 							
 							<!-- ABA MAGIA -->
 							<import file = "layoutMagia.xml"/>
 							
-<<<<<<< HEAD
-							<!-- ABA HISTÓRIA -->
-							<import file = "layoutHistoria.xml"/>
-=======
 							<layout name="layMagias" align="client" visible="false">
 							<AsTabs />
 								 <!-- ESPAÇOS DE MAGIA -->
@@ -1007,7 +956,6 @@
 									</flowPart>
 								</flowLayout>
 							</layout>
->>>>>>> c8763874edddc413bf918f608f84a820bc36d320
 							
 							<!-- ABA ANOTAÇÕES -->
 							<layout name="layNote" align="client" visible="false">
