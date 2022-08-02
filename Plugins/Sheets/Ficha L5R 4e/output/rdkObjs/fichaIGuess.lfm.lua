@@ -138,7 +138,7 @@ local function constructNew_frmOurFichaL5R4e()
     obj.image1:setField("URLImagemFundo");
     obj.image1:setAlign("client");
     obj.image1:setStyle("autoFit");
-    obj.image1:setSRC("/Frames/blur.png");
+    obj.image1:setSRC("");
     obj.image1:setName("image1");
 
     obj.scrollBox1 = GUI.fromHandle(_obj_newObject("scrollBox"));
@@ -581,27 +581,27 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout8:setHeight(30);
     obj.layout8:setName("layout8");
 
-    obj.label11 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label11:setParent(obj.layout8);
-    obj.label11:setText("Karma:");
-    obj.label11:setAlign("left");
-    obj.label11:setWidth(80);
-    obj.label11:setName("label11");
-    obj.label11:setFontColor("white");
-    lfm_setPropAsString(obj.label11, "fontStyle",  "bold");
-    obj.label11:setFontFamily("Cambria");
+    obj.labelkarma = GUI.fromHandle(_obj_newObject("label"));
+    obj.labelkarma:setParent(obj.layout8);
+    obj.labelkarma:setText("Karma:");
+    obj.labelkarma:setAlign("left");
+    obj.labelkarma:setWidth(80);
+    obj.labelkarma:setName("labelkarma");
+    obj.labelkarma:setFontColor("white");
+    lfm_setPropAsString(obj.labelkarma, "fontStyle",  "bold");
+    obj.labelkarma:setFontFamily("Cambria");
 
-    obj.edit6 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit6:setParent(obj.layout8);
-    obj.edit6:setField("karma");
-    obj.edit6:setAlign("client");
-    obj.edit6:setType("number");
-    obj.edit6:setMin(0);
-    obj.edit6:setMax(999);
-    obj.edit6:setName("edit6");
-    obj.edit6:setFontColor("#cdcdcd");
-    obj.edit6:setFontFamily("Cambria");
-    obj.edit6:setTransparent(true);
+    obj.editkarma = GUI.fromHandle(_obj_newObject("edit"));
+    obj.editkarma:setParent(obj.layout8);
+    obj.editkarma:setField("karma");
+    obj.editkarma:setAlign("client");
+    obj.editkarma:setType("number");
+    obj.editkarma:setMin(0);
+    obj.editkarma:setMax(999);
+    obj.editkarma:setName("editkarma");
+    obj.editkarma:setFontColor("#cdcdcd");
+    obj.editkarma:setFontFamily("Cambria");
+    obj.editkarma:setTransparent(true);
 
     obj.dataLink19 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink19:setParent(obj.layout8);
@@ -623,29 +623,29 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout9:setMargins({left=10});
     obj.layout9:setName("layout9");
 
-    obj.label12 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label12:setParent(obj.layout9);
-    obj.label12:setAlign("left");
-    obj.label12:setText("Honra:");
-    obj.label12:setWidth(50);
-    obj.label12:setName("label12");
-    obj.label12:setFontColor("white");
-    lfm_setPropAsString(obj.label12, "fontStyle",  "bold");
-    obj.label12:setFontFamily("Cambria");
+    obj.labelhonra = GUI.fromHandle(_obj_newObject("label"));
+    obj.labelhonra:setParent(obj.layout9);
+    obj.labelhonra:setAlign("left");
+    obj.labelhonra:setText("Honra:");
+    obj.labelhonra:setWidth(50);
+    obj.labelhonra:setName("labelhonra");
+    obj.labelhonra:setFontColor("white");
+    lfm_setPropAsString(obj.labelhonra, "fontStyle",  "bold");
+    obj.labelhonra:setFontFamily("Cambria");
 
-    obj.edit7 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit7:setParent(obj.layout9);
-    obj.edit7:setHorzTextAlign("center");
-    obj.edit7:setField("honra");
-    obj.edit7:setAlign("client");
-    obj.edit7:setMargins({right=10});
-    obj.edit7:setType("float");
-    obj.edit7:setMin(-999.0);
-    obj.edit7:setMax(999.0);
-    obj.edit7:setName("edit7");
-    obj.edit7:setFontColor("#cdcdcd");
-    obj.edit7:setFontFamily("Cambria");
-    obj.edit7:setTransparent(true);
+    obj.edithonra = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edithonra:setParent(obj.layout9);
+    obj.edithonra:setHorzTextAlign("center");
+    obj.edithonra:setField("honra");
+    obj.edithonra:setAlign("client");
+    obj.edithonra:setMargins({right=10});
+    obj.edithonra:setType("float");
+    obj.edithonra:setMin(-999.0);
+    obj.edithonra:setMax(999.0);
+    obj.edithonra:setName("edithonra");
+    obj.edithonra:setFontColor("#cdcdcd");
+    obj.edithonra:setFontFamily("Cambria");
+    obj.edithonra:setTransparent(true);
 
     obj.dataLink20 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink20:setParent(obj.layout9);
@@ -660,29 +660,29 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout10:setMargins({left=10});
     obj.layout10:setName("layout10");
 
-    obj.label13 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label13:setParent(obj.layout10);
-    obj.label13:setAlign("left");
-    obj.label13:setText("Glória:");
-    obj.label13:setWidth(50);
-    obj.label13:setName("label13");
-    obj.label13:setFontColor("white");
-    lfm_setPropAsString(obj.label13, "fontStyle",  "bold");
-    obj.label13:setFontFamily("Cambria");
+    obj.labelgloria = GUI.fromHandle(_obj_newObject("label"));
+    obj.labelgloria:setParent(obj.layout10);
+    obj.labelgloria:setAlign("left");
+    obj.labelgloria:setText("Glória:");
+    obj.labelgloria:setWidth(50);
+    obj.labelgloria:setName("labelgloria");
+    obj.labelgloria:setFontColor("white");
+    lfm_setPropAsString(obj.labelgloria, "fontStyle",  "bold");
+    obj.labelgloria:setFontFamily("Cambria");
 
-    obj.edit8 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit8:setParent(obj.layout10);
-    obj.edit8:setHorzTextAlign("center");
-    obj.edit8:setField("gloria");
-    obj.edit8:setAlign("client");
-    obj.edit8:setMargins({right=10});
-    obj.edit8:setType("float");
-    obj.edit8:setMin(-999.0);
-    obj.edit8:setMax(999.0);
-    obj.edit8:setName("edit8");
-    obj.edit8:setFontColor("#cdcdcd");
-    obj.edit8:setFontFamily("Cambria");
-    obj.edit8:setTransparent(true);
+    obj.editgloria = GUI.fromHandle(_obj_newObject("edit"));
+    obj.editgloria:setParent(obj.layout10);
+    obj.editgloria:setHorzTextAlign("center");
+    obj.editgloria:setField("gloria");
+    obj.editgloria:setAlign("client");
+    obj.editgloria:setMargins({right=10});
+    obj.editgloria:setType("float");
+    obj.editgloria:setMin(-999.0);
+    obj.editgloria:setMax(999.0);
+    obj.editgloria:setName("editgloria");
+    obj.editgloria:setFontColor("#cdcdcd");
+    obj.editgloria:setFontFamily("Cambria");
+    obj.editgloria:setTransparent(true);
 
     obj.dataLink21 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink21:setParent(obj.layout10);
@@ -697,29 +697,29 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout11:setMargins({left=10});
     obj.layout11:setName("layout11");
 
-    obj.label14 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label14:setParent(obj.layout11);
-    obj.label14:setAlign("left");
-    obj.label14:setText("Status:");
-    obj.label14:setWidth(50);
-    obj.label14:setName("label14");
-    obj.label14:setFontColor("white");
-    lfm_setPropAsString(obj.label14, "fontStyle",  "bold");
-    obj.label14:setFontFamily("Cambria");
+    obj.labelstatus = GUI.fromHandle(_obj_newObject("label"));
+    obj.labelstatus:setParent(obj.layout11);
+    obj.labelstatus:setAlign("left");
+    obj.labelstatus:setText("Status:");
+    obj.labelstatus:setWidth(50);
+    obj.labelstatus:setName("labelstatus");
+    obj.labelstatus:setFontColor("white");
+    lfm_setPropAsString(obj.labelstatus, "fontStyle",  "bold");
+    obj.labelstatus:setFontFamily("Cambria");
 
-    obj.edit9 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit9:setParent(obj.layout11);
-    obj.edit9:setHorzTextAlign("center");
-    obj.edit9:setField("status");
-    obj.edit9:setAlign("client");
-    obj.edit9:setMargins({right=10});
-    obj.edit9:setType("float");
-    obj.edit9:setMin(-999.0);
-    obj.edit9:setMax(999.0);
-    obj.edit9:setName("edit9");
-    obj.edit9:setFontColor("#cdcdcd");
-    obj.edit9:setFontFamily("Cambria");
-    obj.edit9:setTransparent(true);
+    obj.editstatus = GUI.fromHandle(_obj_newObject("edit"));
+    obj.editstatus:setParent(obj.layout11);
+    obj.editstatus:setHorzTextAlign("center");
+    obj.editstatus:setField("status");
+    obj.editstatus:setAlign("client");
+    obj.editstatus:setMargins({right=10});
+    obj.editstatus:setType("float");
+    obj.editstatus:setMin(-999.0);
+    obj.editstatus:setMax(999.0);
+    obj.editstatus:setName("editstatus");
+    obj.editstatus:setFontColor("#cdcdcd");
+    obj.editstatus:setFontFamily("Cambria");
+    obj.editstatus:setTransparent(true);
 
     obj.dataLink22 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink22:setParent(obj.layout11);
@@ -734,29 +734,29 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout12:setMargins({left=10});
     obj.layout12:setName("layout12");
 
-    obj.label15 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label15:setParent(obj.layout12);
-    obj.label15:setAlign("left");
-    obj.label15:setText("Mácula:");
-    obj.label15:setWidth(50);
-    obj.label15:setName("label15");
-    obj.label15:setFontColor("white");
-    lfm_setPropAsString(obj.label15, "fontStyle",  "bold");
-    obj.label15:setFontFamily("Cambria");
+    obj.labelmacula = GUI.fromHandle(_obj_newObject("label"));
+    obj.labelmacula:setParent(obj.layout12);
+    obj.labelmacula:setAlign("left");
+    obj.labelmacula:setText("Mácula:");
+    obj.labelmacula:setWidth(50);
+    obj.labelmacula:setName("labelmacula");
+    obj.labelmacula:setFontColor("white");
+    lfm_setPropAsString(obj.labelmacula, "fontStyle",  "bold");
+    obj.labelmacula:setFontFamily("Cambria");
 
-    obj.edit10 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit10:setParent(obj.layout12);
-    obj.edit10:setHorzTextAlign("center");
-    obj.edit10:setField("macula");
-    obj.edit10:setAlign("client");
-    obj.edit10:setMargins({right=10});
-    obj.edit10:setType("float");
-    obj.edit10:setMin(-999.0);
-    obj.edit10:setMax(999.0);
-    obj.edit10:setName("edit10");
-    obj.edit10:setFontColor("#cdcdcd");
-    obj.edit10:setFontFamily("Cambria");
-    obj.edit10:setTransparent(true);
+    obj.editmacula = GUI.fromHandle(_obj_newObject("edit"));
+    obj.editmacula:setParent(obj.layout12);
+    obj.editmacula:setHorzTextAlign("center");
+    obj.editmacula:setField("macula");
+    obj.editmacula:setAlign("client");
+    obj.editmacula:setMargins({right=10});
+    obj.editmacula:setType("float");
+    obj.editmacula:setMin(-999.0);
+    obj.editmacula:setMax(999.0);
+    obj.editmacula:setName("editmacula");
+    obj.editmacula:setFontColor("#cdcdcd");
+    obj.editmacula:setFontFamily("Cambria");
+    obj.editmacula:setTransparent(true);
 
     obj.dataLink23 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink23:setParent(obj.layout12);
@@ -771,16 +771,16 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout13:setMargins({top=40, left=20, bottom=15});
     obj.layout13:setName("layout13");
 
-    obj.label16 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label16:setParent(obj.layout13);
-    obj.label16:setAlign("left");
-    obj.label16:setText("A T R I B U T O S");
-    obj.label16:setWidth(160);
-    obj.label16:setFontSize(20);
-    obj.label16:setFontFamily("Constantia");
-    obj.label16:setName("label16");
-    obj.label16:setFontColor("white");
-    lfm_setPropAsString(obj.label16, "fontStyle",  "bold");
+    obj.label11 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label11:setParent(obj.layout13);
+    obj.label11:setAlign("left");
+    obj.label11:setText("A T R I B U T O S");
+    obj.label11:setWidth(160);
+    obj.label11:setFontSize(20);
+    obj.label11:setFontFamily("Constantia");
+    obj.label11:setName("label11");
+    obj.label11:setFontColor("white");
+    lfm_setPropAsString(obj.label11, "fontStyle",  "bold");
 
     obj.horzLine2 = GUI.fromHandle(_obj_newObject("horzLine"));
     obj.horzLine2:setParent(obj.layout13);
@@ -799,16 +799,71 @@ local function constructNew_frmOurFichaL5R4e()
     obj.image2 = GUI.fromHandle(_obj_newObject("image"));
     obj.image2:setParent(obj.layout14);
     obj.image2:setAlign("client");
-    obj.image2:setSRC("/Frames/rings.png");
+    obj.image2:setSRC("./assets/Frames/rings.png");
     obj.image2:setStyle("proportional");
     obj.image2:setName("image2");
+
+    obj.label12 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label12:setParent(obj.layout14);
+    obj.label12:setFontSize(16.0);
+    obj.label12:setText("Vigor");
+    obj.label12:setLeft(100);
+    obj.label12:setTop(18);
+    obj.label12:setName("label12");
+    obj.label12:setFontColor("white");
+    lfm_setPropAsString(obj.label12, "fontStyle",  "bold");
+    obj.label12:setFontFamily("Cambria");
+
+    obj.label13 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label13:setParent(obj.layout14);
+    obj.label13:setFontSize(16.0);
+    obj.label13:setText("Vontade");
+    obj.label13:setLeft(63);
+    obj.label13:setTop(68);
+    obj.label13:setName("label13");
+    obj.label13:setFontColor("white");
+    lfm_setPropAsString(obj.label13, "fontStyle",  "bold");
+    obj.label13:setFontFamily("Cambria");
+
+    obj.label14 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label14:setParent(obj.layout14);
+    obj.label14:setFontSize(16.0);
+    obj.label14:setText("Força");
+    obj.label14:setLeft(60);
+    obj.label14:setTop(135);
+    obj.label14:setName("label14");
+    obj.label14:setFontColor("white");
+    lfm_setPropAsString(obj.label14, "fontStyle",  "bold");
+    obj.label14:setFontFamily("Cambria");
+
+    obj.label15 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label15:setParent(obj.layout14);
+    obj.label15:setFontSize(16.0);
+    obj.label15:setText("Percepção");
+    obj.label15:setLeft(8);
+    obj.label15:setTop(185);
+    obj.label15:setName("label15");
+    obj.label15:setFontColor("white");
+    lfm_setPropAsString(obj.label15, "fontStyle",  "bold");
+    obj.label15:setFontFamily("Cambria");
+
+    obj.label16 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label16:setParent(obj.layout14);
+    obj.label16:setFontSize(16.0);
+    obj.label16:setText("Reflexos");
+    obj.label16:setLeft(470);
+    obj.label16:setTop(18);
+    obj.label16:setName("label16");
+    obj.label16:setFontColor("white");
+    lfm_setPropAsString(obj.label16, "fontStyle",  "bold");
+    obj.label16:setFontFamily("Cambria");
 
     obj.label17 = GUI.fromHandle(_obj_newObject("label"));
     obj.label17:setParent(obj.layout14);
     obj.label17:setFontSize(16.0);
-    obj.label17:setText("Vigor");
-    obj.label17:setLeft(100);
-    obj.label17:setTop(18);
+    obj.label17:setText("Astúcia");
+    obj.label17:setLeft(488);
+    obj.label17:setTop(68);
     obj.label17:setName("label17");
     obj.label17:setFontColor("white");
     lfm_setPropAsString(obj.label17, "fontStyle",  "bold");
@@ -817,9 +872,9 @@ local function constructNew_frmOurFichaL5R4e()
     obj.label18 = GUI.fromHandle(_obj_newObject("label"));
     obj.label18:setParent(obj.layout14);
     obj.label18:setFontSize(16.0);
-    obj.label18:setText("Vontade");
-    obj.label18:setLeft(63);
-    obj.label18:setTop(68);
+    obj.label18:setText("Agilidade");
+    obj.label18:setLeft(508);
+    obj.label18:setTop(135);
     obj.label18:setName("label18");
     obj.label18:setFontColor("white");
     lfm_setPropAsString(obj.label18, "fontStyle",  "bold");
@@ -828,85 +883,30 @@ local function constructNew_frmOurFichaL5R4e()
     obj.label19 = GUI.fromHandle(_obj_newObject("label"));
     obj.label19:setParent(obj.layout14);
     obj.label19:setFontSize(16.0);
-    obj.label19:setText("Força");
-    obj.label19:setLeft(60);
-    obj.label19:setTop(135);
+    obj.label19:setText("Inteligência");
+    obj.label19:setLeft(523);
+    obj.label19:setTop(185);
     obj.label19:setName("label19");
     obj.label19:setFontColor("white");
     lfm_setPropAsString(obj.label19, "fontStyle",  "bold");
     obj.label19:setFontFamily("Cambria");
 
-    obj.label20 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label20:setParent(obj.layout14);
-    obj.label20:setFontSize(16.0);
-    obj.label20:setText("Percepção");
-    obj.label20:setLeft(8);
-    obj.label20:setTop(185);
-    obj.label20:setName("label20");
-    obj.label20:setFontColor("white");
-    lfm_setPropAsString(obj.label20, "fontStyle",  "bold");
-    obj.label20:setFontFamily("Cambria");
-
-    obj.label21 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label21:setParent(obj.layout14);
-    obj.label21:setFontSize(16.0);
-    obj.label21:setText("Reflexos");
-    obj.label21:setLeft(470);
-    obj.label21:setTop(18);
-    obj.label21:setName("label21");
-    obj.label21:setFontColor("white");
-    lfm_setPropAsString(obj.label21, "fontStyle",  "bold");
-    obj.label21:setFontFamily("Cambria");
-
-    obj.label22 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label22:setParent(obj.layout14);
-    obj.label22:setFontSize(16.0);
-    obj.label22:setText("Astúcia");
-    obj.label22:setLeft(488);
-    obj.label22:setTop(68);
-    obj.label22:setName("label22");
-    obj.label22:setFontColor("white");
-    lfm_setPropAsString(obj.label22, "fontStyle",  "bold");
-    obj.label22:setFontFamily("Cambria");
-
-    obj.label23 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label23:setParent(obj.layout14);
-    obj.label23:setFontSize(16.0);
-    obj.label23:setText("Agilidade");
-    obj.label23:setLeft(508);
-    obj.label23:setTop(135);
-    obj.label23:setName("label23");
-    obj.label23:setFontColor("white");
-    lfm_setPropAsString(obj.label23, "fontStyle",  "bold");
-    obj.label23:setFontFamily("Cambria");
-
-    obj.label24 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label24:setParent(obj.layout14);
-    obj.label24:setFontSize(16.0);
-    obj.label24:setText("Inteligência");
-    obj.label24:setLeft(523);
-    obj.label24:setTop(185);
-    obj.label24:setName("label24");
-    obj.label24:setFontColor("white");
-    lfm_setPropAsString(obj.label24, "fontStyle",  "bold");
-    obj.label24:setFontFamily("Cambria");
-
-    obj.edit11 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit11:setParent(obj.layout14);
-    obj.edit11:setHorzTextAlign("center");
-    obj.edit11:setWidth(30);
-    obj.edit11:setFontSize(20.0);
-    obj.edit11:setField("stamina");
-    obj.edit11:setLeft(153);
-    obj.edit11:setTop(16);
-    lfm_setPropAsString(obj.edit11, "fontStyle",  "bold");
-    obj.edit11:setType("number");
-    obj.edit11:setMin(0);
-    obj.edit11:setMax(10);
-    obj.edit11:setName("edit11");
-    obj.edit11:setFontColor("#cdcdcd");
-    obj.edit11:setFontFamily("Cambria");
-    obj.edit11:setTransparent(true);
+    obj.edit6 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit6:setParent(obj.layout14);
+    obj.edit6:setField("stamina");
+    obj.edit6:setLeft(153);
+    obj.edit6:setTop(16);
+    obj.edit6:setName("edit6");
+    obj.edit6:setWidth(30);
+    obj.edit6:setHorzTextAlign("center");
+    obj.edit6:setFontSize(20);
+    lfm_setPropAsString(obj.edit6, "fontStyle",  "bold");
+    obj.edit6:setType("number");
+    obj.edit6:setMin(0);
+    obj.edit6:setMax(99);
+    obj.edit6:setFontColor("#cdcdcd");
+    obj.edit6:setFontFamily("Cambria");
+    obj.edit6:setTransparent(true);
 
     obj.dataLink24 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink24:setParent(obj.layout14);
@@ -914,22 +914,22 @@ local function constructNew_frmOurFichaL5R4e()
     obj.dataLink24:setField("stamina");
     obj.dataLink24:setName("dataLink24");
 
-    obj.edit12 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit12:setParent(obj.layout14);
-    obj.edit12:setHorzTextAlign("center");
-    obj.edit12:setWidth(30);
-    obj.edit12:setFontSize(20.0);
-    obj.edit12:setField("willpower");
-    obj.edit12:setLeft(136);
-    obj.edit12:setTop(64);
-    lfm_setPropAsString(obj.edit12, "fontStyle",  "bold");
-    obj.edit12:setType("number");
-    obj.edit12:setMin(0);
-    obj.edit12:setMax(10);
-    obj.edit12:setName("edit12");
-    obj.edit12:setFontColor("#cdcdcd");
-    obj.edit12:setFontFamily("Cambria");
-    obj.edit12:setTransparent(true);
+    obj.edit7 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit7:setParent(obj.layout14);
+    obj.edit7:setField("willpower");
+    obj.edit7:setLeft(136);
+    obj.edit7:setTop(64);
+    obj.edit7:setName("edit7");
+    obj.edit7:setWidth(30);
+    obj.edit7:setHorzTextAlign("center");
+    obj.edit7:setFontSize(20);
+    lfm_setPropAsString(obj.edit7, "fontStyle",  "bold");
+    obj.edit7:setType("number");
+    obj.edit7:setMin(0);
+    obj.edit7:setMax(99);
+    obj.edit7:setFontColor("#cdcdcd");
+    obj.edit7:setFontFamily("Cambria");
+    obj.edit7:setTransparent(true);
 
     obj.dataLink25 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink25:setParent(obj.layout14);
@@ -937,22 +937,22 @@ local function constructNew_frmOurFichaL5R4e()
     obj.dataLink25:setField("willpower");
     obj.dataLink25:setName("dataLink25");
 
-    obj.edit13 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit13:setParent(obj.layout14);
-    obj.edit13:setHorzTextAlign("center");
-    obj.edit13:setWidth(30);
-    obj.edit13:setFontSize(20.0);
-    obj.edit13:setField("strength");
-    obj.edit13:setLeft(115);
-    obj.edit13:setTop(133);
-    lfm_setPropAsString(obj.edit13, "fontStyle",  "bold");
-    obj.edit13:setType("number");
-    obj.edit13:setMin(0);
-    obj.edit13:setMax(10);
-    obj.edit13:setName("edit13");
-    obj.edit13:setFontColor("#cdcdcd");
-    obj.edit13:setFontFamily("Cambria");
-    obj.edit13:setTransparent(true);
+    obj.edit8 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit8:setParent(obj.layout14);
+    obj.edit8:setField("strength");
+    obj.edit8:setLeft(115);
+    obj.edit8:setTop(133);
+    obj.edit8:setName("edit8");
+    obj.edit8:setWidth(30);
+    obj.edit8:setHorzTextAlign("center");
+    obj.edit8:setFontSize(20);
+    lfm_setPropAsString(obj.edit8, "fontStyle",  "bold");
+    obj.edit8:setType("number");
+    obj.edit8:setMin(0);
+    obj.edit8:setMax(99);
+    obj.edit8:setFontColor("#cdcdcd");
+    obj.edit8:setFontFamily("Cambria");
+    obj.edit8:setTransparent(true);
 
     obj.dataLink26 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink26:setParent(obj.layout14);
@@ -960,22 +960,22 @@ local function constructNew_frmOurFichaL5R4e()
     obj.dataLink26:setField("strength");
     obj.dataLink26:setName("dataLink26");
 
-    obj.edit14 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit14:setParent(obj.layout14);
-    obj.edit14:setHorzTextAlign("center");
-    obj.edit14:setWidth(30);
-    obj.edit14:setFontSize(20.0);
-    obj.edit14:setField("perception");
-    obj.edit14:setLeft(98);
-    obj.edit14:setTop(180);
-    lfm_setPropAsString(obj.edit14, "fontStyle",  "bold");
-    obj.edit14:setType("number");
-    obj.edit14:setMin(0);
-    obj.edit14:setMax(10);
-    obj.edit14:setName("edit14");
-    obj.edit14:setFontColor("#cdcdcd");
-    obj.edit14:setFontFamily("Cambria");
-    obj.edit14:setTransparent(true);
+    obj.edit9 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit9:setParent(obj.layout14);
+    obj.edit9:setField("perception");
+    obj.edit9:setLeft(98);
+    obj.edit9:setTop(180);
+    obj.edit9:setName("edit9");
+    obj.edit9:setWidth(30);
+    obj.edit9:setHorzTextAlign("center");
+    obj.edit9:setFontSize(20);
+    lfm_setPropAsString(obj.edit9, "fontStyle",  "bold");
+    obj.edit9:setType("number");
+    obj.edit9:setMin(0);
+    obj.edit9:setMax(99);
+    obj.edit9:setFontColor("#cdcdcd");
+    obj.edit9:setFontFamily("Cambria");
+    obj.edit9:setTransparent(true);
 
     obj.dataLink27 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink27:setParent(obj.layout14);
@@ -983,22 +983,22 @@ local function constructNew_frmOurFichaL5R4e()
     obj.dataLink27:setField("perception");
     obj.dataLink27:setName("dataLink27");
 
-    obj.edit15 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit15:setParent(obj.layout14);
-    obj.edit15:setHorzTextAlign("center");
-    obj.edit15:setWidth(30);
-    obj.edit15:setFontSize(20.0);
-    obj.edit15:setField("reflexes");
-    obj.edit15:setLeft(428);
-    obj.edit15:setTop(16);
-    lfm_setPropAsString(obj.edit15, "fontStyle",  "bold");
-    obj.edit15:setType("number");
-    obj.edit15:setMin(0);
-    obj.edit15:setMax(10);
-    obj.edit15:setName("edit15");
-    obj.edit15:setFontColor("#cdcdcd");
-    obj.edit15:setFontFamily("Cambria");
-    obj.edit15:setTransparent(true);
+    obj.edit10 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit10:setParent(obj.layout14);
+    obj.edit10:setField("reflexes");
+    obj.edit10:setLeft(428);
+    obj.edit10:setTop(16);
+    obj.edit10:setName("edit10");
+    obj.edit10:setWidth(30);
+    obj.edit10:setHorzTextAlign("center");
+    obj.edit10:setFontSize(20);
+    lfm_setPropAsString(obj.edit10, "fontStyle",  "bold");
+    obj.edit10:setType("number");
+    obj.edit10:setMin(0);
+    obj.edit10:setMax(99);
+    obj.edit10:setFontColor("#cdcdcd");
+    obj.edit10:setFontFamily("Cambria");
+    obj.edit10:setTransparent(true);
 
     obj.dataLink28 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink28:setParent(obj.layout14);
@@ -1006,22 +1006,22 @@ local function constructNew_frmOurFichaL5R4e()
     obj.dataLink28:setField("reflexes");
     obj.dataLink28:setName("dataLink28");
 
-    obj.edit16 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit16:setParent(obj.layout14);
-    obj.edit16:setHorzTextAlign("center");
-    obj.edit16:setWidth(30);
-    obj.edit16:setFontSize(20.0);
-    obj.edit16:setField("awareness");
-    obj.edit16:setLeft(445);
-    obj.edit16:setTop(64);
-    lfm_setPropAsString(obj.edit16, "fontStyle",  "bold");
-    obj.edit16:setType("number");
-    obj.edit16:setMin(0);
-    obj.edit16:setMax(10);
-    obj.edit16:setName("edit16");
-    obj.edit16:setFontColor("#cdcdcd");
-    obj.edit16:setFontFamily("Cambria");
-    obj.edit16:setTransparent(true);
+    obj.edit11 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit11:setParent(obj.layout14);
+    obj.edit11:setField("awareness");
+    obj.edit11:setLeft(445);
+    obj.edit11:setTop(64);
+    obj.edit11:setName("edit11");
+    obj.edit11:setWidth(30);
+    obj.edit11:setHorzTextAlign("center");
+    obj.edit11:setFontSize(20);
+    lfm_setPropAsString(obj.edit11, "fontStyle",  "bold");
+    obj.edit11:setType("number");
+    obj.edit11:setMin(0);
+    obj.edit11:setMax(99);
+    obj.edit11:setFontColor("#cdcdcd");
+    obj.edit11:setFontFamily("Cambria");
+    obj.edit11:setTransparent(true);
 
     obj.dataLink29 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink29:setParent(obj.layout14);
@@ -1029,22 +1029,22 @@ local function constructNew_frmOurFichaL5R4e()
     obj.dataLink29:setField("awareness");
     obj.dataLink29:setName("dataLink29");
 
-    obj.edit17 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit17:setParent(obj.layout14);
-    obj.edit17:setHorzTextAlign("center");
-    obj.edit17:setWidth(30);
-    obj.edit17:setFontSize(20.0);
-    obj.edit17:setField("agility");
-    obj.edit17:setLeft(466);
-    obj.edit17:setTop(133);
-    lfm_setPropAsString(obj.edit17, "fontStyle",  "bold");
-    obj.edit17:setType("number");
-    obj.edit17:setMin(0);
-    obj.edit17:setMax(10);
-    obj.edit17:setName("edit17");
-    obj.edit17:setFontColor("#cdcdcd");
-    obj.edit17:setFontFamily("Cambria");
-    obj.edit17:setTransparent(true);
+    obj.edit12 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit12:setParent(obj.layout14);
+    obj.edit12:setField("agility");
+    obj.edit12:setLeft(466);
+    obj.edit12:setTop(133);
+    obj.edit12:setName("edit12");
+    obj.edit12:setWidth(30);
+    obj.edit12:setHorzTextAlign("center");
+    obj.edit12:setFontSize(20);
+    lfm_setPropAsString(obj.edit12, "fontStyle",  "bold");
+    obj.edit12:setType("number");
+    obj.edit12:setMin(0);
+    obj.edit12:setMax(99);
+    obj.edit12:setFontColor("#cdcdcd");
+    obj.edit12:setFontFamily("Cambria");
+    obj.edit12:setTransparent(true);
 
     obj.dataLink30 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink30:setParent(obj.layout14);
@@ -1052,22 +1052,22 @@ local function constructNew_frmOurFichaL5R4e()
     obj.dataLink30:setField("agility");
     obj.dataLink30:setName("dataLink30");
 
-    obj.edit18 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit18:setParent(obj.layout14);
-    obj.edit18:setHorzTextAlign("center");
-    obj.edit18:setWidth(30);
-    obj.edit18:setFontSize(20.0);
-    obj.edit18:setField("intelligence");
-    obj.edit18:setLeft(483);
-    obj.edit18:setTop(180);
-    lfm_setPropAsString(obj.edit18, "fontStyle",  "bold");
-    obj.edit18:setType("number");
-    obj.edit18:setMin(0);
-    obj.edit18:setMax(10);
-    obj.edit18:setName("edit18");
-    obj.edit18:setFontColor("#cdcdcd");
-    obj.edit18:setFontFamily("Cambria");
-    obj.edit18:setTransparent(true);
+    obj.edit13 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit13:setParent(obj.layout14);
+    obj.edit13:setField("intelligence");
+    obj.edit13:setLeft(483);
+    obj.edit13:setTop(180);
+    obj.edit13:setName("edit13");
+    obj.edit13:setWidth(30);
+    obj.edit13:setHorzTextAlign("center");
+    obj.edit13:setFontSize(20);
+    lfm_setPropAsString(obj.edit13, "fontStyle",  "bold");
+    obj.edit13:setType("number");
+    obj.edit13:setMin(0);
+    obj.edit13:setMax(99);
+    obj.edit13:setFontColor("#cdcdcd");
+    obj.edit13:setFontFamily("Cambria");
+    obj.edit13:setTransparent(true);
 
     obj.dataLink31 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink31:setParent(obj.layout14);
@@ -1075,22 +1075,22 @@ local function constructNew_frmOurFichaL5R4e()
     obj.dataLink31:setField("intelligence");
     obj.dataLink31:setName("dataLink31");
 
-    obj.edit19 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit19:setParent(obj.layout14);
-    obj.edit19:setHorzTextAlign("center");
-    obj.edit19:setWidth(30);
-    obj.edit19:setFontSize(20.0);
-    obj.edit19:setField("void");
-    obj.edit19:setLeft(290);
-    obj.edit19:setTop(164);
-    lfm_setPropAsString(obj.edit19, "fontStyle",  "bold");
-    obj.edit19:setType("number");
-    obj.edit19:setMin(0);
-    obj.edit19:setMax(10);
-    obj.edit19:setName("edit19");
-    obj.edit19:setFontColor("#cdcdcd");
-    obj.edit19:setFontFamily("Cambria");
-    obj.edit19:setTransparent(true);
+    obj.edit14 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit14:setParent(obj.layout14);
+    obj.edit14:setField("void");
+    obj.edit14:setLeft(290);
+    obj.edit14:setTop(164);
+    obj.edit14:setName("edit14");
+    obj.edit14:setWidth(30);
+    obj.edit14:setHorzTextAlign("center");
+    obj.edit14:setFontSize(20);
+    lfm_setPropAsString(obj.edit14, "fontStyle",  "bold");
+    obj.edit14:setType("number");
+    obj.edit14:setMin(0);
+    obj.edit14:setMax(99);
+    obj.edit14:setFontColor("#cdcdcd");
+    obj.edit14:setFontFamily("Cambria");
+    obj.edit14:setTransparent(true);
 
     obj.dataLink32 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink32:setParent(obj.layout14);
@@ -1098,17 +1098,17 @@ local function constructNew_frmOurFichaL5R4e()
     obj.dataLink32:setField("void");
     obj.dataLink32:setName("dataLink32");
 
-    obj.label25 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label25:setParent(obj.layout14);
-    obj.label25:setFontSize(20.0);
-    obj.label25:setLeft(324);
-    obj.label25:setTop(94);
-    obj.label25:setHeight(30);
-    obj.label25:setField("air");
-    obj.label25:setName("label25");
-    obj.label25:setFontColor("white");
-    lfm_setPropAsString(obj.label25, "fontStyle",  "bold");
-    obj.label25:setFontFamily("Cambria");
+    obj.label20 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label20:setParent(obj.layout14);
+    obj.label20:setFontSize(20.0);
+    obj.label20:setLeft(324);
+    obj.label20:setTop(94);
+    obj.label20:setHeight(30);
+    obj.label20:setField("air");
+    obj.label20:setName("label20");
+    obj.label20:setFontColor("white");
+    lfm_setPropAsString(obj.label20, "fontStyle",  "bold");
+    obj.label20:setFontFamily("Cambria");
 
     obj.dataLink33 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink33:setParent(obj.layout14);
@@ -1116,17 +1116,17 @@ local function constructNew_frmOurFichaL5R4e()
     obj.dataLink33:setField("air");
     obj.dataLink33:setName("dataLink33");
 
-    obj.label26 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label26:setParent(obj.layout14);
-    obj.label26:setFontSize(20.0);
-    obj.label26:setLeft(275);
-    obj.label26:setTop(94);
-    obj.label26:setHeight(30);
-    obj.label26:setField("earth");
-    obj.label26:setName("label26");
-    obj.label26:setFontColor("white");
-    lfm_setPropAsString(obj.label26, "fontStyle",  "bold");
-    obj.label26:setFontFamily("Cambria");
+    obj.label21 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label21:setParent(obj.layout14);
+    obj.label21:setFontSize(20.0);
+    obj.label21:setLeft(275);
+    obj.label21:setTop(94);
+    obj.label21:setHeight(30);
+    obj.label21:setField("earth");
+    obj.label21:setName("label21");
+    obj.label21:setFontColor("white");
+    lfm_setPropAsString(obj.label21, "fontStyle",  "bold");
+    obj.label21:setFontFamily("Cambria");
 
     obj.dataLink34 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink34:setParent(obj.layout14);
@@ -1134,17 +1134,17 @@ local function constructNew_frmOurFichaL5R4e()
     obj.dataLink34:setField("earth");
     obj.dataLink34:setName("dataLink34");
 
-    obj.label27 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label27:setParent(obj.layout14);
-    obj.label27:setFontSize(20.0);
-    obj.label27:setLeft(260);
-    obj.label27:setTop(138);
-    obj.label27:setHeight(30);
-    obj.label27:setField("water");
-    obj.label27:setName("label27");
-    obj.label27:setFontColor("white");
-    lfm_setPropAsString(obj.label27, "fontStyle",  "bold");
-    obj.label27:setFontFamily("Cambria");
+    obj.label22 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label22:setParent(obj.layout14);
+    obj.label22:setFontSize(20.0);
+    obj.label22:setLeft(260);
+    obj.label22:setTop(138);
+    obj.label22:setHeight(30);
+    obj.label22:setField("water");
+    obj.label22:setName("label22");
+    obj.label22:setFontColor("white");
+    lfm_setPropAsString(obj.label22, "fontStyle",  "bold");
+    obj.label22:setFontFamily("Cambria");
 
     obj.dataLink35 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink35:setParent(obj.layout14);
@@ -1152,17 +1152,17 @@ local function constructNew_frmOurFichaL5R4e()
     obj.dataLink35:setField("water");
     obj.dataLink35:setName("dataLink35");
 
-    obj.label28 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label28:setParent(obj.layout14);
-    obj.label28:setFontSize(20.0);
-    obj.label28:setLeft(339);
-    obj.label28:setTop(138);
-    obj.label28:setHeight(30);
-    obj.label28:setField("fire");
-    obj.label28:setName("label28");
-    obj.label28:setFontColor("white");
-    lfm_setPropAsString(obj.label28, "fontStyle",  "bold");
-    obj.label28:setFontFamily("Cambria");
+    obj.label23 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label23:setParent(obj.layout14);
+    obj.label23:setFontSize(20.0);
+    obj.label23:setLeft(339);
+    obj.label23:setTop(138);
+    obj.label23:setHeight(30);
+    obj.label23:setField("fire");
+    obj.label23:setName("label23");
+    obj.label23:setFontColor("white");
+    lfm_setPropAsString(obj.label23, "fontStyle",  "bold");
+    obj.label23:setFontFamily("Cambria");
 
     obj.dataLink36 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink36:setParent(obj.layout14);
@@ -1274,9 +1274,64 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout17:setHeight(20);
     obj.layout17:setName("layout17");
 
+    obj.label24 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label24:setParent(obj.layout17);
+    obj.label24:setText("0");
+    obj.label24:setAlign("left");
+    obj.label24:setWidth(20);
+    obj.label24:setHorzTextAlign("center");
+    obj.label24:setName("label24");
+    obj.label24:setFontColor("white");
+    lfm_setPropAsString(obj.label24, "fontStyle",  "bold");
+    obj.label24:setFontFamily("Cambria");
+
+    obj.label25 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label25:setParent(obj.layout17);
+    obj.label25:setText("1");
+    obj.label25:setAlign("left");
+    obj.label25:setWidth(20);
+    obj.label25:setHorzTextAlign("center");
+    obj.label25:setName("label25");
+    obj.label25:setFontColor("white");
+    lfm_setPropAsString(obj.label25, "fontStyle",  "bold");
+    obj.label25:setFontFamily("Cambria");
+
+    obj.label26 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label26:setParent(obj.layout17);
+    obj.label26:setText("2");
+    obj.label26:setAlign("left");
+    obj.label26:setWidth(20);
+    obj.label26:setHorzTextAlign("center");
+    obj.label26:setName("label26");
+    obj.label26:setFontColor("white");
+    lfm_setPropAsString(obj.label26, "fontStyle",  "bold");
+    obj.label26:setFontFamily("Cambria");
+
+    obj.label27 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label27:setParent(obj.layout17);
+    obj.label27:setText("3");
+    obj.label27:setAlign("left");
+    obj.label27:setWidth(20);
+    obj.label27:setHorzTextAlign("center");
+    obj.label27:setName("label27");
+    obj.label27:setFontColor("white");
+    lfm_setPropAsString(obj.label27, "fontStyle",  "bold");
+    obj.label27:setFontFamily("Cambria");
+
+    obj.label28 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label28:setParent(obj.layout17);
+    obj.label28:setText("4");
+    obj.label28:setAlign("left");
+    obj.label28:setWidth(20);
+    obj.label28:setHorzTextAlign("center");
+    obj.label28:setName("label28");
+    obj.label28:setFontColor("white");
+    lfm_setPropAsString(obj.label28, "fontStyle",  "bold");
+    obj.label28:setFontFamily("Cambria");
+
     obj.label29 = GUI.fromHandle(_obj_newObject("label"));
     obj.label29:setParent(obj.layout17);
-    obj.label29:setText("0");
+    obj.label29:setText("5");
     obj.label29:setAlign("left");
     obj.label29:setWidth(20);
     obj.label29:setHorzTextAlign("center");
@@ -1287,7 +1342,7 @@ local function constructNew_frmOurFichaL5R4e()
 
     obj.label30 = GUI.fromHandle(_obj_newObject("label"));
     obj.label30:setParent(obj.layout17);
-    obj.label30:setText("1");
+    obj.label30:setText("6");
     obj.label30:setAlign("left");
     obj.label30:setWidth(20);
     obj.label30:setHorzTextAlign("center");
@@ -1298,7 +1353,7 @@ local function constructNew_frmOurFichaL5R4e()
 
     obj.label31 = GUI.fromHandle(_obj_newObject("label"));
     obj.label31:setParent(obj.layout17);
-    obj.label31:setText("2");
+    obj.label31:setText("7");
     obj.label31:setAlign("left");
     obj.label31:setWidth(20);
     obj.label31:setHorzTextAlign("center");
@@ -1307,61 +1362,6 @@ local function constructNew_frmOurFichaL5R4e()
     lfm_setPropAsString(obj.label31, "fontStyle",  "bold");
     obj.label31:setFontFamily("Cambria");
 
-    obj.label32 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label32:setParent(obj.layout17);
-    obj.label32:setText("3");
-    obj.label32:setAlign("left");
-    obj.label32:setWidth(20);
-    obj.label32:setHorzTextAlign("center");
-    obj.label32:setName("label32");
-    obj.label32:setFontColor("white");
-    lfm_setPropAsString(obj.label32, "fontStyle",  "bold");
-    obj.label32:setFontFamily("Cambria");
-
-    obj.label33 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label33:setParent(obj.layout17);
-    obj.label33:setText("4");
-    obj.label33:setAlign("left");
-    obj.label33:setWidth(20);
-    obj.label33:setHorzTextAlign("center");
-    obj.label33:setName("label33");
-    obj.label33:setFontColor("white");
-    lfm_setPropAsString(obj.label33, "fontStyle",  "bold");
-    obj.label33:setFontFamily("Cambria");
-
-    obj.label34 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label34:setParent(obj.layout17);
-    obj.label34:setText("5");
-    obj.label34:setAlign("left");
-    obj.label34:setWidth(20);
-    obj.label34:setHorzTextAlign("center");
-    obj.label34:setName("label34");
-    obj.label34:setFontColor("white");
-    lfm_setPropAsString(obj.label34, "fontStyle",  "bold");
-    obj.label34:setFontFamily("Cambria");
-
-    obj.label35 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label35:setParent(obj.layout17);
-    obj.label35:setText("6");
-    obj.label35:setAlign("left");
-    obj.label35:setWidth(20);
-    obj.label35:setHorzTextAlign("center");
-    obj.label35:setName("label35");
-    obj.label35:setFontColor("white");
-    lfm_setPropAsString(obj.label35, "fontStyle",  "bold");
-    obj.label35:setFontFamily("Cambria");
-
-    obj.label36 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label36:setParent(obj.layout17);
-    obj.label36:setText("7");
-    obj.label36:setAlign("left");
-    obj.label36:setWidth(20);
-    obj.label36:setHorzTextAlign("center");
-    obj.label36:setName("label36");
-    obj.label36:setFontColor("white");
-    lfm_setPropAsString(obj.label36, "fontStyle",  "bold");
-    obj.label36:setFontFamily("Cambria");
-
     obj.layout18 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout18:setParent(obj.flowPart2);
     obj.layout18:setAlign("top");
@@ -1369,16 +1369,16 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout18:setMargins({top=40, left=20, bottom=15});
     obj.layout18:setName("layout18");
 
-    obj.label37 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label37:setParent(obj.layout18);
-    obj.label37:setAlign("left");
-    obj.label37:setText("P E R Í C I A S");
-    obj.label37:setWidth(130);
-    obj.label37:setFontSize(20);
-    obj.label37:setFontFamily("Constantia");
-    obj.label37:setName("label37");
-    obj.label37:setFontColor("white");
-    lfm_setPropAsString(obj.label37, "fontStyle",  "bold");
+    obj.label32 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label32:setParent(obj.layout18);
+    obj.label32:setAlign("left");
+    obj.label32:setText("P E R Í C I A S");
+    obj.label32:setWidth(130);
+    obj.label32:setFontSize(20);
+    obj.label32:setFontFamily("Constantia");
+    obj.label32:setName("label32");
+    obj.label32:setFontColor("white");
+    lfm_setPropAsString(obj.label32, "fontStyle",  "bold");
 
     obj.horzLine3 = GUI.fromHandle(_obj_newObject("horzLine"));
     obj.horzLine3:setParent(obj.layout18);
@@ -1404,56 +1404,56 @@ local function constructNew_frmOurFichaL5R4e()
     obj.rectangle7:setColor("#212121");
     obj.rectangle7:setName("rectangle7");
 
-    obj.label38 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label38:setParent(obj.rectangle7);
-    obj.label38:setAlign("left");
-    obj.label38:setWidth(254);
-    obj.label38:setText("PERÍCIAS");
-    obj.label38:setMargins({left=5});
-    obj.label38:setName("label38");
-    obj.label38:setFontColor("white");
-    lfm_setPropAsString(obj.label38, "fontStyle",  "bold");
-    obj.label38:setFontFamily("Cambria");
+    obj.label33 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label33:setParent(obj.rectangle7);
+    obj.label33:setAlign("left");
+    obj.label33:setWidth(240);
+    obj.label33:setText("PERÍCIAS");
+    obj.label33:setMargins({left=5});
+    obj.label33:setName("label33");
+    obj.label33:setFontColor("white");
+    lfm_setPropAsString(obj.label33, "fontStyle",  "bold");
+    obj.label33:setFontFamily("Cambria");
 
-    obj.label39 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label39:setParent(obj.rectangle7);
-    obj.label39:setAlign("left");
-    obj.label39:setWidth(70);
-    obj.label39:setText("TIPOS");
-    obj.label39:setName("label39");
-    obj.label39:setFontColor("white");
-    lfm_setPropAsString(obj.label39, "fontStyle",  "bold");
-    obj.label39:setFontFamily("Cambria");
+    obj.label34 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label34:setParent(obj.rectangle7);
+    obj.label34:setAlign("left");
+    obj.label34:setWidth(70);
+    obj.label34:setText("TIPOS");
+    obj.label34:setName("label34");
+    obj.label34:setFontColor("white");
+    lfm_setPropAsString(obj.label34, "fontStyle",  "bold");
+    obj.label34:setFontFamily("Cambria");
 
-    obj.label40 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label40:setParent(obj.rectangle7);
-    obj.label40:setAlign("left");
-    obj.label40:setWidth(57);
-    obj.label40:setText("RANK");
-    obj.label40:setName("label40");
-    obj.label40:setFontColor("white");
-    lfm_setPropAsString(obj.label40, "fontStyle",  "bold");
-    obj.label40:setFontFamily("Cambria");
+    obj.label35 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label35:setParent(obj.rectangle7);
+    obj.label35:setAlign("left");
+    obj.label35:setWidth(57);
+    obj.label35:setText("RANK");
+    obj.label35:setName("label35");
+    obj.label35:setFontColor("white");
+    lfm_setPropAsString(obj.label35, "fontStyle",  "bold");
+    obj.label35:setFontFamily("Cambria");
 
-    obj.label41 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label41:setParent(obj.rectangle7);
-    obj.label41:setAlign("left");
-    obj.label41:setWidth(90);
-    obj.label41:setText("ATRIBUTO");
-    obj.label41:setName("label41");
-    obj.label41:setFontColor("white");
-    lfm_setPropAsString(obj.label41, "fontStyle",  "bold");
-    obj.label41:setFontFamily("Cambria");
+    obj.label36 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label36:setParent(obj.rectangle7);
+    obj.label36:setAlign("left");
+    obj.label36:setWidth(90);
+    obj.label36:setText("ATRIBUTO");
+    obj.label36:setName("label36");
+    obj.label36:setFontColor("white");
+    lfm_setPropAsString(obj.label36, "fontStyle",  "bold");
+    obj.label36:setFontFamily("Cambria");
 
-    obj.label42 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label42:setParent(obj.rectangle7);
-    obj.label42:setAlign("left");
-    obj.label42:setWidth(105);
-    obj.label42:setText("ROLAGEM");
-    obj.label42:setName("label42");
-    obj.label42:setFontColor("white");
-    lfm_setPropAsString(obj.label42, "fontStyle",  "bold");
-    obj.label42:setFontFamily("Cambria");
+    obj.label37 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label37:setParent(obj.rectangle7);
+    obj.label37:setAlign("left");
+    obj.label37:setWidth(105);
+    obj.label37:setText("ROLAGEM");
+    obj.label37:setName("label37");
+    obj.label37:setFontColor("white");
+    lfm_setPropAsString(obj.label37, "fontStyle",  "bold");
+    obj.label37:setFontFamily("Cambria");
 
     obj.button6 = GUI.fromHandle(_obj_newObject("button"));
     obj.button6:setParent(obj.rectangle7);
@@ -1504,16 +1504,16 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout20:setMargins({top=60, left=20, bottom=15});
     obj.layout20:setName("layout20");
 
-    obj.label43 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label43:setParent(obj.layout20);
-    obj.label43:setAlign("left");
-    obj.label43:setText("I N I C I A T I V A");
-    obj.label43:setWidth(160);
-    obj.label43:setFontSize(20);
-    obj.label43:setFontFamily("Constantia");
-    obj.label43:setName("label43");
-    obj.label43:setFontColor("white");
-    lfm_setPropAsString(obj.label43, "fontStyle",  "bold");
+    obj.label38 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label38:setParent(obj.layout20);
+    obj.label38:setAlign("left");
+    obj.label38:setText("I N I C I A T I V A");
+    obj.label38:setWidth(160);
+    obj.label38:setFontSize(20);
+    obj.label38:setFontFamily("Constantia");
+    obj.label38:setName("label38");
+    obj.label38:setFontColor("white");
+    lfm_setPropAsString(obj.label38, "fontStyle",  "bold");
 
     obj.horzLine4 = GUI.fromHandle(_obj_newObject("horzLine"));
     obj.horzLine4:setParent(obj.layout20);
@@ -1535,7 +1535,7 @@ local function constructNew_frmOurFichaL5R4e()
     obj.popImagemFundo:setParent(obj.flowPart7);
     obj.popImagemFundo:setName("popImagemFundo");
     obj.popImagemFundo:setWidth(260);
-    obj.popImagemFundo:setHeight(80);
+    obj.popImagemFundo:setHeight(175);
     obj.popImagemFundo:setBackOpacity(0);
     obj.popImagemFundo:setDrawContainer(false);
 
@@ -1549,15 +1549,15 @@ local function constructNew_frmOurFichaL5R4e()
     obj.rectangle10:setCornerType("bevel");
     obj.rectangle10:setName("rectangle10");
 
-    obj.label44 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label44:setParent(obj.rectangle10);
-    obj.label44:setAlign("top");
-    obj.label44:setText("I M A G E M  D E  F U N D O");
-    obj.label44:setMargins({bottom=5});
-    lfm_setPropAsString(obj.label44, "fontStyle",  "bold");
-    obj.label44:setFontFamily("Constantia");
-    obj.label44:setName("label44");
-    obj.label44:setFontColor("white");
+    obj.label39 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label39:setParent(obj.rectangle10);
+    obj.label39:setAlign("top");
+    obj.label39:setText("V A L O R E S  O P C I O N A I S");
+    obj.label39:setMargins({bottom=5});
+    lfm_setPropAsString(obj.label39, "fontStyle",  "bold");
+    obj.label39:setFontFamily("Constantia");
+    obj.label39:setName("label39");
+    obj.label39:setFontColor("white");
 
     obj.horzLine5 = GUI.fromHandle(_obj_newObject("horzLine"));
     obj.horzLine5:setParent(obj.rectangle10);
@@ -1566,16 +1566,65 @@ local function constructNew_frmOurFichaL5R4e()
     obj.horzLine5:setStrokeColor("#424242");
     obj.horzLine5:setName("horzLine5");
 
-    obj.edit20 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit20:setParent(obj.rectangle10);
-    obj.edit20:setAlign("client");
-    obj.edit20:setPadding({top=10, left=10, bottom=10, right=10});
-    obj.edit20:setTransparent(false);
-    obj.edit20:setField("URLImagemFundo");
-    obj.edit20:setWidth(240);
-    obj.edit20:setName("edit20");
-    obj.edit20:setFontColor("#cdcdcd");
-    obj.edit20:setFontFamily("Cambria");
+    obj.checkBox1 = GUI.fromHandle(_obj_newObject("checkBox"));
+    obj.checkBox1:setParent(obj.rectangle10);
+    obj.checkBox1:setAlign("top");
+    obj.checkBox1:setText("Mácula");
+    obj.checkBox1:setMargins({bottom=5, top=5});
+    lfm_setPropAsString(obj.checkBox1, "fontStyle",  "bold");
+    obj.checkBox1:setFontFamily("Constantia");
+    obj.checkBox1:setField("mostraMacula");
+    obj.checkBox1:setName("checkBox1");
+    obj.checkBox1:setFontColor("white");
+
+    obj.dataLink37 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink37:setParent(obj.rectangle10);
+    obj.dataLink37:setField("mostraMacula");
+    obj.dataLink37:setName("dataLink37");
+
+    obj.checkBox2 = GUI.fromHandle(_obj_newObject("checkBox"));
+    obj.checkBox2:setParent(obj.rectangle10);
+    obj.checkBox2:setAlign("top");
+    obj.checkBox2:setText("Karma");
+    obj.checkBox2:setMargins({bottom=5, top=5});
+    lfm_setPropAsString(obj.checkBox2, "fontStyle",  "bold");
+    obj.checkBox2:setFontFamily("Constantia");
+    obj.checkBox2:setField("mostraKarma");
+    obj.checkBox2:setName("checkBox2");
+    obj.checkBox2:setFontColor("white");
+
+    obj.dataLink38 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink38:setParent(obj.rectangle10);
+    obj.dataLink38:setField("mostraKarma");
+    obj.dataLink38:setName("dataLink38");
+
+    obj.label40 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label40:setParent(obj.rectangle10);
+    obj.label40:setAlign("top");
+    obj.label40:setText("I M A G E M  D E  F U N D O");
+    obj.label40:setMargins({bottom=5, top=10});
+    lfm_setPropAsString(obj.label40, "fontStyle",  "bold");
+    obj.label40:setFontFamily("Constantia");
+    obj.label40:setName("label40");
+    obj.label40:setFontColor("white");
+
+    obj.horzLine6 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine6:setParent(obj.rectangle10);
+    obj.horzLine6:setAlign("top");
+    obj.horzLine6:setMargins({bottom=5});
+    obj.horzLine6:setStrokeColor("#424242");
+    obj.horzLine6:setName("horzLine6");
+
+    obj.edit15 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit15:setParent(obj.rectangle10);
+    obj.edit15:setAlign("client");
+    obj.edit15:setPadding({top=10, left=10, bottom=10, right=10});
+    obj.edit15:setTransparent(false);
+    obj.edit15:setField("URLImagemFundo");
+    obj.edit15:setWidth(240);
+    obj.edit15:setName("edit15");
+    obj.edit15:setFontColor("#cdcdcd");
+    obj.edit15:setFontFamily("Cambria");
 
     obj.layout21 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout21:setParent(obj.flowPart7);
@@ -1602,26 +1651,26 @@ local function constructNew_frmOurFichaL5R4e()
     obj.rectangle11:setColor("black");
     obj.rectangle11:setName("rectangle11");
 
-    obj.label45 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label45:setParent(obj.rectangle11);
-    obj.label45:setField("nivelSb");
-    obj.label45:setHorzTextAlign("center");
-    obj.label45:setAlign("client");
-    obj.label45:setName("label45");
-    obj.label45:setFontColor("white");
-    lfm_setPropAsString(obj.label45, "fontStyle",  "bold");
-    obj.label45:setFontFamily("Cambria");
+    obj.label41 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label41:setParent(obj.rectangle11);
+    obj.label41:setField("nivelSb");
+    obj.label41:setHorzTextAlign("center");
+    obj.label41:setAlign("client");
+    obj.label41:setName("label41");
+    obj.label41:setFontColor("white");
+    lfm_setPropAsString(obj.label41, "fontStyle",  "bold");
+    obj.label41:setFontFamily("Cambria");
 
-    obj.label46 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label46:setParent(obj.layout22);
-    obj.label46:setAlign("left");
-    obj.label46:setText("Nível");
-    obj.label46:setWidth(155);
-    obj.label46:setMargins({left=35});
-    obj.label46:setName("label46");
-    obj.label46:setFontColor("white");
-    lfm_setPropAsString(obj.label46, "fontStyle",  "bold");
-    obj.label46:setFontFamily("Cambria");
+    obj.label42 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label42:setParent(obj.layout22);
+    obj.label42:setAlign("left");
+    obj.label42:setText("Nível");
+    obj.label42:setWidth(155);
+    obj.label42:setMargins({left=35});
+    obj.label42:setName("label42");
+    obj.label42:setFontColor("white");
+    lfm_setPropAsString(obj.label42, "fontStyle",  "bold");
+    obj.label42:setFontFamily("Cambria");
 
     obj.layout23 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout23:setParent(obj.layout21);
@@ -1641,26 +1690,26 @@ local function constructNew_frmOurFichaL5R4e()
     obj.rectangle12:setColor("black");
     obj.rectangle12:setName("rectangle12");
 
-    obj.label47 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label47:setParent(obj.rectangle12);
-    obj.label47:setField("reflexes");
-    obj.label47:setHorzTextAlign("center");
-    obj.label47:setAlign("client");
-    obj.label47:setName("label47");
-    obj.label47:setFontColor("white");
-    lfm_setPropAsString(obj.label47, "fontStyle",  "bold");
-    obj.label47:setFontFamily("Cambria");
+    obj.label43 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label43:setParent(obj.rectangle12);
+    obj.label43:setField("reflexes");
+    obj.label43:setHorzTextAlign("center");
+    obj.label43:setAlign("client");
+    obj.label43:setName("label43");
+    obj.label43:setFontColor("white");
+    lfm_setPropAsString(obj.label43, "fontStyle",  "bold");
+    obj.label43:setFontFamily("Cambria");
 
-    obj.label48 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label48:setParent(obj.layout23);
-    obj.label48:setAlign("left");
-    obj.label48:setText("Reflexos");
-    obj.label48:setWidth(155);
-    obj.label48:setMargins({left=35});
-    obj.label48:setName("label48");
-    obj.label48:setFontColor("white");
-    lfm_setPropAsString(obj.label48, "fontStyle",  "bold");
-    obj.label48:setFontFamily("Cambria");
+    obj.label44 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label44:setParent(obj.layout23);
+    obj.label44:setAlign("left");
+    obj.label44:setText("Reflexos");
+    obj.label44:setWidth(155);
+    obj.label44:setMargins({left=35});
+    obj.label44:setName("label44");
+    obj.label44:setFontColor("white");
+    lfm_setPropAsString(obj.label44, "fontStyle",  "bold");
+    obj.label44:setFontFamily("Cambria");
 
     obj.layout24 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout24:setParent(obj.layout21);
@@ -1668,41 +1717,118 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout24:setHeight(30);
     obj.layout24:setName("layout24");
 
+    obj.label45 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label45:setParent(obj.layout24);
+    obj.label45:setAlign("left");
+    obj.label45:setText("Modificadores:");
+    obj.label45:setWidth(100);
+    obj.label45:setName("label45");
+    obj.label45:setFontColor("white");
+    lfm_setPropAsString(obj.label45, "fontStyle",  "bold");
+    obj.label45:setFontFamily("Cambria");
+
+    obj.label46 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label46:setParent(obj.layout24);
+    obj.label46:setAlign("left");
+    obj.label46:setText("+");
+    obj.label46:setHorzTextAlign("trailing");
+    obj.label46:setWidth(15);
+    obj.label46:setName("label46");
+    obj.label46:setFontColor("white");
+    lfm_setPropAsString(obj.label46, "fontStyle",  "bold");
+    obj.label46:setFontFamily("Cambria");
+
+    obj.edit16 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit16:setParent(obj.layout24);
+    obj.edit16:setAlign("left");
+    obj.edit16:setHorzTextAlign("center");
+    obj.edit16:setWidth(25);
+    obj.edit16:setType("number");
+    obj.edit16:setField("addRolaIni");
+    obj.edit16:setName("edit16");
+    obj.edit16:setFontColor("#cdcdcd");
+    obj.edit16:setFontFamily("Cambria");
+    obj.edit16:setTransparent(true);
+
+    obj.label47 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label47:setParent(obj.layout24);
+    obj.label47:setAlign("left");
+    obj.label47:setText("k");
+    obj.label47:setWidth(15);
+    obj.label47:setHorzTextAlign("center");
+    obj.label47:setName("label47");
+    obj.label47:setFontColor("white");
+    lfm_setPropAsString(obj.label47, "fontStyle",  "bold");
+    obj.label47:setFontFamily("Cambria");
+
+    obj.edit17 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit17:setParent(obj.layout24);
+    obj.edit17:setAlign("left");
+    obj.edit17:setHorzTextAlign("center");
+    obj.edit17:setWidth(25);
+    obj.edit17:setType("number");
+    obj.edit17:setField("addMantemIni");
+    obj.edit17:setName("edit17");
+    obj.edit17:setFontColor("#cdcdcd");
+    obj.edit17:setFontFamily("Cambria");
+    obj.edit17:setTransparent(true);
+
+    obj.label48 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label48:setParent(obj.layout24);
+    obj.label48:setAlign("left");
+    obj.label48:setText("+");
+    obj.label48:setWidth(10);
+    obj.label48:setName("label48");
+    obj.label48:setFontColor("white");
+    lfm_setPropAsString(obj.label48, "fontStyle",  "bold");
+    obj.label48:setFontFamily("Cambria");
+
+    obj.edit18 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit18:setParent(obj.layout24);
+    obj.edit18:setAlign("left");
+    obj.edit18:setWidth(25);
+    obj.edit18:setType("number");
+    obj.edit18:setField("addMod");
+    obj.edit18:setName("edit18");
+    obj.edit18:setFontColor("#cdcdcd");
+    obj.edit18:setFontFamily("Cambria");
+    obj.edit18:setTransparent(true);
+
+    obj.dataLink39 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink39:setParent(obj.layout24);
+    obj.dataLink39:setDefaultValue("0");
+    obj.dataLink39:setField("addMod");
+    obj.dataLink39:setName("dataLink39");
+
+    obj.layout25 = GUI.fromHandle(_obj_newObject("layout"));
+    obj.layout25:setParent(obj.layout21);
+    obj.layout25:setAlign("top");
+    obj.layout25:setHeight(30);
+    obj.layout25:setName("layout25");
+
     obj.label49 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label49:setParent(obj.layout24);
+    obj.label49:setParent(obj.layout25);
     obj.label49:setAlign("left");
-    obj.label49:setText("Modificadores:");
-    obj.label49:setWidth(100);
+    obj.label49:setText("Iniciativa Atual:");
+    obj.label49:setWidth(115);
     obj.label49:setName("label49");
     obj.label49:setFontColor("white");
     lfm_setPropAsString(obj.label49, "fontStyle",  "bold");
     obj.label49:setFontFamily("Cambria");
 
     obj.label50 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label50:setParent(obj.layout24);
+    obj.label50:setParent(obj.layout25);
     obj.label50:setAlign("left");
-    obj.label50:setText("+");
-    obj.label50:setHorzTextAlign("trailing");
-    obj.label50:setWidth(15);
+    obj.label50:setHorzTextAlign("center");
+    obj.label50:setWidth(25);
+    obj.label50:setField("rolaIni");
     obj.label50:setName("label50");
     obj.label50:setFontColor("white");
     lfm_setPropAsString(obj.label50, "fontStyle",  "bold");
     obj.label50:setFontFamily("Cambria");
 
-    obj.edit21 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit21:setParent(obj.layout24);
-    obj.edit21:setAlign("left");
-    obj.edit21:setHorzTextAlign("center");
-    obj.edit21:setWidth(25);
-    obj.edit21:setType("number");
-    obj.edit21:setField("addRolaIni");
-    obj.edit21:setName("edit21");
-    obj.edit21:setFontColor("#cdcdcd");
-    obj.edit21:setFontFamily("Cambria");
-    obj.edit21:setTransparent(true);
-
     obj.label51 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label51:setParent(obj.layout24);
+    obj.label51:setParent(obj.layout25);
     obj.label51:setAlign("left");
     obj.label51:setText("k");
     obj.label51:setWidth(15);
@@ -1712,56 +1838,22 @@ local function constructNew_frmOurFichaL5R4e()
     lfm_setPropAsString(obj.label51, "fontStyle",  "bold");
     obj.label51:setFontFamily("Cambria");
 
-    obj.edit22 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit22:setParent(obj.layout24);
-    obj.edit22:setAlign("left");
-    obj.edit22:setHorzTextAlign("center");
-    obj.edit22:setWidth(25);
-    obj.edit22:setType("number");
-    obj.edit22:setField("addMantemIni");
-    obj.edit22:setName("edit22");
-    obj.edit22:setFontColor("#cdcdcd");
-    obj.edit22:setFontFamily("Cambria");
-    obj.edit22:setTransparent(true);
-
     obj.label52 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label52:setParent(obj.layout24);
+    obj.label52:setParent(obj.layout25);
     obj.label52:setAlign("left");
-    obj.label52:setText("+");
-    obj.label52:setWidth(10);
+    obj.label52:setHorzTextAlign("center");
+    obj.label52:setWidth(25);
+    obj.label52:setField("mantemIni");
     obj.label52:setName("label52");
     obj.label52:setFontColor("white");
     lfm_setPropAsString(obj.label52, "fontStyle",  "bold");
     obj.label52:setFontFamily("Cambria");
 
-    obj.edit23 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit23:setParent(obj.layout24);
-    obj.edit23:setAlign("left");
-    obj.edit23:setWidth(25);
-    obj.edit23:setType("number");
-    obj.edit23:setField("addMod");
-    obj.edit23:setName("edit23");
-    obj.edit23:setFontColor("#cdcdcd");
-    obj.edit23:setFontFamily("Cambria");
-    obj.edit23:setTransparent(true);
-
-    obj.dataLink37 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink37:setParent(obj.layout24);
-    obj.dataLink37:setDefaultValue("0");
-    obj.dataLink37:setField("addMod");
-    obj.dataLink37:setName("dataLink37");
-
-    obj.layout25 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.layout25:setParent(obj.layout21);
-    obj.layout25:setAlign("top");
-    obj.layout25:setHeight(30);
-    obj.layout25:setName("layout25");
-
     obj.label53 = GUI.fromHandle(_obj_newObject("label"));
     obj.label53:setParent(obj.layout25);
     obj.label53:setAlign("left");
-    obj.label53:setText("Iniciativa Atual:");
-    obj.label53:setWidth(115);
+    obj.label53:setText("+");
+    obj.label53:setWidth(10);
     obj.label53:setName("label53");
     obj.label53:setFontColor("white");
     lfm_setPropAsString(obj.label53, "fontStyle",  "bold");
@@ -1770,55 +1862,12 @@ local function constructNew_frmOurFichaL5R4e()
     obj.label54 = GUI.fromHandle(_obj_newObject("label"));
     obj.label54:setParent(obj.layout25);
     obj.label54:setAlign("left");
-    obj.label54:setHorzTextAlign("center");
     obj.label54:setWidth(25);
-    obj.label54:setField("rolaIni");
+    obj.label54:setField("addMod");
     obj.label54:setName("label54");
     obj.label54:setFontColor("white");
     lfm_setPropAsString(obj.label54, "fontStyle",  "bold");
     obj.label54:setFontFamily("Cambria");
-
-    obj.label55 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label55:setParent(obj.layout25);
-    obj.label55:setAlign("left");
-    obj.label55:setText("k");
-    obj.label55:setWidth(15);
-    obj.label55:setHorzTextAlign("center");
-    obj.label55:setName("label55");
-    obj.label55:setFontColor("white");
-    lfm_setPropAsString(obj.label55, "fontStyle",  "bold");
-    obj.label55:setFontFamily("Cambria");
-
-    obj.label56 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label56:setParent(obj.layout25);
-    obj.label56:setAlign("left");
-    obj.label56:setHorzTextAlign("center");
-    obj.label56:setWidth(25);
-    obj.label56:setField("mantemIni");
-    obj.label56:setName("label56");
-    obj.label56:setFontColor("white");
-    lfm_setPropAsString(obj.label56, "fontStyle",  "bold");
-    obj.label56:setFontFamily("Cambria");
-
-    obj.label57 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label57:setParent(obj.layout25);
-    obj.label57:setAlign("left");
-    obj.label57:setText("+");
-    obj.label57:setWidth(10);
-    obj.label57:setName("label57");
-    obj.label57:setFontColor("white");
-    lfm_setPropAsString(obj.label57, "fontStyle",  "bold");
-    obj.label57:setFontFamily("Cambria");
-
-    obj.label58 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label58:setParent(obj.layout25);
-    obj.label58:setAlign("left");
-    obj.label58:setWidth(25);
-    obj.label58:setField("addMod");
-    obj.label58:setName("label58");
-    obj.label58:setFontColor("white");
-    lfm_setPropAsString(obj.label58, "fontStyle",  "bold");
-    obj.label58:setFontFamily("Cambria");
 
     obj.layout26 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout26:setParent(obj.flowPart7);
@@ -1827,23 +1876,23 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout26:setMargins({top=40, left=20, bottom=15});
     obj.layout26:setName("layout26");
 
-    obj.label59 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label59:setParent(obj.layout26);
-    obj.label59:setAlign("left");
-    obj.label59:setText("A R M A D U R A");
-    obj.label59:setWidth(160);
-    obj.label59:setFontSize(20);
-    obj.label59:setFontFamily("Constantia");
-    obj.label59:setName("label59");
-    obj.label59:setFontColor("white");
-    lfm_setPropAsString(obj.label59, "fontStyle",  "bold");
+    obj.label55 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label55:setParent(obj.layout26);
+    obj.label55:setAlign("left");
+    obj.label55:setText("A R M A D U R A");
+    obj.label55:setWidth(160);
+    obj.label55:setFontSize(20);
+    obj.label55:setFontFamily("Constantia");
+    obj.label55:setName("label55");
+    obj.label55:setFontColor("white");
+    lfm_setPropAsString(obj.label55, "fontStyle",  "bold");
 
-    obj.horzLine6 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine6:setParent(obj.layout26);
-    obj.horzLine6:setAlign("client");
-    obj.horzLine6:setMargins({right=20, top=14});
-    obj.horzLine6:setStrokeColor("#424242");
-    obj.horzLine6:setName("horzLine6");
+    obj.horzLine7 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine7:setParent(obj.layout26);
+    obj.horzLine7:setAlign("client");
+    obj.horzLine7:setMargins({right=20, top=14});
+    obj.horzLine7:setStrokeColor("#424242");
+    obj.horzLine7:setName("horzLine7");
 
     obj.layout27 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout27:setParent(obj.flowPart7);
@@ -1858,30 +1907,30 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout28:setHeight(30);
     obj.layout28:setName("layout28");
 
-    obj.label60 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label60:setParent(obj.layout28);
-    obj.label60:setAlign("left");
-    obj.label60:setText("Tipo:");
-    obj.label60:setWidth(80);
-    obj.label60:setName("label60");
-    obj.label60:setFontColor("white");
-    lfm_setPropAsString(obj.label60, "fontStyle",  "bold");
-    obj.label60:setFontFamily("Cambria");
+    obj.label56 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label56:setParent(obj.layout28);
+    obj.label56:setAlign("left");
+    obj.label56:setText("Tipo:");
+    obj.label56:setWidth(80);
+    obj.label56:setName("label56");
+    obj.label56:setFontColor("white");
+    lfm_setPropAsString(obj.label56, "fontStyle",  "bold");
+    obj.label56:setFontFamily("Cambria");
 
-    obj.edit24 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit24:setParent(obj.layout28);
-    obj.edit24:setAlign("client");
-    obj.edit24:setField("tipoArmadura");
-    obj.edit24:setName("edit24");
-    obj.edit24:setFontColor("#cdcdcd");
-    obj.edit24:setFontFamily("Cambria");
-    obj.edit24:setTransparent(true);
+    obj.edit19 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit19:setParent(obj.layout28);
+    obj.edit19:setAlign("client");
+    obj.edit19:setField("tipoArmadura");
+    obj.edit19:setName("edit19");
+    obj.edit19:setFontColor("#cdcdcd");
+    obj.edit19:setFontFamily("Cambria");
+    obj.edit19:setTransparent(true);
 
-    obj.dataLink38 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink38:setParent(obj.layout28);
-    obj.dataLink38:setField("tipoArmadura");
-    obj.dataLink38:setDefaultValue("—");
-    obj.dataLink38:setName("dataLink38");
+    obj.dataLink40 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink40:setParent(obj.layout28);
+    obj.dataLink40:setField("tipoArmadura");
+    obj.dataLink40:setDefaultValue("—");
+    obj.dataLink40:setName("dataLink40");
 
     obj.layout29 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout29:setParent(obj.layout27);
@@ -1889,31 +1938,31 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout29:setHeight(30);
     obj.layout29:setName("layout29");
 
-    obj.label61 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label61:setParent(obj.layout29);
-    obj.label61:setAlign("left");
-    obj.label61:setText("Bônus:");
-    obj.label61:setWidth(80);
-    obj.label61:setName("label61");
-    obj.label61:setFontColor("white");
-    lfm_setPropAsString(obj.label61, "fontStyle",  "bold");
-    obj.label61:setFontFamily("Cambria");
+    obj.label57 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label57:setParent(obj.layout29);
+    obj.label57:setAlign("left");
+    obj.label57:setText("Bônus:");
+    obj.label57:setWidth(80);
+    obj.label57:setName("label57");
+    obj.label57:setFontColor("white");
+    lfm_setPropAsString(obj.label57, "fontStyle",  "bold");
+    obj.label57:setFontFamily("Cambria");
 
-    obj.edit25 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit25:setParent(obj.layout29);
-    obj.edit25:setAlign("client");
-    obj.edit25:setField("bonusNA");
-    obj.edit25:setType("number");
-    obj.edit25:setName("edit25");
-    obj.edit25:setFontColor("#cdcdcd");
-    obj.edit25:setFontFamily("Cambria");
-    obj.edit25:setTransparent(true);
+    obj.edit20 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit20:setParent(obj.layout29);
+    obj.edit20:setAlign("client");
+    obj.edit20:setField("bonusNA");
+    obj.edit20:setType("number");
+    obj.edit20:setName("edit20");
+    obj.edit20:setFontColor("#cdcdcd");
+    obj.edit20:setFontFamily("Cambria");
+    obj.edit20:setTransparent(true);
 
-    obj.dataLink39 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink39:setParent(obj.layout29);
-    obj.dataLink39:setField("bonusNA");
-    obj.dataLink39:setDefaultValue("0");
-    obj.dataLink39:setName("dataLink39");
+    obj.dataLink41 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink41:setParent(obj.layout29);
+    obj.dataLink41:setField("bonusNA");
+    obj.dataLink41:setDefaultValue("0");
+    obj.dataLink41:setName("dataLink41");
 
     obj.layout30 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout30:setParent(obj.layout27);
@@ -1921,31 +1970,31 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout30:setHeight(30);
     obj.layout30:setName("layout30");
 
-    obj.label62 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label62:setParent(obj.layout30);
-    obj.label62:setAlign("left");
-    obj.label62:setText("Redução:");
-    obj.label62:setWidth(80);
-    obj.label62:setName("label62");
-    obj.label62:setFontColor("white");
-    lfm_setPropAsString(obj.label62, "fontStyle",  "bold");
-    obj.label62:setFontFamily("Cambria");
+    obj.label58 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label58:setParent(obj.layout30);
+    obj.label58:setAlign("left");
+    obj.label58:setText("Redução:");
+    obj.label58:setWidth(80);
+    obj.label58:setName("label58");
+    obj.label58:setFontColor("white");
+    lfm_setPropAsString(obj.label58, "fontStyle",  "bold");
+    obj.label58:setFontFamily("Cambria");
 
-    obj.edit26 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit26:setParent(obj.layout30);
-    obj.edit26:setAlign("client");
-    obj.edit26:setField("Reducao");
-    obj.edit26:setType("number");
-    obj.edit26:setName("edit26");
-    obj.edit26:setFontColor("#cdcdcd");
-    obj.edit26:setFontFamily("Cambria");
-    obj.edit26:setTransparent(true);
+    obj.edit21 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit21:setParent(obj.layout30);
+    obj.edit21:setAlign("client");
+    obj.edit21:setField("Reducao");
+    obj.edit21:setType("number");
+    obj.edit21:setName("edit21");
+    obj.edit21:setFontColor("#cdcdcd");
+    obj.edit21:setFontFamily("Cambria");
+    obj.edit21:setTransparent(true);
 
-    obj.dataLink40 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink40:setParent(obj.layout30);
-    obj.dataLink40:setField("Reducao");
-    obj.dataLink40:setDefaultValue("0");
-    obj.dataLink40:setName("dataLink40");
+    obj.dataLink42 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink42:setParent(obj.layout30);
+    obj.dataLink42:setField("Reducao");
+    obj.dataLink42:setDefaultValue("0");
+    obj.dataLink42:setName("dataLink42");
 
     obj.layout31 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout31:setParent(obj.layout27);
@@ -1953,24 +2002,24 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout31:setHeight(30);
     obj.layout31:setName("layout31");
 
-    obj.label63 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label63:setParent(obj.layout31);
-    obj.label63:setAlign("left");
-    obj.label63:setText("NA Atual:");
-    obj.label63:setWidth(80);
-    obj.label63:setName("label63");
-    obj.label63:setFontColor("white");
-    lfm_setPropAsString(obj.label63, "fontStyle",  "bold");
-    obj.label63:setFontFamily("Cambria");
+    obj.label59 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label59:setParent(obj.layout31);
+    obj.label59:setAlign("left");
+    obj.label59:setText("NA Atual:");
+    obj.label59:setWidth(80);
+    obj.label59:setName("label59");
+    obj.label59:setFontColor("white");
+    lfm_setPropAsString(obj.label59, "fontStyle",  "bold");
+    obj.label59:setFontFamily("Cambria");
 
-    obj.label64 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label64:setParent(obj.layout31);
-    obj.label64:setAlign("left");
-    obj.label64:setField("NA");
-    obj.label64:setName("label64");
-    obj.label64:setFontColor("white");
-    lfm_setPropAsString(obj.label64, "fontStyle",  "bold");
-    obj.label64:setFontFamily("Cambria");
+    obj.label60 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label60:setParent(obj.layout31);
+    obj.label60:setAlign("left");
+    obj.label60:setField("NA");
+    obj.label60:setName("label60");
+    obj.label60:setFontColor("white");
+    lfm_setPropAsString(obj.label60, "fontStyle",  "bold");
+    obj.label60:setFontFamily("Cambria");
 
     obj.layout32 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout32:setParent(obj.flowPart7);
@@ -1979,23 +2028,23 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout32:setMargins({top=40, left=20, bottom=15});
     obj.layout32:setName("layout32");
 
-    obj.label65 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label65:setParent(obj.layout32);
-    obj.label65:setAlign("left");
-    obj.label65:setText("F E R I M E N T O S");
-    obj.label65:setWidth(180);
-    obj.label65:setFontSize(20);
-    obj.label65:setFontFamily("Constantia");
-    obj.label65:setName("label65");
-    obj.label65:setFontColor("white");
-    lfm_setPropAsString(obj.label65, "fontStyle",  "bold");
+    obj.label61 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label61:setParent(obj.layout32);
+    obj.label61:setAlign("left");
+    obj.label61:setText("F E R I M E N T O S");
+    obj.label61:setWidth(180);
+    obj.label61:setFontSize(20);
+    obj.label61:setFontFamily("Constantia");
+    obj.label61:setName("label61");
+    obj.label61:setFontColor("white");
+    lfm_setPropAsString(obj.label61, "fontStyle",  "bold");
 
-    obj.horzLine7 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine7:setParent(obj.layout32);
-    obj.horzLine7:setAlign("client");
-    obj.horzLine7:setMargins({right=20, top=14});
-    obj.horzLine7:setStrokeColor("#424242");
-    obj.horzLine7:setName("horzLine7");
+    obj.horzLine8 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine8:setParent(obj.layout32);
+    obj.horzLine8:setAlign("client");
+    obj.horzLine8:setMargins({right=20, top=14});
+    obj.horzLine8:setStrokeColor("#424242");
+    obj.horzLine8:setName("horzLine8");
 
     obj.layout33 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout33:setParent(obj.flowPart7);
@@ -2020,36 +2069,36 @@ local function constructNew_frmOurFichaL5R4e()
     obj.rectangle13:setColor("black");
     obj.rectangle13:setName("rectangle13");
 
-    obj.label66 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label66:setParent(obj.rectangle13);
-    obj.label66:setAlign("left");
-    obj.label66:setText("NÍVEL");
-    obj.label66:setWidth(97);
-    obj.label66:setMargins({left=5});
-    obj.label66:setName("label66");
-    obj.label66:setFontColor("white");
-    lfm_setPropAsString(obj.label66, "fontStyle",  "bold");
-    obj.label66:setFontFamily("Cambria");
+    obj.label62 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label62:setParent(obj.rectangle13);
+    obj.label62:setAlign("left");
+    obj.label62:setText("NÍVEL");
+    obj.label62:setWidth(97);
+    obj.label62:setMargins({left=5});
+    obj.label62:setName("label62");
+    obj.label62:setFontColor("white");
+    lfm_setPropAsString(obj.label62, "fontStyle",  "bold");
+    obj.label62:setFontFamily("Cambria");
 
-    obj.label67 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label67:setParent(obj.rectangle13);
-    obj.label67:setAlign("left");
-    obj.label67:setText("PEN.");
-    obj.label67:setWidth(50);
-    obj.label67:setName("label67");
-    obj.label67:setFontColor("white");
-    lfm_setPropAsString(obj.label67, "fontStyle",  "bold");
-    obj.label67:setFontFamily("Cambria");
+    obj.label63 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label63:setParent(obj.rectangle13);
+    obj.label63:setAlign("left");
+    obj.label63:setText("PEN.");
+    obj.label63:setWidth(50);
+    obj.label63:setName("label63");
+    obj.label63:setFontColor("white");
+    lfm_setPropAsString(obj.label63, "fontStyle",  "bold");
+    obj.label63:setFontFamily("Cambria");
 
-    obj.label68 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label68:setParent(obj.rectangle13);
-    obj.label68:setAlign("left");
-    obj.label68:setText("FERIMENTOS");
-    obj.label68:setWidth(80);
-    obj.label68:setName("label68");
-    obj.label68:setFontColor("white");
-    lfm_setPropAsString(obj.label68, "fontStyle",  "bold");
-    obj.label68:setFontFamily("Cambria");
+    obj.label64 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label64:setParent(obj.rectangle13);
+    obj.label64:setAlign("left");
+    obj.label64:setText("FERIMENTOS");
+    obj.label64:setWidth(80);
+    obj.label64:setName("label64");
+    obj.label64:setFontColor("white");
+    lfm_setPropAsString(obj.label64, "fontStyle",  "bold");
+    obj.label64:setFontFamily("Cambria");
 
     obj.btnFeri = GUI.fromHandle(_obj_newObject("button"));
     obj.btnFeri:setParent(obj.rectangle13);
@@ -2076,49 +2125,29 @@ local function constructNew_frmOurFichaL5R4e()
     obj.rectangle14:setCornerType("bevel");
     obj.rectangle14:setName("rectangle14");
 
-    obj.label69 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label69:setParent(obj.rectangle14);
-    obj.label69:setAlign("top");
-    obj.label69:setText("C O N F I G U R A Ç Õ E S");
-    obj.label69:setMargins({bottom=5});
-    lfm_setPropAsString(obj.label69, "fontStyle",  "bold");
-    obj.label69:setFontFamily("Constantia");
-    obj.label69:setName("label69");
-    obj.label69:setFontColor("white");
+    obj.label65 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label65:setParent(obj.rectangle14);
+    obj.label65:setAlign("top");
+    obj.label65:setText("C O N F I G U R A Ç Õ E S");
+    obj.label65:setMargins({bottom=5});
+    lfm_setPropAsString(obj.label65, "fontStyle",  "bold");
+    obj.label65:setFontFamily("Constantia");
+    obj.label65:setName("label65");
+    obj.label65:setFontColor("white");
 
-    obj.horzLine8 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine8:setParent(obj.rectangle14);
-    obj.horzLine8:setAlign("top");
-    obj.horzLine8:setMargins({bottom=5});
-    obj.horzLine8:setStrokeColor("#424242");
-    obj.horzLine8:setName("horzLine8");
-
-    obj.checkBox1 = GUI.fromHandle(_obj_newObject("checkBox"));
-    obj.checkBox1:setParent(obj.rectangle14);
-    obj.checkBox1:setAlign("top");
-    obj.checkBox1:setHeight(30);
-    obj.checkBox1:setText("Permanent Wound");
-    obj.checkBox1:setField("PWound");
-    obj.checkBox1:setName("checkBox1");
-    obj.checkBox1:setFontColor("white");
-    obj.checkBox1:setFontFamily("Cambria");
-
-    obj.checkBox2 = GUI.fromHandle(_obj_newObject("checkBox"));
-    obj.checkBox2:setParent(obj.rectangle14);
-    obj.checkBox2:setAlign("top");
-    obj.checkBox2:setHeight(30);
-    obj.checkBox2:setText("Bad Health");
-    obj.checkBox2:setField("BHealth");
-    obj.checkBox2:setName("checkBox2");
-    obj.checkBox2:setFontColor("white");
-    obj.checkBox2:setFontFamily("Cambria");
+    obj.horzLine9 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine9:setParent(obj.rectangle14);
+    obj.horzLine9:setAlign("top");
+    obj.horzLine9:setMargins({bottom=5});
+    obj.horzLine9:setStrokeColor("#424242");
+    obj.horzLine9:setName("horzLine9");
 
     obj.checkBox3 = GUI.fromHandle(_obj_newObject("checkBox"));
     obj.checkBox3:setParent(obj.rectangle14);
     obj.checkBox3:setAlign("top");
     obj.checkBox3:setHeight(30);
-    obj.checkBox3:setText("Low Pain Threshold");
-    obj.checkBox3:setField("LPThold");
+    obj.checkBox3:setText("Permanent Wound");
+    obj.checkBox3:setField("PWound");
     obj.checkBox3:setName("checkBox3");
     obj.checkBox3:setFontColor("white");
     obj.checkBox3:setFontFamily("Cambria");
@@ -2127,8 +2156,8 @@ local function constructNew_frmOurFichaL5R4e()
     obj.checkBox4:setParent(obj.rectangle14);
     obj.checkBox4:setAlign("top");
     obj.checkBox4:setHeight(30);
-    obj.checkBox4:setText("Strength of the Earth");
-    obj.checkBox4:setField("SotEarth");
+    obj.checkBox4:setText("Bad Health");
+    obj.checkBox4:setField("BHealth");
     obj.checkBox4:setName("checkBox4");
     obj.checkBox4:setFontColor("white");
     obj.checkBox4:setFontFamily("Cambria");
@@ -2137,11 +2166,31 @@ local function constructNew_frmOurFichaL5R4e()
     obj.checkBox5:setParent(obj.rectangle14);
     obj.checkBox5:setAlign("top");
     obj.checkBox5:setHeight(30);
-    obj.checkBox5:setText("Quick Healer");
-    obj.checkBox5:setField("QHealer");
+    obj.checkBox5:setText("Low Pain Threshold");
+    obj.checkBox5:setField("LPThold");
     obj.checkBox5:setName("checkBox5");
     obj.checkBox5:setFontColor("white");
     obj.checkBox5:setFontFamily("Cambria");
+
+    obj.checkBox6 = GUI.fromHandle(_obj_newObject("checkBox"));
+    obj.checkBox6:setParent(obj.rectangle14);
+    obj.checkBox6:setAlign("top");
+    obj.checkBox6:setHeight(30);
+    obj.checkBox6:setText("Strength of the Earth");
+    obj.checkBox6:setField("SotEarth");
+    obj.checkBox6:setName("checkBox6");
+    obj.checkBox6:setFontColor("white");
+    obj.checkBox6:setFontFamily("Cambria");
+
+    obj.checkBox7 = GUI.fromHandle(_obj_newObject("checkBox"));
+    obj.checkBox7:setParent(obj.rectangle14);
+    obj.checkBox7:setAlign("top");
+    obj.checkBox7:setHeight(30);
+    obj.checkBox7:setText("Quick Healer");
+    obj.checkBox7:setField("QHealer");
+    obj.checkBox7:setName("checkBox7");
+    obj.checkBox7:setFontColor("white");
+    obj.checkBox7:setFontFamily("Cambria");
 
     obj.layout35 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout35:setParent(obj.rectangle14);
@@ -2150,31 +2199,31 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout35:setMargins({top=15});
     obj.layout35:setName("layout35");
 
-    obj.label70 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label70:setParent(obj.layout35);
-    obj.label70:setAlign("left");
-    obj.label70:setWidth(190);
-    obj.label70:setText("Multiplicador do Anel de Terra:");
-    obj.label70:setName("label70");
-    obj.label70:setFontColor("white");
-    lfm_setPropAsString(obj.label70, "fontStyle",  "bold");
-    obj.label70:setFontFamily("Cambria");
+    obj.label66 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label66:setParent(obj.layout35);
+    obj.label66:setAlign("left");
+    obj.label66:setWidth(190);
+    obj.label66:setText("Multiplicador do Anel de Terra:");
+    obj.label66:setName("label66");
+    obj.label66:setFontColor("white");
+    lfm_setPropAsString(obj.label66, "fontStyle",  "bold");
+    obj.label66:setFontFamily("Cambria");
 
-    obj.edit27 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit27:setParent(obj.layout35);
-    obj.edit27:setField("lastroTerra");
-    obj.edit27:setAlign("client");
-    obj.edit27:setType("number");
-    obj.edit27:setName("edit27");
-    obj.edit27:setFontColor("#cdcdcd");
-    obj.edit27:setFontFamily("Cambria");
-    obj.edit27:setTransparent(true);
+    obj.edit22 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit22:setParent(obj.layout35);
+    obj.edit22:setField("lastroTerra");
+    obj.edit22:setAlign("client");
+    obj.edit22:setType("number");
+    obj.edit22:setName("edit22");
+    obj.edit22:setFontColor("#cdcdcd");
+    obj.edit22:setFontFamily("Cambria");
+    obj.edit22:setTransparent(true);
 
-    obj.dataLink41 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink41:setParent(obj.layout35);
-    obj.dataLink41:setField("lastroTerra");
-    obj.dataLink41:setDefaultValue("2");
-    obj.dataLink41:setName("dataLink41");
+    obj.dataLink43 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink43:setParent(obj.layout35);
+    obj.dataLink43:setField("lastroTerra");
+    obj.dataLink43:setDefaultValue("2");
+    obj.dataLink43:setName("dataLink43");
 
     obj.layout36 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout36:setParent(obj.rectangle14);
@@ -2182,31 +2231,31 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout36:setHeight(30);
     obj.layout36:setName("layout36");
 
-    obj.label71 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label71:setParent(obj.layout36);
-    obj.label71:setAlign("left");
-    obj.label71:setWidth(190);
-    obj.label71:setText("Ferimentos a mais por nível:");
-    obj.label71:setName("label71");
-    obj.label71:setFontColor("white");
-    lfm_setPropAsString(obj.label71, "fontStyle",  "bold");
-    obj.label71:setFontFamily("Cambria");
+    obj.label67 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label67:setParent(obj.layout36);
+    obj.label67:setAlign("left");
+    obj.label67:setWidth(190);
+    obj.label67:setText("Ferimentos a mais por nível:");
+    obj.label67:setName("label67");
+    obj.label67:setFontColor("white");
+    lfm_setPropAsString(obj.label67, "fontStyle",  "bold");
+    obj.label67:setFontFamily("Cambria");
 
-    obj.edit28 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit28:setParent(obj.layout36);
-    obj.edit28:setField("extraFerimentos");
-    obj.edit28:setAlign("client");
-    obj.edit28:setType("number");
-    obj.edit28:setName("edit28");
-    obj.edit28:setFontColor("#cdcdcd");
-    obj.edit28:setFontFamily("Cambria");
-    obj.edit28:setTransparent(true);
+    obj.edit23 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit23:setParent(obj.layout36);
+    obj.edit23:setField("extraFerimentos");
+    obj.edit23:setAlign("client");
+    obj.edit23:setType("number");
+    obj.edit23:setName("edit23");
+    obj.edit23:setFontColor("#cdcdcd");
+    obj.edit23:setFontFamily("Cambria");
+    obj.edit23:setTransparent(true);
 
-    obj.dataLink42 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink42:setParent(obj.layout36);
-    obj.dataLink42:setField("extraFerimentos");
-    obj.dataLink42:setDefaultValue("0");
-    obj.dataLink42:setName("dataLink42");
+    obj.dataLink44 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink44:setParent(obj.layout36);
+    obj.dataLink44:setField("extraFerimentos");
+    obj.dataLink44:setDefaultValue("0");
+    obj.dataLink44:setName("dataLink44");
 
     obj.layout37 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout37:setParent(obj.layout34);
@@ -2214,12 +2263,57 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout37:setHeight(30);
     obj.layout37:setName("layout37");
 
+    obj.label68 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label68:setParent(obj.layout37);
+    obj.label68:setAlign("left");
+    obj.label68:setWidth(100);
+    obj.label68:setText("Saudável");
+    obj.label68:setMargins({left=5});
+    obj.label68:setName("label68");
+    obj.label68:setFontColor("white");
+    lfm_setPropAsString(obj.label68, "fontStyle",  "bold");
+    obj.label68:setFontFamily("Cambria");
+
+    obj.label69 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label69:setParent(obj.layout37);
+    obj.label69:setAlign("left");
+    obj.label69:setText("+0");
+    obj.label69:setWidth(50);
+    obj.label69:setName("label69");
+    obj.label69:setFontColor("white");
+    lfm_setPropAsString(obj.label69, "fontStyle",  "bold");
+    obj.label69:setFontFamily("Cambria");
+
+    obj.label70 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label70:setParent(obj.layout37);
+    obj.label70:setAlign("left");
+    obj.label70:setFontSize(16.0);
+    obj.label70:setField("FSaud");
+    obj.label70:setWidth(35);
+    obj.label70:setHorzTextAlign("center");
+    obj.label70:setName("label70");
+    obj.label70:setFontColor("white");
+    lfm_setPropAsString(obj.label70, "fontStyle",  "bold");
+    obj.label70:setFontFamily("Cambria");
+
+    obj.label71 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label71:setParent(obj.layout37);
+    obj.label71:setAlign("left");
+    obj.label71:setText("de");
+    lfm_setPropAsString(obj.label71, "fontStyle",  "");
+    obj.label71:setFontColor("#959595");
+    obj.label71:setHorzTextAlign("center");
+    obj.label71:setWidth(40);
+    obj.label71:setName("label71");
+    obj.label71:setFontFamily("Cambria");
+
     obj.label72 = GUI.fromHandle(_obj_newObject("label"));
     obj.label72:setParent(obj.layout37);
     obj.label72:setAlign("left");
-    obj.label72:setWidth(100);
-    obj.label72:setText("Saudável");
-    obj.label72:setMargins({left=5});
+    obj.label72:setHorzTextAlign("center");
+    obj.label72:setFontSize(16.0);
+    obj.label72:setField("Saud");
+    obj.label72:setWidth(30);
     obj.label72:setName("label72");
     obj.label72:setFontColor("white");
     lfm_setPropAsString(obj.label72, "fontStyle",  "bold");
@@ -2227,60 +2321,15 @@ local function constructNew_frmOurFichaL5R4e()
 
     obj.label73 = GUI.fromHandle(_obj_newObject("label"));
     obj.label73:setParent(obj.layout37);
-    obj.label73:setAlign("left");
-    obj.label73:setText("+0");
-    obj.label73:setWidth(50);
+    obj.label73:setHorzTextAlign("trailing");
+    obj.label73:setFontSize(12.0);
+    lfm_setPropAsString(obj.label73, "fontStyle",  "");
+    obj.label73:setFontColor("#959595");
+    obj.label73:setTop(15);
+    obj.label73:setLeft(157);
+    obj.label73:setField("LSaud");
     obj.label73:setName("label73");
-    obj.label73:setFontColor("white");
-    lfm_setPropAsString(obj.label73, "fontStyle",  "bold");
     obj.label73:setFontFamily("Cambria");
-
-    obj.label74 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label74:setParent(obj.layout37);
-    obj.label74:setAlign("left");
-    obj.label74:setFontSize(16.0);
-    obj.label74:setField("FSaud");
-    obj.label74:setWidth(35);
-    obj.label74:setHorzTextAlign("center");
-    obj.label74:setName("label74");
-    obj.label74:setFontColor("white");
-    lfm_setPropAsString(obj.label74, "fontStyle",  "bold");
-    obj.label74:setFontFamily("Cambria");
-
-    obj.label75 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label75:setParent(obj.layout37);
-    obj.label75:setAlign("left");
-    obj.label75:setText("de");
-    lfm_setPropAsString(obj.label75, "fontStyle",  "");
-    obj.label75:setFontColor("#959595");
-    obj.label75:setHorzTextAlign("center");
-    obj.label75:setWidth(40);
-    obj.label75:setName("label75");
-    obj.label75:setFontFamily("Cambria");
-
-    obj.label76 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label76:setParent(obj.layout37);
-    obj.label76:setAlign("left");
-    obj.label76:setHorzTextAlign("center");
-    obj.label76:setFontSize(16.0);
-    obj.label76:setField("Saud");
-    obj.label76:setWidth(30);
-    obj.label76:setName("label76");
-    obj.label76:setFontColor("white");
-    lfm_setPropAsString(obj.label76, "fontStyle",  "bold");
-    obj.label76:setFontFamily("Cambria");
-
-    obj.label77 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label77:setParent(obj.layout37);
-    obj.label77:setHorzTextAlign("trailing");
-    obj.label77:setFontSize(12.0);
-    lfm_setPropAsString(obj.label77, "fontStyle",  "");
-    obj.label77:setFontColor("#959595");
-    obj.label77:setTop(15);
-    obj.label77:setLeft(157);
-    obj.label77:setField("LSaud");
-    obj.label77:setName("label77");
-    obj.label77:setFontFamily("Cambria");
 
     obj.layout38 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout38:setParent(obj.layout34);
@@ -2288,12 +2337,57 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout38:setHeight(30);
     obj.layout38:setName("layout38");
 
+    obj.label74 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label74:setParent(obj.layout38);
+    obj.label74:setAlign("left");
+    obj.label74:setWidth(100);
+    obj.label74:setText("Escoriado");
+    obj.label74:setMargins({left=5});
+    obj.label74:setName("label74");
+    obj.label74:setFontColor("white");
+    lfm_setPropAsString(obj.label74, "fontStyle",  "bold");
+    obj.label74:setFontFamily("Cambria");
+
+    obj.label75 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label75:setParent(obj.layout38);
+    obj.label75:setAlign("left");
+    obj.label75:setField("Escoriado");
+    obj.label75:setWidth(50);
+    obj.label75:setName("label75");
+    obj.label75:setFontColor("white");
+    lfm_setPropAsString(obj.label75, "fontStyle",  "bold");
+    obj.label75:setFontFamily("Cambria");
+
+    obj.label76 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label76:setParent(obj.layout38);
+    obj.label76:setAlign("left");
+    obj.label76:setFontSize(16.0);
+    obj.label76:setField("FEsco");
+    obj.label76:setWidth(35);
+    obj.label76:setHorzTextAlign("center");
+    obj.label76:setName("label76");
+    obj.label76:setFontColor("white");
+    lfm_setPropAsString(obj.label76, "fontStyle",  "bold");
+    obj.label76:setFontFamily("Cambria");
+
+    obj.label77 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label77:setParent(obj.layout38);
+    obj.label77:setAlign("left");
+    obj.label77:setText("de");
+    lfm_setPropAsString(obj.label77, "fontStyle",  "");
+    obj.label77:setFontColor("#959595");
+    obj.label77:setHorzTextAlign("center");
+    obj.label77:setWidth(40);
+    obj.label77:setName("label77");
+    obj.label77:setFontFamily("Cambria");
+
     obj.label78 = GUI.fromHandle(_obj_newObject("label"));
     obj.label78:setParent(obj.layout38);
     obj.label78:setAlign("left");
-    obj.label78:setWidth(100);
-    obj.label78:setText("Escoriado");
-    obj.label78:setMargins({left=5});
+    obj.label78:setHorzTextAlign("center");
+    obj.label78:setFontSize(16.0);
+    obj.label78:setField("Esco");
+    obj.label78:setWidth(30);
     obj.label78:setName("label78");
     obj.label78:setFontColor("white");
     lfm_setPropAsString(obj.label78, "fontStyle",  "bold");
@@ -2301,60 +2395,15 @@ local function constructNew_frmOurFichaL5R4e()
 
     obj.label79 = GUI.fromHandle(_obj_newObject("label"));
     obj.label79:setParent(obj.layout38);
-    obj.label79:setAlign("left");
-    obj.label79:setField("Escoriado");
-    obj.label79:setWidth(50);
+    obj.label79:setHorzTextAlign("trailing");
+    obj.label79:setFontSize(12.0);
+    lfm_setPropAsString(obj.label79, "fontStyle",  "");
+    obj.label79:setFontColor("#959595");
+    obj.label79:setTop(15);
+    obj.label79:setLeft(157);
+    obj.label79:setField("LEsco");
     obj.label79:setName("label79");
-    obj.label79:setFontColor("white");
-    lfm_setPropAsString(obj.label79, "fontStyle",  "bold");
     obj.label79:setFontFamily("Cambria");
-
-    obj.label80 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label80:setParent(obj.layout38);
-    obj.label80:setAlign("left");
-    obj.label80:setFontSize(16.0);
-    obj.label80:setField("FEsco");
-    obj.label80:setWidth(35);
-    obj.label80:setHorzTextAlign("center");
-    obj.label80:setName("label80");
-    obj.label80:setFontColor("white");
-    lfm_setPropAsString(obj.label80, "fontStyle",  "bold");
-    obj.label80:setFontFamily("Cambria");
-
-    obj.label81 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label81:setParent(obj.layout38);
-    obj.label81:setAlign("left");
-    obj.label81:setText("de");
-    lfm_setPropAsString(obj.label81, "fontStyle",  "");
-    obj.label81:setFontColor("#959595");
-    obj.label81:setHorzTextAlign("center");
-    obj.label81:setWidth(40);
-    obj.label81:setName("label81");
-    obj.label81:setFontFamily("Cambria");
-
-    obj.label82 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label82:setParent(obj.layout38);
-    obj.label82:setAlign("left");
-    obj.label82:setHorzTextAlign("center");
-    obj.label82:setFontSize(16.0);
-    obj.label82:setField("Esco");
-    obj.label82:setWidth(30);
-    obj.label82:setName("label82");
-    obj.label82:setFontColor("white");
-    lfm_setPropAsString(obj.label82, "fontStyle",  "bold");
-    obj.label82:setFontFamily("Cambria");
-
-    obj.label83 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label83:setParent(obj.layout38);
-    obj.label83:setHorzTextAlign("trailing");
-    obj.label83:setFontSize(12.0);
-    lfm_setPropAsString(obj.label83, "fontStyle",  "");
-    obj.label83:setFontColor("#959595");
-    obj.label83:setTop(15);
-    obj.label83:setLeft(157);
-    obj.label83:setField("LEsco");
-    obj.label83:setName("label83");
-    obj.label83:setFontFamily("Cambria");
 
     obj.layout39 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout39:setParent(obj.layout34);
@@ -2362,12 +2411,57 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout39:setHeight(30);
     obj.layout39:setName("layout39");
 
+    obj.label80 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label80:setParent(obj.layout39);
+    obj.label80:setAlign("left");
+    obj.label80:setWidth(100);
+    obj.label80:setText("Machucado");
+    obj.label80:setMargins({left=5});
+    obj.label80:setName("label80");
+    obj.label80:setFontColor("white");
+    lfm_setPropAsString(obj.label80, "fontStyle",  "bold");
+    obj.label80:setFontFamily("Cambria");
+
+    obj.label81 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label81:setParent(obj.layout39);
+    obj.label81:setAlign("left");
+    obj.label81:setField("Machucado");
+    obj.label81:setWidth(50);
+    obj.label81:setName("label81");
+    obj.label81:setFontColor("white");
+    lfm_setPropAsString(obj.label81, "fontStyle",  "bold");
+    obj.label81:setFontFamily("Cambria");
+
+    obj.label82 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label82:setParent(obj.layout39);
+    obj.label82:setAlign("left");
+    obj.label82:setFontSize(16.0);
+    obj.label82:setField("FMach");
+    obj.label82:setWidth(35);
+    obj.label82:setHorzTextAlign("center");
+    obj.label82:setName("label82");
+    obj.label82:setFontColor("white");
+    lfm_setPropAsString(obj.label82, "fontStyle",  "bold");
+    obj.label82:setFontFamily("Cambria");
+
+    obj.label83 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label83:setParent(obj.layout39);
+    obj.label83:setAlign("left");
+    obj.label83:setText("de");
+    lfm_setPropAsString(obj.label83, "fontStyle",  "");
+    obj.label83:setFontColor("#959595");
+    obj.label83:setHorzTextAlign("center");
+    obj.label83:setWidth(40);
+    obj.label83:setName("label83");
+    obj.label83:setFontFamily("Cambria");
+
     obj.label84 = GUI.fromHandle(_obj_newObject("label"));
     obj.label84:setParent(obj.layout39);
     obj.label84:setAlign("left");
-    obj.label84:setWidth(100);
-    obj.label84:setText("Machucado");
-    obj.label84:setMargins({left=5});
+    obj.label84:setHorzTextAlign("center");
+    obj.label84:setFontSize(16.0);
+    obj.label84:setField("Mach");
+    obj.label84:setWidth(30);
     obj.label84:setName("label84");
     obj.label84:setFontColor("white");
     lfm_setPropAsString(obj.label84, "fontStyle",  "bold");
@@ -2375,60 +2469,15 @@ local function constructNew_frmOurFichaL5R4e()
 
     obj.label85 = GUI.fromHandle(_obj_newObject("label"));
     obj.label85:setParent(obj.layout39);
-    obj.label85:setAlign("left");
-    obj.label85:setField("Machucado");
-    obj.label85:setWidth(50);
+    obj.label85:setHorzTextAlign("trailing");
+    obj.label85:setFontSize(12.0);
+    lfm_setPropAsString(obj.label85, "fontStyle",  "");
+    obj.label85:setFontColor("#959595");
+    obj.label85:setTop(15);
+    obj.label85:setLeft(157);
+    obj.label85:setField("LMach");
     obj.label85:setName("label85");
-    obj.label85:setFontColor("white");
-    lfm_setPropAsString(obj.label85, "fontStyle",  "bold");
     obj.label85:setFontFamily("Cambria");
-
-    obj.label86 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label86:setParent(obj.layout39);
-    obj.label86:setAlign("left");
-    obj.label86:setFontSize(16.0);
-    obj.label86:setField("FMach");
-    obj.label86:setWidth(35);
-    obj.label86:setHorzTextAlign("center");
-    obj.label86:setName("label86");
-    obj.label86:setFontColor("white");
-    lfm_setPropAsString(obj.label86, "fontStyle",  "bold");
-    obj.label86:setFontFamily("Cambria");
-
-    obj.label87 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label87:setParent(obj.layout39);
-    obj.label87:setAlign("left");
-    obj.label87:setText("de");
-    lfm_setPropAsString(obj.label87, "fontStyle",  "");
-    obj.label87:setFontColor("#959595");
-    obj.label87:setHorzTextAlign("center");
-    obj.label87:setWidth(40);
-    obj.label87:setName("label87");
-    obj.label87:setFontFamily("Cambria");
-
-    obj.label88 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label88:setParent(obj.layout39);
-    obj.label88:setAlign("left");
-    obj.label88:setHorzTextAlign("center");
-    obj.label88:setFontSize(16.0);
-    obj.label88:setField("Mach");
-    obj.label88:setWidth(30);
-    obj.label88:setName("label88");
-    obj.label88:setFontColor("white");
-    lfm_setPropAsString(obj.label88, "fontStyle",  "bold");
-    obj.label88:setFontFamily("Cambria");
-
-    obj.label89 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label89:setParent(obj.layout39);
-    obj.label89:setHorzTextAlign("trailing");
-    obj.label89:setFontSize(12.0);
-    lfm_setPropAsString(obj.label89, "fontStyle",  "");
-    obj.label89:setFontColor("#959595");
-    obj.label89:setTop(15);
-    obj.label89:setLeft(157);
-    obj.label89:setField("LMach");
-    obj.label89:setName("label89");
-    obj.label89:setFontFamily("Cambria");
 
     obj.layout40 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout40:setParent(obj.layout34);
@@ -2436,12 +2485,57 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout40:setHeight(30);
     obj.layout40:setName("layout40");
 
+    obj.label86 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label86:setParent(obj.layout40);
+    obj.label86:setAlign("left");
+    obj.label86:setWidth(100);
+    obj.label86:setText("Ferido");
+    obj.label86:setMargins({left=5});
+    obj.label86:setName("label86");
+    obj.label86:setFontColor("white");
+    lfm_setPropAsString(obj.label86, "fontStyle",  "bold");
+    obj.label86:setFontFamily("Cambria");
+
+    obj.label87 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label87:setParent(obj.layout40);
+    obj.label87:setAlign("left");
+    obj.label87:setField("Ferido");
+    obj.label87:setWidth(50);
+    obj.label87:setName("label87");
+    obj.label87:setFontColor("white");
+    lfm_setPropAsString(obj.label87, "fontStyle",  "bold");
+    obj.label87:setFontFamily("Cambria");
+
+    obj.label88 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label88:setParent(obj.layout40);
+    obj.label88:setAlign("left");
+    obj.label88:setFontSize(16.0);
+    obj.label88:setField("FFeri");
+    obj.label88:setWidth(35);
+    obj.label88:setHorzTextAlign("center");
+    obj.label88:setName("label88");
+    obj.label88:setFontColor("white");
+    lfm_setPropAsString(obj.label88, "fontStyle",  "bold");
+    obj.label88:setFontFamily("Cambria");
+
+    obj.label89 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label89:setParent(obj.layout40);
+    obj.label89:setAlign("left");
+    obj.label89:setText("de");
+    lfm_setPropAsString(obj.label89, "fontStyle",  "");
+    obj.label89:setFontColor("#959595");
+    obj.label89:setHorzTextAlign("center");
+    obj.label89:setWidth(40);
+    obj.label89:setName("label89");
+    obj.label89:setFontFamily("Cambria");
+
     obj.label90 = GUI.fromHandle(_obj_newObject("label"));
     obj.label90:setParent(obj.layout40);
     obj.label90:setAlign("left");
-    obj.label90:setWidth(100);
-    obj.label90:setText("Ferido");
-    obj.label90:setMargins({left=5});
+    obj.label90:setHorzTextAlign("center");
+    obj.label90:setFontSize(16.0);
+    obj.label90:setField("Feri");
+    obj.label90:setWidth(30);
     obj.label90:setName("label90");
     obj.label90:setFontColor("white");
     lfm_setPropAsString(obj.label90, "fontStyle",  "bold");
@@ -2449,60 +2543,15 @@ local function constructNew_frmOurFichaL5R4e()
 
     obj.label91 = GUI.fromHandle(_obj_newObject("label"));
     obj.label91:setParent(obj.layout40);
-    obj.label91:setAlign("left");
-    obj.label91:setField("Ferido");
-    obj.label91:setWidth(50);
+    obj.label91:setHorzTextAlign("trailing");
+    obj.label91:setFontSize(12.0);
+    lfm_setPropAsString(obj.label91, "fontStyle",  "");
+    obj.label91:setFontColor("#959595");
+    obj.label91:setTop(15);
+    obj.label91:setLeft(157);
+    obj.label91:setField("LFeri");
     obj.label91:setName("label91");
-    obj.label91:setFontColor("white");
-    lfm_setPropAsString(obj.label91, "fontStyle",  "bold");
     obj.label91:setFontFamily("Cambria");
-
-    obj.label92 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label92:setParent(obj.layout40);
-    obj.label92:setAlign("left");
-    obj.label92:setFontSize(16.0);
-    obj.label92:setField("FFeri");
-    obj.label92:setWidth(35);
-    obj.label92:setHorzTextAlign("center");
-    obj.label92:setName("label92");
-    obj.label92:setFontColor("white");
-    lfm_setPropAsString(obj.label92, "fontStyle",  "bold");
-    obj.label92:setFontFamily("Cambria");
-
-    obj.label93 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label93:setParent(obj.layout40);
-    obj.label93:setAlign("left");
-    obj.label93:setText("de");
-    lfm_setPropAsString(obj.label93, "fontStyle",  "");
-    obj.label93:setFontColor("#959595");
-    obj.label93:setHorzTextAlign("center");
-    obj.label93:setWidth(40);
-    obj.label93:setName("label93");
-    obj.label93:setFontFamily("Cambria");
-
-    obj.label94 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label94:setParent(obj.layout40);
-    obj.label94:setAlign("left");
-    obj.label94:setHorzTextAlign("center");
-    obj.label94:setFontSize(16.0);
-    obj.label94:setField("Feri");
-    obj.label94:setWidth(30);
-    obj.label94:setName("label94");
-    obj.label94:setFontColor("white");
-    lfm_setPropAsString(obj.label94, "fontStyle",  "bold");
-    obj.label94:setFontFamily("Cambria");
-
-    obj.label95 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label95:setParent(obj.layout40);
-    obj.label95:setHorzTextAlign("trailing");
-    obj.label95:setFontSize(12.0);
-    lfm_setPropAsString(obj.label95, "fontStyle",  "");
-    obj.label95:setFontColor("#959595");
-    obj.label95:setTop(15);
-    obj.label95:setLeft(157);
-    obj.label95:setField("LFeri");
-    obj.label95:setName("label95");
-    obj.label95:setFontFamily("Cambria");
 
     obj.layout41 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout41:setParent(obj.layout34);
@@ -2510,12 +2559,57 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout41:setHeight(30);
     obj.layout41:setName("layout41");
 
+    obj.label92 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label92:setParent(obj.layout41);
+    obj.label92:setAlign("left");
+    obj.label92:setWidth(100);
+    obj.label92:setText("Ser. Ferido");
+    obj.label92:setMargins({left=5});
+    obj.label92:setName("label92");
+    obj.label92:setFontColor("white");
+    lfm_setPropAsString(obj.label92, "fontStyle",  "bold");
+    obj.label92:setFontFamily("Cambria");
+
+    obj.label93 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label93:setParent(obj.layout41);
+    obj.label93:setAlign("left");
+    obj.label93:setField("SerFerido");
+    obj.label93:setWidth(50);
+    obj.label93:setName("label93");
+    obj.label93:setFontColor("white");
+    lfm_setPropAsString(obj.label93, "fontStyle",  "bold");
+    obj.label93:setFontFamily("Cambria");
+
+    obj.label94 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label94:setParent(obj.layout41);
+    obj.label94:setAlign("left");
+    obj.label94:setFontSize(16.0);
+    obj.label94:setField("FSeri");
+    obj.label94:setWidth(35);
+    obj.label94:setHorzTextAlign("center");
+    obj.label94:setName("label94");
+    obj.label94:setFontColor("white");
+    lfm_setPropAsString(obj.label94, "fontStyle",  "bold");
+    obj.label94:setFontFamily("Cambria");
+
+    obj.label95 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label95:setParent(obj.layout41);
+    obj.label95:setAlign("left");
+    obj.label95:setText("de");
+    lfm_setPropAsString(obj.label95, "fontStyle",  "");
+    obj.label95:setFontColor("#959595");
+    obj.label95:setHorzTextAlign("center");
+    obj.label95:setWidth(40);
+    obj.label95:setName("label95");
+    obj.label95:setFontFamily("Cambria");
+
     obj.label96 = GUI.fromHandle(_obj_newObject("label"));
     obj.label96:setParent(obj.layout41);
     obj.label96:setAlign("left");
-    obj.label96:setWidth(100);
-    obj.label96:setText("Ser. Ferido");
-    obj.label96:setMargins({left=5});
+    obj.label96:setHorzTextAlign("center");
+    obj.label96:setFontSize(16.0);
+    obj.label96:setField("Seri");
+    obj.label96:setWidth(30);
     obj.label96:setName("label96");
     obj.label96:setFontColor("white");
     lfm_setPropAsString(obj.label96, "fontStyle",  "bold");
@@ -2523,60 +2617,15 @@ local function constructNew_frmOurFichaL5R4e()
 
     obj.label97 = GUI.fromHandle(_obj_newObject("label"));
     obj.label97:setParent(obj.layout41);
-    obj.label97:setAlign("left");
-    obj.label97:setField("SerFerido");
-    obj.label97:setWidth(50);
+    obj.label97:setHorzTextAlign("trailing");
+    obj.label97:setFontSize(12.0);
+    lfm_setPropAsString(obj.label97, "fontStyle",  "");
+    obj.label97:setFontColor("#959595");
+    obj.label97:setTop(15);
+    obj.label97:setLeft(157);
+    obj.label97:setField("LSeri");
     obj.label97:setName("label97");
-    obj.label97:setFontColor("white");
-    lfm_setPropAsString(obj.label97, "fontStyle",  "bold");
     obj.label97:setFontFamily("Cambria");
-
-    obj.label98 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label98:setParent(obj.layout41);
-    obj.label98:setAlign("left");
-    obj.label98:setFontSize(16.0);
-    obj.label98:setField("FSeri");
-    obj.label98:setWidth(35);
-    obj.label98:setHorzTextAlign("center");
-    obj.label98:setName("label98");
-    obj.label98:setFontColor("white");
-    lfm_setPropAsString(obj.label98, "fontStyle",  "bold");
-    obj.label98:setFontFamily("Cambria");
-
-    obj.label99 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label99:setParent(obj.layout41);
-    obj.label99:setAlign("left");
-    obj.label99:setText("de");
-    lfm_setPropAsString(obj.label99, "fontStyle",  "");
-    obj.label99:setFontColor("#959595");
-    obj.label99:setHorzTextAlign("center");
-    obj.label99:setWidth(40);
-    obj.label99:setName("label99");
-    obj.label99:setFontFamily("Cambria");
-
-    obj.label100 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label100:setParent(obj.layout41);
-    obj.label100:setAlign("left");
-    obj.label100:setHorzTextAlign("center");
-    obj.label100:setFontSize(16.0);
-    obj.label100:setField("Seri");
-    obj.label100:setWidth(30);
-    obj.label100:setName("label100");
-    obj.label100:setFontColor("white");
-    lfm_setPropAsString(obj.label100, "fontStyle",  "bold");
-    obj.label100:setFontFamily("Cambria");
-
-    obj.label101 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label101:setParent(obj.layout41);
-    obj.label101:setHorzTextAlign("trailing");
-    obj.label101:setFontSize(12.0);
-    lfm_setPropAsString(obj.label101, "fontStyle",  "");
-    obj.label101:setFontColor("#959595");
-    obj.label101:setTop(15);
-    obj.label101:setLeft(157);
-    obj.label101:setField("LSeri");
-    obj.label101:setName("label101");
-    obj.label101:setFontFamily("Cambria");
 
     obj.layout42 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout42:setParent(obj.layout34);
@@ -2584,12 +2633,57 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout42:setHeight(30);
     obj.layout42:setName("layout42");
 
+    obj.label98 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label98:setParent(obj.layout42);
+    obj.label98:setAlign("left");
+    obj.label98:setWidth(100);
+    obj.label98:setText("Incapacitado");
+    obj.label98:setMargins({left=5});
+    obj.label98:setName("label98");
+    obj.label98:setFontColor("white");
+    lfm_setPropAsString(obj.label98, "fontStyle",  "bold");
+    obj.label98:setFontFamily("Cambria");
+
+    obj.label99 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label99:setParent(obj.layout42);
+    obj.label99:setAlign("left");
+    obj.label99:setField("Incapacitado");
+    obj.label99:setWidth(50);
+    obj.label99:setName("label99");
+    obj.label99:setFontColor("white");
+    lfm_setPropAsString(obj.label99, "fontStyle",  "bold");
+    obj.label99:setFontFamily("Cambria");
+
+    obj.label100 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label100:setParent(obj.layout42);
+    obj.label100:setAlign("left");
+    obj.label100:setFontSize(16.0);
+    obj.label100:setField("FInca");
+    obj.label100:setWidth(35);
+    obj.label100:setHorzTextAlign("center");
+    obj.label100:setName("label100");
+    obj.label100:setFontColor("white");
+    lfm_setPropAsString(obj.label100, "fontStyle",  "bold");
+    obj.label100:setFontFamily("Cambria");
+
+    obj.label101 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label101:setParent(obj.layout42);
+    obj.label101:setAlign("left");
+    obj.label101:setText("de");
+    lfm_setPropAsString(obj.label101, "fontStyle",  "");
+    obj.label101:setFontColor("#959595");
+    obj.label101:setHorzTextAlign("center");
+    obj.label101:setWidth(40);
+    obj.label101:setName("label101");
+    obj.label101:setFontFamily("Cambria");
+
     obj.label102 = GUI.fromHandle(_obj_newObject("label"));
     obj.label102:setParent(obj.layout42);
     obj.label102:setAlign("left");
-    obj.label102:setWidth(100);
-    obj.label102:setText("Incapacitado");
-    obj.label102:setMargins({left=5});
+    obj.label102:setHorzTextAlign("center");
+    obj.label102:setFontSize(16.0);
+    obj.label102:setField("Inca");
+    obj.label102:setWidth(30);
     obj.label102:setName("label102");
     obj.label102:setFontColor("white");
     lfm_setPropAsString(obj.label102, "fontStyle",  "bold");
@@ -2597,60 +2691,15 @@ local function constructNew_frmOurFichaL5R4e()
 
     obj.label103 = GUI.fromHandle(_obj_newObject("label"));
     obj.label103:setParent(obj.layout42);
-    obj.label103:setAlign("left");
-    obj.label103:setField("Incapacitado");
-    obj.label103:setWidth(50);
+    obj.label103:setHorzTextAlign("trailing");
+    obj.label103:setFontSize(12.0);
+    lfm_setPropAsString(obj.label103, "fontStyle",  "");
+    obj.label103:setFontColor("#959595");
+    obj.label103:setTop(15);
+    obj.label103:setLeft(157);
+    obj.label103:setField("LInca");
     obj.label103:setName("label103");
-    obj.label103:setFontColor("white");
-    lfm_setPropAsString(obj.label103, "fontStyle",  "bold");
     obj.label103:setFontFamily("Cambria");
-
-    obj.label104 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label104:setParent(obj.layout42);
-    obj.label104:setAlign("left");
-    obj.label104:setFontSize(16.0);
-    obj.label104:setField("FInca");
-    obj.label104:setWidth(35);
-    obj.label104:setHorzTextAlign("center");
-    obj.label104:setName("label104");
-    obj.label104:setFontColor("white");
-    lfm_setPropAsString(obj.label104, "fontStyle",  "bold");
-    obj.label104:setFontFamily("Cambria");
-
-    obj.label105 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label105:setParent(obj.layout42);
-    obj.label105:setAlign("left");
-    obj.label105:setText("de");
-    lfm_setPropAsString(obj.label105, "fontStyle",  "");
-    obj.label105:setFontColor("#959595");
-    obj.label105:setHorzTextAlign("center");
-    obj.label105:setWidth(40);
-    obj.label105:setName("label105");
-    obj.label105:setFontFamily("Cambria");
-
-    obj.label106 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label106:setParent(obj.layout42);
-    obj.label106:setAlign("left");
-    obj.label106:setHorzTextAlign("center");
-    obj.label106:setFontSize(16.0);
-    obj.label106:setField("Inca");
-    obj.label106:setWidth(30);
-    obj.label106:setName("label106");
-    obj.label106:setFontColor("white");
-    lfm_setPropAsString(obj.label106, "fontStyle",  "bold");
-    obj.label106:setFontFamily("Cambria");
-
-    obj.label107 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label107:setParent(obj.layout42);
-    obj.label107:setHorzTextAlign("trailing");
-    obj.label107:setFontSize(12.0);
-    lfm_setPropAsString(obj.label107, "fontStyle",  "");
-    obj.label107:setFontColor("#959595");
-    obj.label107:setTop(15);
-    obj.label107:setLeft(157);
-    obj.label107:setField("LInca");
-    obj.label107:setName("label107");
-    obj.label107:setFontFamily("Cambria");
 
     obj.layout43 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout43:setParent(obj.layout34);
@@ -2658,12 +2707,57 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout43:setHeight(30);
     obj.layout43:setName("layout43");
 
+    obj.label104 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label104:setParent(obj.layout43);
+    obj.label104:setAlign("left");
+    obj.label104:setWidth(100);
+    obj.label104:setText("Abatido");
+    obj.label104:setMargins({left=5});
+    obj.label104:setName("label104");
+    obj.label104:setFontColor("white");
+    lfm_setPropAsString(obj.label104, "fontStyle",  "bold");
+    obj.label104:setFontFamily("Cambria");
+
+    obj.label105 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label105:setParent(obj.layout43);
+    obj.label105:setAlign("left");
+    obj.label105:setField("Abatido");
+    obj.label105:setWidth(50);
+    obj.label105:setName("label105");
+    obj.label105:setFontColor("white");
+    lfm_setPropAsString(obj.label105, "fontStyle",  "bold");
+    obj.label105:setFontFamily("Cambria");
+
+    obj.label106 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label106:setParent(obj.layout43);
+    obj.label106:setAlign("left");
+    obj.label106:setFontSize(16.0);
+    obj.label106:setField("FAbat");
+    obj.label106:setWidth(35);
+    obj.label106:setHorzTextAlign("center");
+    obj.label106:setName("label106");
+    obj.label106:setFontColor("white");
+    lfm_setPropAsString(obj.label106, "fontStyle",  "bold");
+    obj.label106:setFontFamily("Cambria");
+
+    obj.label107 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label107:setParent(obj.layout43);
+    obj.label107:setAlign("left");
+    obj.label107:setText("de");
+    lfm_setPropAsString(obj.label107, "fontStyle",  "");
+    obj.label107:setFontColor("#959595");
+    obj.label107:setHorzTextAlign("center");
+    obj.label107:setWidth(40);
+    obj.label107:setName("label107");
+    obj.label107:setFontFamily("Cambria");
+
     obj.label108 = GUI.fromHandle(_obj_newObject("label"));
     obj.label108:setParent(obj.layout43);
     obj.label108:setAlign("left");
-    obj.label108:setWidth(100);
-    obj.label108:setText("Abatido");
-    obj.label108:setMargins({left=5});
+    obj.label108:setHorzTextAlign("center");
+    obj.label108:setFontSize(16.0);
+    obj.label108:setField("Abat");
+    obj.label108:setWidth(30);
     obj.label108:setName("label108");
     obj.label108:setFontColor("white");
     lfm_setPropAsString(obj.label108, "fontStyle",  "bold");
@@ -2671,60 +2765,15 @@ local function constructNew_frmOurFichaL5R4e()
 
     obj.label109 = GUI.fromHandle(_obj_newObject("label"));
     obj.label109:setParent(obj.layout43);
-    obj.label109:setAlign("left");
-    obj.label109:setField("Abatido");
-    obj.label109:setWidth(50);
+    obj.label109:setHorzTextAlign("trailing");
+    obj.label109:setFontSize(12.0);
+    lfm_setPropAsString(obj.label109, "fontStyle",  "");
+    obj.label109:setFontColor("#959595");
+    obj.label109:setTop(15);
+    obj.label109:setLeft(157);
+    obj.label109:setField("LAbat");
     obj.label109:setName("label109");
-    obj.label109:setFontColor("white");
-    lfm_setPropAsString(obj.label109, "fontStyle",  "bold");
     obj.label109:setFontFamily("Cambria");
-
-    obj.label110 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label110:setParent(obj.layout43);
-    obj.label110:setAlign("left");
-    obj.label110:setFontSize(16.0);
-    obj.label110:setField("FAbat");
-    obj.label110:setWidth(35);
-    obj.label110:setHorzTextAlign("center");
-    obj.label110:setName("label110");
-    obj.label110:setFontColor("white");
-    lfm_setPropAsString(obj.label110, "fontStyle",  "bold");
-    obj.label110:setFontFamily("Cambria");
-
-    obj.label111 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label111:setParent(obj.layout43);
-    obj.label111:setAlign("left");
-    obj.label111:setText("de");
-    lfm_setPropAsString(obj.label111, "fontStyle",  "");
-    obj.label111:setFontColor("#959595");
-    obj.label111:setHorzTextAlign("center");
-    obj.label111:setWidth(40);
-    obj.label111:setName("label111");
-    obj.label111:setFontFamily("Cambria");
-
-    obj.label112 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label112:setParent(obj.layout43);
-    obj.label112:setAlign("left");
-    obj.label112:setHorzTextAlign("center");
-    obj.label112:setFontSize(16.0);
-    obj.label112:setField("Abat");
-    obj.label112:setWidth(30);
-    obj.label112:setName("label112");
-    obj.label112:setFontColor("white");
-    lfm_setPropAsString(obj.label112, "fontStyle",  "bold");
-    obj.label112:setFontFamily("Cambria");
-
-    obj.label113 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label113:setParent(obj.layout43);
-    obj.label113:setHorzTextAlign("trailing");
-    obj.label113:setFontSize(12.0);
-    lfm_setPropAsString(obj.label113, "fontStyle",  "");
-    obj.label113:setFontColor("#959595");
-    obj.label113:setTop(15);
-    obj.label113:setLeft(157);
-    obj.label113:setField("LAbat");
-    obj.label113:setName("label113");
-    obj.label113:setFontFamily("Cambria");
 
     obj.layout44 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout44:setParent(obj.layout34);
@@ -2732,12 +2781,57 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout44:setHeight(30);
     obj.layout44:setName("layout44");
 
+    obj.label110 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label110:setParent(obj.layout44);
+    obj.label110:setAlign("left");
+    obj.label110:setWidth(100);
+    obj.label110:setText("Inconsciente");
+    obj.label110:setMargins({left=5});
+    obj.label110:setName("label110");
+    obj.label110:setFontColor("white");
+    lfm_setPropAsString(obj.label110, "fontStyle",  "bold");
+    obj.label110:setFontFamily("Cambria");
+
+    obj.label111 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label111:setParent(obj.layout44);
+    obj.label111:setAlign("left");
+    obj.label111:setText("X");
+    obj.label111:setWidth(50);
+    obj.label111:setName("label111");
+    obj.label111:setFontColor("white");
+    lfm_setPropAsString(obj.label111, "fontStyle",  "bold");
+    obj.label111:setFontFamily("Cambria");
+
+    obj.label112 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label112:setParent(obj.layout44);
+    obj.label112:setAlign("left");
+    obj.label112:setFontSize(16.0);
+    obj.label112:setField("FInco");
+    obj.label112:setWidth(35);
+    obj.label112:setHorzTextAlign("center");
+    obj.label112:setName("label112");
+    obj.label112:setFontColor("white");
+    lfm_setPropAsString(obj.label112, "fontStyle",  "bold");
+    obj.label112:setFontFamily("Cambria");
+
+    obj.label113 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label113:setParent(obj.layout44);
+    obj.label113:setAlign("left");
+    obj.label113:setText("de");
+    lfm_setPropAsString(obj.label113, "fontStyle",  "");
+    obj.label113:setFontColor("#959595");
+    obj.label113:setHorzTextAlign("center");
+    obj.label113:setWidth(40);
+    obj.label113:setName("label113");
+    obj.label113:setFontFamily("Cambria");
+
     obj.label114 = GUI.fromHandle(_obj_newObject("label"));
     obj.label114:setParent(obj.layout44);
     obj.label114:setAlign("left");
-    obj.label114:setWidth(100);
-    obj.label114:setText("Inconsciente");
-    obj.label114:setMargins({left=5});
+    obj.label114:setHorzTextAlign("center");
+    obj.label114:setFontSize(16.0);
+    obj.label114:setField("Inco");
+    obj.label114:setWidth(30);
     obj.label114:setName("label114");
     obj.label114:setFontColor("white");
     lfm_setPropAsString(obj.label114, "fontStyle",  "bold");
@@ -2745,60 +2839,15 @@ local function constructNew_frmOurFichaL5R4e()
 
     obj.label115 = GUI.fromHandle(_obj_newObject("label"));
     obj.label115:setParent(obj.layout44);
-    obj.label115:setAlign("left");
-    obj.label115:setText("X");
-    obj.label115:setWidth(50);
+    obj.label115:setHorzTextAlign("trailing");
+    obj.label115:setFontSize(12.0);
+    lfm_setPropAsString(obj.label115, "fontStyle",  "");
+    obj.label115:setFontColor("#959595");
+    obj.label115:setTop(15);
+    obj.label115:setLeft(157);
+    obj.label115:setField("LInco");
     obj.label115:setName("label115");
-    obj.label115:setFontColor("white");
-    lfm_setPropAsString(obj.label115, "fontStyle",  "bold");
     obj.label115:setFontFamily("Cambria");
-
-    obj.label116 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label116:setParent(obj.layout44);
-    obj.label116:setAlign("left");
-    obj.label116:setFontSize(16.0);
-    obj.label116:setField("FInco");
-    obj.label116:setWidth(35);
-    obj.label116:setHorzTextAlign("center");
-    obj.label116:setName("label116");
-    obj.label116:setFontColor("white");
-    lfm_setPropAsString(obj.label116, "fontStyle",  "bold");
-    obj.label116:setFontFamily("Cambria");
-
-    obj.label117 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label117:setParent(obj.layout44);
-    obj.label117:setAlign("left");
-    obj.label117:setText("de");
-    lfm_setPropAsString(obj.label117, "fontStyle",  "");
-    obj.label117:setFontColor("#959595");
-    obj.label117:setHorzTextAlign("center");
-    obj.label117:setWidth(40);
-    obj.label117:setName("label117");
-    obj.label117:setFontFamily("Cambria");
-
-    obj.label118 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label118:setParent(obj.layout44);
-    obj.label118:setAlign("left");
-    obj.label118:setHorzTextAlign("center");
-    obj.label118:setFontSize(16.0);
-    obj.label118:setField("Inco");
-    obj.label118:setWidth(30);
-    obj.label118:setName("label118");
-    obj.label118:setFontColor("white");
-    lfm_setPropAsString(obj.label118, "fontStyle",  "bold");
-    obj.label118:setFontFamily("Cambria");
-
-    obj.label119 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label119:setParent(obj.layout44);
-    obj.label119:setHorzTextAlign("trailing");
-    obj.label119:setFontSize(12.0);
-    lfm_setPropAsString(obj.label119, "fontStyle",  "");
-    obj.label119:setFontColor("#959595");
-    obj.label119:setTop(15);
-    obj.label119:setLeft(157);
-    obj.label119:setField("LInco");
-    obj.label119:setName("label119");
-    obj.label119:setFontFamily("Cambria");
 
     obj.layout45 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout45:setParent(obj.layout34);
@@ -2813,32 +2862,32 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout46:setWidth(145);
     obj.layout46:setName("layout46");
 
-    obj.label120 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label120:setParent(obj.layout46);
-    obj.label120:setAlign("left");
-    obj.label120:setText("Ferimentos:");
-    obj.label120:setWidth(75);
-    obj.label120:setMargins({left=5});
-    obj.label120:setName("label120");
-    obj.label120:setFontColor("white");
-    lfm_setPropAsString(obj.label120, "fontStyle",  "bold");
-    obj.label120:setFontFamily("Cambria");
+    obj.label116 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label116:setParent(obj.layout46);
+    obj.label116:setAlign("left");
+    obj.label116:setText("Ferimentos:");
+    obj.label116:setWidth(75);
+    obj.label116:setMargins({left=5});
+    obj.label116:setName("label116");
+    obj.label116:setFontColor("white");
+    lfm_setPropAsString(obj.label116, "fontStyle",  "bold");
+    obj.label116:setFontFamily("Cambria");
 
-    obj.edit29 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit29:setParent(obj.layout46);
-    obj.edit29:setAlign("client");
-    obj.edit29:setField("ferimentos");
-    obj.edit29:setType("number");
-    obj.edit29:setName("edit29");
-    obj.edit29:setFontColor("#cdcdcd");
-    obj.edit29:setFontFamily("Cambria");
-    obj.edit29:setTransparent(true);
+    obj.edit24 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit24:setParent(obj.layout46);
+    obj.edit24:setAlign("client");
+    obj.edit24:setField("ferimentos");
+    obj.edit24:setType("number");
+    obj.edit24:setName("edit24");
+    obj.edit24:setFontColor("#cdcdcd");
+    obj.edit24:setFontFamily("Cambria");
+    obj.edit24:setTransparent(true);
 
-    obj.dataLink43 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink43:setParent(obj.layout46);
-    obj.dataLink43:setDefaultValue("0");
-    obj.dataLink43:setField("ferimentos");
-    obj.dataLink43:setName("dataLink43");
+    obj.dataLink45 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink45:setParent(obj.layout46);
+    obj.dataLink45:setDefaultValue("0");
+    obj.dataLink45:setField("ferimentos");
+    obj.dataLink45:setName("dataLink45");
 
     obj.layout47 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout47:setParent(obj.layout45);
@@ -2846,39 +2895,39 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout47:setWidth(160);
     obj.layout47:setName("layout47");
 
-    obj.label121 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label121:setParent(obj.layout47);
-    obj.label121:setAlign("left");
-    obj.label121:setText("Regeneração:");
-    obj.label121:setWidth(85);
-    obj.label121:setName("label121");
-    obj.label121:setFontColor("white");
-    lfm_setPropAsString(obj.label121, "fontStyle",  "bold");
-    obj.label121:setFontFamily("Cambria");
+    obj.label117 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label117:setParent(obj.layout47);
+    obj.label117:setAlign("left");
+    obj.label117:setText("Regeneração:");
+    obj.label117:setWidth(85);
+    obj.label117:setName("label117");
+    obj.label117:setFontColor("white");
+    lfm_setPropAsString(obj.label117, "fontStyle",  "bold");
+    obj.label117:setFontFamily("Cambria");
 
-    obj.label122 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label122:setParent(obj.layout47);
-    obj.label122:setAlign("left");
-    obj.label122:setHorzTextAlign("center");
-    obj.label122:setField("RecuFerimento");
-    obj.label122:setWidth(20);
-    obj.label122:setName("label122");
-    obj.label122:setFontColor("white");
-    lfm_setPropAsString(obj.label122, "fontStyle",  "bold");
-    obj.label122:setFontFamily("Cambria");
+    obj.label118 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label118:setParent(obj.layout47);
+    obj.label118:setAlign("left");
+    obj.label118:setHorzTextAlign("center");
+    obj.label118:setField("RecuFerimento");
+    obj.label118:setWidth(20);
+    obj.label118:setName("label118");
+    obj.label118:setFontColor("white");
+    lfm_setPropAsString(obj.label118, "fontStyle",  "bold");
+    obj.label118:setFontFamily("Cambria");
 
-    obj.label123 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label123:setParent(obj.layout47);
-    obj.label123:setAlign("left");
-    lfm_setPropAsString(obj.label123, "fontStyle",  "");
-    obj.label123:setText("/ dia");
-    obj.label123:setName("label123");
-    obj.label123:setFontColor("white");
-    obj.label123:setFontFamily("Cambria");
+    obj.label119 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label119:setParent(obj.layout47);
+    obj.label119:setAlign("left");
+    lfm_setPropAsString(obj.label119, "fontStyle",  "");
+    obj.label119:setText("/ dia");
+    obj.label119:setName("label119");
+    obj.label119:setFontColor("white");
+    obj.label119:setFontFamily("Cambria");
 
     obj.image3 = GUI.fromHandle(_obj_newObject("image"));
     obj.image3:setParent(obj.flowPart7);
-    obj.image3:setURL("/Frames/logo.png");
+    obj.image3:setURL("./assets/Frames/logo.png");
     obj.image3:setHeight(135);
     obj.image3:setStyle("proportional");
     obj.image3:setAlign("bottom");
@@ -2979,23 +3028,23 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout48:setMargins({top=10, left=20, bottom=15});
     obj.layout48:setName("layout48");
 
-    obj.label124 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label124:setParent(obj.layout48);
-    obj.label124:setAlign("left");
-    obj.label124:setText("V A N T A G E N S");
-    obj.label124:setWidth(163);
-    obj.label124:setFontSize(20);
-    obj.label124:setFontFamily("Constantia");
-    obj.label124:setName("label124");
-    obj.label124:setFontColor("white");
-    lfm_setPropAsString(obj.label124, "fontStyle",  "bold");
+    obj.label120 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label120:setParent(obj.layout48);
+    obj.label120:setAlign("left");
+    obj.label120:setText("V A N T A G E N S");
+    obj.label120:setWidth(163);
+    obj.label120:setFontSize(20);
+    obj.label120:setFontFamily("Constantia");
+    obj.label120:setName("label120");
+    obj.label120:setFontColor("white");
+    lfm_setPropAsString(obj.label120, "fontStyle",  "bold");
 
-    obj.horzLine9 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine9:setParent(obj.layout48);
-    obj.horzLine9:setAlign("client");
-    obj.horzLine9:setMargins({right=9, top=14});
-    obj.horzLine9:setStrokeColor("#424242");
-    obj.horzLine9:setName("horzLine9");
+    obj.horzLine10 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine10:setParent(obj.layout48);
+    obj.horzLine10:setAlign("client");
+    obj.horzLine10:setMargins({right=9, top=14});
+    obj.horzLine10:setStrokeColor("#424242");
+    obj.horzLine10:setName("horzLine10");
 
     obj.rectangle16 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle16:setParent(obj.fpEsquerdaMec);
@@ -3008,35 +3057,35 @@ local function constructNew_frmOurFichaL5R4e()
     obj.rectangle16:setMargins({left=20, right=10});
     obj.rectangle16:setName("rectangle16");
 
-    obj.label125 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label125:setParent(obj.rectangle16);
-    obj.label125:setAlign("left");
-    obj.label125:setWidth(466);
-    obj.label125:setText("NOME DAS VANTAGENS");
-    obj.label125:setMargins({left=5});
-    obj.label125:setName("label125");
-    obj.label125:setFontColor("white");
-    lfm_setPropAsString(obj.label125, "fontStyle",  "bold");
-    obj.label125:setFontFamily("Cambria");
+    obj.label121 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label121:setParent(obj.rectangle16);
+    obj.label121:setAlign("left");
+    obj.label121:setWidth(466);
+    obj.label121:setText("NOME DAS VANTAGENS");
+    obj.label121:setMargins({left=5});
+    obj.label121:setName("label121");
+    obj.label121:setFontColor("white");
+    lfm_setPropAsString(obj.label121, "fontStyle",  "bold");
+    obj.label121:setFontFamily("Cambria");
 
-    obj.label126 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label126:setParent(obj.rectangle16);
-    obj.label126:setAlign("left");
-    obj.label126:setWidth(72);
-    obj.label126:setText("TIPO");
-    obj.label126:setName("label126");
-    obj.label126:setFontColor("white");
-    lfm_setPropAsString(obj.label126, "fontStyle",  "bold");
-    obj.label126:setFontFamily("Cambria");
+    obj.label122 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label122:setParent(obj.rectangle16);
+    obj.label122:setAlign("left");
+    obj.label122:setWidth(72);
+    obj.label122:setText("TIPO");
+    obj.label122:setName("label122");
+    obj.label122:setFontColor("white");
+    lfm_setPropAsString(obj.label122, "fontStyle",  "bold");
+    obj.label122:setFontFamily("Cambria");
 
-    obj.label127 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label127:setParent(obj.rectangle16);
-    obj.label127:setAlign("left");
-    obj.label127:setText("CUSTO");
-    obj.label127:setName("label127");
-    obj.label127:setFontColor("white");
-    lfm_setPropAsString(obj.label127, "fontStyle",  "bold");
-    obj.label127:setFontFamily("Cambria");
+    obj.label123 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label123:setParent(obj.rectangle16);
+    obj.label123:setAlign("left");
+    obj.label123:setText("CUSTO");
+    obj.label123:setName("label123");
+    obj.label123:setFontColor("white");
+    lfm_setPropAsString(obj.label123, "fontStyle",  "bold");
+    obj.label123:setFontFamily("Cambria");
 
     obj.button12 = GUI.fromHandle(_obj_newObject("button"));
     obj.button12:setParent(obj.rectangle16);
@@ -3061,23 +3110,23 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout49:setMargins({top=40, left=20, bottom=15});
     obj.layout49:setName("layout49");
 
-    obj.label128 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label128:setParent(obj.layout49);
-    obj.label128:setAlign("left");
-    obj.label128:setText("D E S V A N T A G E N S");
-    obj.label128:setWidth(215);
-    obj.label128:setFontSize(20);
-    obj.label128:setFontFamily("Constantia");
-    obj.label128:setName("label128");
-    obj.label128:setFontColor("white");
-    lfm_setPropAsString(obj.label128, "fontStyle",  "bold");
+    obj.label124 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label124:setParent(obj.layout49);
+    obj.label124:setAlign("left");
+    obj.label124:setText("D E S V A N T A G E N S");
+    obj.label124:setWidth(215);
+    obj.label124:setFontSize(20);
+    obj.label124:setFontFamily("Constantia");
+    obj.label124:setName("label124");
+    obj.label124:setFontColor("white");
+    lfm_setPropAsString(obj.label124, "fontStyle",  "bold");
 
-    obj.horzLine10 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine10:setParent(obj.layout49);
-    obj.horzLine10:setAlign("client");
-    obj.horzLine10:setMargins({right=9, top=14});
-    obj.horzLine10:setStrokeColor("#424242");
-    obj.horzLine10:setName("horzLine10");
+    obj.horzLine11 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine11:setParent(obj.layout49);
+    obj.horzLine11:setAlign("client");
+    obj.horzLine11:setMargins({right=9, top=14});
+    obj.horzLine11:setStrokeColor("#424242");
+    obj.horzLine11:setName("horzLine11");
 
     obj.rectangle17 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle17:setParent(obj.fpEsquerdaMec);
@@ -3090,35 +3139,35 @@ local function constructNew_frmOurFichaL5R4e()
     obj.rectangle17:setMargins({left=20, right=10});
     obj.rectangle17:setName("rectangle17");
 
-    obj.label129 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label129:setParent(obj.rectangle17);
-    obj.label129:setAlign("left");
-    obj.label129:setWidth(466);
-    obj.label129:setText("NOME DAS DESVANTAGENS");
-    obj.label129:setMargins({left=5});
-    obj.label129:setName("label129");
-    obj.label129:setFontColor("white");
-    lfm_setPropAsString(obj.label129, "fontStyle",  "bold");
-    obj.label129:setFontFamily("Cambria");
+    obj.label125 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label125:setParent(obj.rectangle17);
+    obj.label125:setAlign("left");
+    obj.label125:setWidth(466);
+    obj.label125:setText("NOME DAS DESVANTAGENS");
+    obj.label125:setMargins({left=5});
+    obj.label125:setName("label125");
+    obj.label125:setFontColor("white");
+    lfm_setPropAsString(obj.label125, "fontStyle",  "bold");
+    obj.label125:setFontFamily("Cambria");
 
-    obj.label130 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label130:setParent(obj.rectangle17);
-    obj.label130:setAlign("left");
-    obj.label130:setWidth(72);
-    obj.label130:setText("TIPO");
-    obj.label130:setName("label130");
-    obj.label130:setFontColor("white");
-    lfm_setPropAsString(obj.label130, "fontStyle",  "bold");
-    obj.label130:setFontFamily("Cambria");
+    obj.label126 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label126:setParent(obj.rectangle17);
+    obj.label126:setAlign("left");
+    obj.label126:setWidth(72);
+    obj.label126:setText("TIPO");
+    obj.label126:setName("label126");
+    obj.label126:setFontColor("white");
+    lfm_setPropAsString(obj.label126, "fontStyle",  "bold");
+    obj.label126:setFontFamily("Cambria");
 
-    obj.label131 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label131:setParent(obj.rectangle17);
-    obj.label131:setAlign("left");
-    obj.label131:setText("CUSTO");
-    obj.label131:setName("label131");
-    obj.label131:setFontColor("white");
-    lfm_setPropAsString(obj.label131, "fontStyle",  "bold");
-    obj.label131:setFontFamily("Cambria");
+    obj.label127 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label127:setParent(obj.rectangle17);
+    obj.label127:setAlign("left");
+    obj.label127:setText("CUSTO");
+    obj.label127:setName("label127");
+    obj.label127:setFontColor("white");
+    lfm_setPropAsString(obj.label127, "fontStyle",  "bold");
+    obj.label127:setFontFamily("Cambria");
 
     obj.button13 = GUI.fromHandle(_obj_newObject("button"));
     obj.button13:setParent(obj.rectangle17);
@@ -3143,23 +3192,23 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout50:setMargins({top=40, left=20, bottom=15});
     obj.layout50:setName("layout50");
 
-    obj.label132 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label132:setParent(obj.layout50);
-    obj.label132:setAlign("left");
-    obj.label132:setText("T É C N I C A S");
-    obj.label132:setWidth(137);
-    obj.label132:setFontSize(20);
-    obj.label132:setFontFamily("Constantia");
-    obj.label132:setName("label132");
-    obj.label132:setFontColor("white");
-    lfm_setPropAsString(obj.label132, "fontStyle",  "bold");
+    obj.label128 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label128:setParent(obj.layout50);
+    obj.label128:setAlign("left");
+    obj.label128:setText("T É C N I C A S");
+    obj.label128:setWidth(137);
+    obj.label128:setFontSize(20);
+    obj.label128:setFontFamily("Constantia");
+    obj.label128:setName("label128");
+    obj.label128:setFontColor("white");
+    lfm_setPropAsString(obj.label128, "fontStyle",  "bold");
 
-    obj.horzLine11 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine11:setParent(obj.layout50);
-    obj.horzLine11:setAlign("client");
-    obj.horzLine11:setMargins({right=9, top=14});
-    obj.horzLine11:setStrokeColor("#424242");
-    obj.horzLine11:setName("horzLine11");
+    obj.horzLine12 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine12:setParent(obj.layout50);
+    obj.horzLine12:setAlign("client");
+    obj.horzLine12:setMargins({right=9, top=14});
+    obj.horzLine12:setStrokeColor("#424242");
+    obj.horzLine12:setName("horzLine12");
 
     obj.rectangle18 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle18:setParent(obj.fpEsquerdaMec);
@@ -3172,45 +3221,45 @@ local function constructNew_frmOurFichaL5R4e()
     obj.rectangle18:setMargins({left=20, right=10});
     obj.rectangle18:setName("rectangle18");
 
-    obj.label133 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label133:setParent(obj.rectangle18);
-    obj.label133:setAlign("left");
-    obj.label133:setText("NOME");
-    obj.label133:setMargins({left=5});
-    obj.label133:setWidth(280);
-    obj.label133:setName("label133");
-    obj.label133:setFontColor("white");
-    lfm_setPropAsString(obj.label133, "fontStyle",  "bold");
-    obj.label133:setFontFamily("Cambria");
+    obj.label129 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label129:setParent(obj.rectangle18);
+    obj.label129:setAlign("left");
+    obj.label129:setText("NOME");
+    obj.label129:setMargins({left=5});
+    obj.label129:setWidth(280);
+    obj.label129:setName("label129");
+    obj.label129:setFontColor("white");
+    lfm_setPropAsString(obj.label129, "fontStyle",  "bold");
+    obj.label129:setFontFamily("Cambria");
 
-    obj.label134 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label134:setParent(obj.rectangle18);
-    obj.label134:setAlign("left");
-    obj.label134:setText("NV.");
-    obj.label134:setWidth(27);
-    obj.label134:setName("label134");
-    obj.label134:setFontColor("white");
-    lfm_setPropAsString(obj.label134, "fontStyle",  "bold");
-    obj.label134:setFontFamily("Cambria");
+    obj.label130 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label130:setParent(obj.rectangle18);
+    obj.label130:setAlign("left");
+    obj.label130:setText("NV.");
+    obj.label130:setWidth(27);
+    obj.label130:setName("label130");
+    obj.label130:setFontColor("white");
+    lfm_setPropAsString(obj.label130, "fontStyle",  "bold");
+    obj.label130:setFontFamily("Cambria");
 
-    obj.label135 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label135:setParent(obj.rectangle18);
-    obj.label135:setAlign("left");
-    obj.label135:setText("AFINIDADE");
-    obj.label135:setWidth(82);
-    obj.label135:setName("label135");
-    obj.label135:setFontColor("white");
-    lfm_setPropAsString(obj.label135, "fontStyle",  "bold");
-    obj.label135:setFontFamily("Cambria");
+    obj.label131 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label131:setParent(obj.rectangle18);
+    obj.label131:setAlign("left");
+    obj.label131:setText("AFINIDADE");
+    obj.label131:setWidth(82);
+    obj.label131:setName("label131");
+    obj.label131:setFontColor("white");
+    lfm_setPropAsString(obj.label131, "fontStyle",  "bold");
+    obj.label131:setFontFamily("Cambria");
 
-    obj.label136 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label136:setParent(obj.rectangle18);
-    obj.label136:setAlign("left");
-    obj.label136:setText("DEFICIÊNCIA");
-    obj.label136:setName("label136");
-    obj.label136:setFontColor("white");
-    lfm_setPropAsString(obj.label136, "fontStyle",  "bold");
-    obj.label136:setFontFamily("Cambria");
+    obj.label132 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label132:setParent(obj.rectangle18);
+    obj.label132:setAlign("left");
+    obj.label132:setText("DEFICIÊNCIA");
+    obj.label132:setName("label132");
+    obj.label132:setFontColor("white");
+    lfm_setPropAsString(obj.label132, "fontStyle",  "bold");
+    obj.label132:setFontFamily("Cambria");
 
     obj.button14 = GUI.fromHandle(_obj_newObject("button"));
     obj.button14:setParent(obj.rectangle18);
@@ -3260,23 +3309,23 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout51:setMargins({top=60, left=20, bottom=15});
     obj.layout51:setName("layout51");
 
-    obj.label137 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label137:setParent(obj.layout51);
-    obj.label137:setAlign("left");
-    obj.label137:setText("K A T A S   🙵   K I H O S");
-    obj.label137:setWidth(220);
-    obj.label137:setFontSize(20);
-    obj.label137:setFontFamily("Constantia");
-    obj.label137:setName("label137");
-    obj.label137:setFontColor("white");
-    lfm_setPropAsString(obj.label137, "fontStyle",  "bold");
+    obj.label133 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label133:setParent(obj.layout51);
+    obj.label133:setAlign("left");
+    obj.label133:setText("K A T A S   🙵   K I H O S");
+    obj.label133:setWidth(220);
+    obj.label133:setFontSize(20);
+    obj.label133:setFontFamily("Constantia");
+    obj.label133:setName("label133");
+    obj.label133:setFontColor("white");
+    lfm_setPropAsString(obj.label133, "fontStyle",  "bold");
 
-    obj.horzLine12 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine12:setParent(obj.layout51);
-    obj.horzLine12:setAlign("client");
-    obj.horzLine12:setMargins({right=20, top=14});
-    obj.horzLine12:setStrokeColor("#424242");
-    obj.horzLine12:setName("horzLine12");
+    obj.horzLine13 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine13:setParent(obj.layout51);
+    obj.horzLine13:setAlign("client");
+    obj.horzLine13:setMargins({right=20, top=14});
+    obj.horzLine13:setStrokeColor("#424242");
+    obj.horzLine13:setName("horzLine13");
 
     obj.rectangle21 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle21:setParent(obj.fpDireitaMec);
@@ -3289,25 +3338,25 @@ local function constructNew_frmOurFichaL5R4e()
     obj.rectangle21:setMargins({left=10, right=20});
     obj.rectangle21:setName("rectangle21");
 
-    obj.label138 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label138:setParent(obj.rectangle21);
-    obj.label138:setAlign("left");
-    obj.label138:setText("NOME");
-    obj.label138:setMargins({left=5});
-    obj.label138:setWidth(195);
-    obj.label138:setName("label138");
-    obj.label138:setFontColor("white");
-    lfm_setPropAsString(obj.label138, "fontStyle",  "bold");
-    obj.label138:setFontFamily("Cambria");
+    obj.label134 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label134:setParent(obj.rectangle21);
+    obj.label134:setAlign("left");
+    obj.label134:setText("NOME");
+    obj.label134:setMargins({left=5});
+    obj.label134:setWidth(195);
+    obj.label134:setName("label134");
+    obj.label134:setFontColor("white");
+    lfm_setPropAsString(obj.label134, "fontStyle",  "bold");
+    obj.label134:setFontFamily("Cambria");
 
-    obj.label139 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label139:setParent(obj.rectangle21);
-    obj.label139:setAlign("left");
-    obj.label139:setText("NV.");
-    obj.label139:setName("label139");
-    obj.label139:setFontColor("white");
-    lfm_setPropAsString(obj.label139, "fontStyle",  "bold");
-    obj.label139:setFontFamily("Cambria");
+    obj.label135 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label135:setParent(obj.rectangle21);
+    obj.label135:setAlign("left");
+    obj.label135:setText("NV.");
+    obj.label135:setName("label135");
+    obj.label135:setFontColor("white");
+    lfm_setPropAsString(obj.label135, "fontStyle",  "bold");
+    obj.label135:setFontFamily("Cambria");
 
     obj.button15 = GUI.fromHandle(_obj_newObject("button"));
     obj.button15:setParent(obj.rectangle21);
@@ -3332,23 +3381,23 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout52:setMargins({top=40, left=20, bottom=15});
     obj.layout52:setName("layout52");
 
-    obj.label140 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label140:setParent(obj.layout52);
-    obj.label140:setAlign("left");
-    obj.label140:setText("A R M A S");
-    obj.label140:setWidth(100);
-    obj.label140:setFontSize(20);
-    obj.label140:setFontFamily("Constantia");
-    obj.label140:setName("label140");
-    obj.label140:setFontColor("white");
-    lfm_setPropAsString(obj.label140, "fontStyle",  "bold");
+    obj.label136 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label136:setParent(obj.layout52);
+    obj.label136:setAlign("left");
+    obj.label136:setText("A R M A S");
+    obj.label136:setWidth(100);
+    obj.label136:setFontSize(20);
+    obj.label136:setFontFamily("Constantia");
+    obj.label136:setName("label136");
+    obj.label136:setFontColor("white");
+    lfm_setPropAsString(obj.label136, "fontStyle",  "bold");
 
-    obj.horzLine13 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine13:setParent(obj.layout52);
-    obj.horzLine13:setAlign("client");
-    obj.horzLine13:setMargins({right=20, top=14});
-    obj.horzLine13:setStrokeColor("#424242");
-    obj.horzLine13:setName("horzLine13");
+    obj.horzLine14 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine14:setParent(obj.layout52);
+    obj.horzLine14:setAlign("client");
+    obj.horzLine14:setMargins({right=20, top=14});
+    obj.horzLine14:setStrokeColor("#424242");
+    obj.horzLine14:setName("horzLine14");
 
     obj.rectangle22 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle22:setParent(obj.fpDireitaMec);
@@ -3361,16 +3410,16 @@ local function constructNew_frmOurFichaL5R4e()
     obj.rectangle22:setMargins({left=10, right=20});
     obj.rectangle22:setName("rectangle22");
 
-    obj.label141 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label141:setParent(obj.rectangle22);
-    obj.label141:setAlign("left");
-    obj.label141:setText("NOME DAS ARMAS");
-    obj.label141:setWidth(200);
-    obj.label141:setMargins({left=5});
-    obj.label141:setName("label141");
-    obj.label141:setFontColor("white");
-    lfm_setPropAsString(obj.label141, "fontStyle",  "bold");
-    obj.label141:setFontFamily("Cambria");
+    obj.label137 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label137:setParent(obj.rectangle22);
+    obj.label137:setAlign("left");
+    obj.label137:setText("NOME DAS ARMAS");
+    obj.label137:setWidth(200);
+    obj.label137:setMargins({left=5});
+    obj.label137:setName("label137");
+    obj.label137:setFontColor("white");
+    lfm_setPropAsString(obj.label137, "fontStyle",  "bold");
+    obj.label137:setFontFamily("Cambria");
 
     obj.button16 = GUI.fromHandle(_obj_newObject("button"));
     obj.button16:setParent(obj.rectangle22);
@@ -3395,23 +3444,23 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout53:setMargins({top=40, left=20, bottom=15});
     obj.layout53:setName("layout53");
 
-    obj.label142 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label142:setParent(obj.layout53);
-    obj.label142:setAlign("left");
-    obj.label142:setText("I N V E N T Á R I O");
-    obj.label142:setWidth(180);
-    obj.label142:setFontSize(20);
-    obj.label142:setFontFamily("Constantia");
-    obj.label142:setName("label142");
-    obj.label142:setFontColor("white");
-    lfm_setPropAsString(obj.label142, "fontStyle",  "bold");
+    obj.label138 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label138:setParent(obj.layout53);
+    obj.label138:setAlign("left");
+    obj.label138:setText("I N V E N T Á R I O");
+    obj.label138:setWidth(180);
+    obj.label138:setFontSize(20);
+    obj.label138:setFontFamily("Constantia");
+    obj.label138:setName("label138");
+    obj.label138:setFontColor("white");
+    lfm_setPropAsString(obj.label138, "fontStyle",  "bold");
 
-    obj.horzLine14 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine14:setParent(obj.layout53);
-    obj.horzLine14:setAlign("client");
-    obj.horzLine14:setMargins({right=20, top=14});
-    obj.horzLine14:setStrokeColor("#424242");
-    obj.horzLine14:setName("horzLine14");
+    obj.horzLine15 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine15:setParent(obj.layout53);
+    obj.horzLine15:setAlign("client");
+    obj.horzLine15:setMargins({right=20, top=14});
+    obj.horzLine15:setStrokeColor("#424242");
+    obj.horzLine15:setName("horzLine15");
 
     obj.rectangle23 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle23:setParent(obj.fpDireitaMec);
@@ -3424,90 +3473,90 @@ local function constructNew_frmOurFichaL5R4e()
     obj.rectangle23:setMargins({left=10, right=20});
     obj.rectangle23:setName("rectangle23");
 
-    obj.label143 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label143:setParent(obj.rectangle23);
-    obj.label143:setAlign("left");
-    obj.label143:setText("Koku:");
-    obj.label143:setMargins({left=5});
-    obj.label143:setWidth(40);
-    obj.label143:setName("label143");
-    obj.label143:setFontColor("white");
-    lfm_setPropAsString(obj.label143, "fontStyle",  "bold");
-    obj.label143:setFontFamily("Cambria");
+    obj.label139 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label139:setParent(obj.rectangle23);
+    obj.label139:setAlign("left");
+    obj.label139:setText("Koku:");
+    obj.label139:setMargins({left=5});
+    obj.label139:setWidth(40);
+    obj.label139:setName("label139");
+    obj.label139:setFontColor("white");
+    lfm_setPropAsString(obj.label139, "fontStyle",  "bold");
+    obj.label139:setFontFamily("Cambria");
 
-    obj.edit30 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit30:setParent(obj.rectangle23);
-    obj.edit30:setAlign("left");
-    obj.edit30:setField("koku");
-    obj.edit30:setWidth(55);
-    obj.edit30:setType("number");
-    obj.edit30:setMargins({right=2});
-    obj.edit30:setName("edit30");
-    obj.edit30:setFontColor("#cdcdcd");
-    obj.edit30:setFontFamily("Cambria");
-    obj.edit30:setTransparent(true);
-
-    obj.dataLink44 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink44:setParent(obj.rectangle23);
-    obj.dataLink44:setDefaultValue("0");
-    obj.dataLink44:setField("koku");
-    obj.dataLink44:setName("dataLink44");
-
-    obj.label144 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label144:setParent(obj.rectangle23);
-    obj.label144:setAlign("left");
-    obj.label144:setText("Bu:");
-    obj.label144:setWidth(40);
-    obj.label144:setName("label144");
-    obj.label144:setFontColor("white");
-    lfm_setPropAsString(obj.label144, "fontStyle",  "bold");
-    obj.label144:setFontFamily("Cambria");
-
-    obj.edit31 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit31:setParent(obj.rectangle23);
-    obj.edit31:setAlign("left");
-    obj.edit31:setField("bu");
-    obj.edit31:setWidth(55);
-    obj.edit31:setType("number");
-    obj.edit31:setMargins({right=2});
-    obj.edit31:setName("edit31");
-    obj.edit31:setFontColor("#cdcdcd");
-    obj.edit31:setFontFamily("Cambria");
-    obj.edit31:setTransparent(true);
-
-    obj.dataLink45 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink45:setParent(obj.rectangle23);
-    obj.dataLink45:setDefaultValue("0");
-    obj.dataLink45:setField("bu");
-    obj.dataLink45:setName("dataLink45");
-
-    obj.label145 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label145:setParent(obj.rectangle23);
-    obj.label145:setAlign("left");
-    obj.label145:setText("Zeni:");
-    obj.label145:setWidth(40);
-    obj.label145:setName("label145");
-    obj.label145:setFontColor("white");
-    lfm_setPropAsString(obj.label145, "fontStyle",  "bold");
-    obj.label145:setFontFamily("Cambria");
-
-    obj.edit32 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit32:setParent(obj.rectangle23);
-    obj.edit32:setAlign("left");
-    obj.edit32:setField("zeni");
-    obj.edit32:setWidth(55);
-    obj.edit32:setType("number");
-    obj.edit32:setMargins({right=2});
-    obj.edit32:setName("edit32");
-    obj.edit32:setFontColor("#cdcdcd");
-    obj.edit32:setFontFamily("Cambria");
-    obj.edit32:setTransparent(true);
+    obj.edit25 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit25:setParent(obj.rectangle23);
+    obj.edit25:setAlign("left");
+    obj.edit25:setField("koku");
+    obj.edit25:setWidth(55);
+    obj.edit25:setType("number");
+    obj.edit25:setMargins({right=2});
+    obj.edit25:setName("edit25");
+    obj.edit25:setFontColor("#cdcdcd");
+    obj.edit25:setFontFamily("Cambria");
+    obj.edit25:setTransparent(true);
 
     obj.dataLink46 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink46:setParent(obj.rectangle23);
     obj.dataLink46:setDefaultValue("0");
-    obj.dataLink46:setField("zeni");
+    obj.dataLink46:setField("koku");
     obj.dataLink46:setName("dataLink46");
+
+    obj.label140 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label140:setParent(obj.rectangle23);
+    obj.label140:setAlign("left");
+    obj.label140:setText("Bu:");
+    obj.label140:setWidth(40);
+    obj.label140:setName("label140");
+    obj.label140:setFontColor("white");
+    lfm_setPropAsString(obj.label140, "fontStyle",  "bold");
+    obj.label140:setFontFamily("Cambria");
+
+    obj.edit26 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit26:setParent(obj.rectangle23);
+    obj.edit26:setAlign("left");
+    obj.edit26:setField("bu");
+    obj.edit26:setWidth(55);
+    obj.edit26:setType("number");
+    obj.edit26:setMargins({right=2});
+    obj.edit26:setName("edit26");
+    obj.edit26:setFontColor("#cdcdcd");
+    obj.edit26:setFontFamily("Cambria");
+    obj.edit26:setTransparent(true);
+
+    obj.dataLink47 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink47:setParent(obj.rectangle23);
+    obj.dataLink47:setDefaultValue("0");
+    obj.dataLink47:setField("bu");
+    obj.dataLink47:setName("dataLink47");
+
+    obj.label141 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label141:setParent(obj.rectangle23);
+    obj.label141:setAlign("left");
+    obj.label141:setText("Zeni:");
+    obj.label141:setWidth(40);
+    obj.label141:setName("label141");
+    obj.label141:setFontColor("white");
+    lfm_setPropAsString(obj.label141, "fontStyle",  "bold");
+    obj.label141:setFontFamily("Cambria");
+
+    obj.edit27 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit27:setParent(obj.rectangle23);
+    obj.edit27:setAlign("left");
+    obj.edit27:setField("zeni");
+    obj.edit27:setWidth(55);
+    obj.edit27:setType("number");
+    obj.edit27:setMargins({right=2});
+    obj.edit27:setName("edit27");
+    obj.edit27:setFontColor("#cdcdcd");
+    obj.edit27:setFontFamily("Cambria");
+    obj.edit27:setTransparent(true);
+
+    obj.dataLink48 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink48:setParent(obj.rectangle23);
+    obj.dataLink48:setDefaultValue("0");
+    obj.dataLink48:setField("zeni");
+    obj.dataLink48:setName("dataLink48");
 
     obj.rectangle24 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle24:setParent(obj.fpDireitaMec);
@@ -3532,7 +3581,7 @@ local function constructNew_frmOurFichaL5R4e()
 
     obj.image4 = GUI.fromHandle(_obj_newObject("image"));
     obj.image4:setParent(obj.fpDireitaMec);
-    obj.image4:setURL("/Frames/logo.png");
+    obj.image4:setURL("./assets/Frames/logo.png");
     obj.image4:setHeight(135);
     obj.image4:setStyle("proportional");
     obj.image4:setAlign("bottom");
@@ -3618,23 +3667,23 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout54:setMargins({top=10, left=20, bottom=15});
     obj.layout54:setName("layout54");
 
-    obj.label146 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label146:setParent(obj.layout54);
-    obj.label146:setAlign("left");
-    obj.label146:setText("L I S T A   D E   M A G I A S");
-    obj.label146:setWidth(245);
-    obj.label146:setFontSize(20);
-    obj.label146:setFontFamily("Constantia");
-    obj.label146:setName("label146");
-    obj.label146:setFontColor("white");
-    lfm_setPropAsString(obj.label146, "fontStyle",  "bold");
+    obj.label142 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label142:setParent(obj.layout54);
+    obj.label142:setAlign("left");
+    obj.label142:setText("L I S T A   D E   M A G I A S");
+    obj.label142:setWidth(245);
+    obj.label142:setFontSize(20);
+    obj.label142:setFontFamily("Constantia");
+    obj.label142:setName("label142");
+    obj.label142:setFontColor("white");
+    lfm_setPropAsString(obj.label142, "fontStyle",  "bold");
 
-    obj.horzLine15 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine15:setParent(obj.layout54);
-    obj.horzLine15:setAlign("client");
-    obj.horzLine15:setMargins({right=20, top=14});
-    obj.horzLine15:setStrokeColor("#424242");
-    obj.horzLine15:setName("horzLine15");
+    obj.horzLine16 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine16:setParent(obj.layout54);
+    obj.horzLine16:setAlign("client");
+    obj.horzLine16:setMargins({right=20, top=14});
+    obj.horzLine16:setStrokeColor("#424242");
+    obj.horzLine16:setName("horzLine16");
 
     obj.rectangle26 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle26:setParent(obj.layMagias);
@@ -3659,57 +3708,57 @@ local function constructNew_frmOurFichaL5R4e()
     obj.image5:setAlign("left");
     obj.image5:setStyle("proportional");
     obj.image5:setWidth(25);
-    obj.image5:setSRC("/Frames/miniAguaI.png");
+    obj.image5:setSRC("./assets/Frames/miniAguaI.png");
     obj.image5:setMargins({right=7, top=2.5, bottom=2.5});
     obj.image5:setName("image5");
 
-    obj.label147 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label147:setParent(obj.layout55);
-    obj.label147:setAlign("left");
-    obj.label147:setText("ÁGUA:");
-    obj.label147:setMargins({right=2});
-    obj.label147:setWidth(38);
-    obj.label147:setName("label147");
-    obj.label147:setFontColor("white");
-    lfm_setPropAsString(obj.label147, "fontStyle",  "bold");
-    obj.label147:setFontFamily("Cambria");
+    obj.label143 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label143:setParent(obj.layout55);
+    obj.label143:setAlign("left");
+    obj.label143:setText("ÁGUA:");
+    obj.label143:setMargins({right=2});
+    obj.label143:setWidth(38);
+    obj.label143:setName("label143");
+    obj.label143:setFontColor("white");
+    lfm_setPropAsString(obj.label143, "fontStyle",  "bold");
+    obj.label143:setFontFamily("Cambria");
 
-    obj.edit33 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit33:setParent(obj.layout55);
-    obj.edit33:setField("slotAgua");
-    obj.edit33:setHorzTextAlign("center");
-    obj.edit33:setWidth(25);
-    obj.edit33:setAlign("left");
-    obj.edit33:setName("edit33");
-    obj.edit33:setFontColor("#cdcdcd");
-    obj.edit33:setFontFamily("Cambria");
-    obj.edit33:setTransparent(true);
+    obj.edit28 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit28:setParent(obj.layout55);
+    obj.edit28:setField("slotAgua");
+    obj.edit28:setHorzTextAlign("center");
+    obj.edit28:setWidth(25);
+    obj.edit28:setAlign("left");
+    obj.edit28:setName("edit28");
+    obj.edit28:setFontColor("#cdcdcd");
+    obj.edit28:setFontFamily("Cambria");
+    obj.edit28:setTransparent(true);
 
-    obj.dataLink47 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink47:setParent(obj.layout55);
-    obj.dataLink47:setDefaultValue("0");
-    obj.dataLink47:setField("slotAgua");
-    obj.dataLink47:setName("dataLink47");
+    obj.dataLink49 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink49:setParent(obj.layout55);
+    obj.dataLink49:setDefaultValue("0");
+    obj.dataLink49:setField("slotAgua");
+    obj.dataLink49:setName("dataLink49");
 
-    obj.label148 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label148:setParent(obj.layout55);
-    obj.label148:setAlign("left");
-    obj.label148:setWidth(10);
-    obj.label148:setText("/");
-    obj.label148:setName("label148");
-    obj.label148:setFontColor("white");
-    lfm_setPropAsString(obj.label148, "fontStyle",  "bold");
-    obj.label148:setFontFamily("Cambria");
+    obj.label144 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label144:setParent(obj.layout55);
+    obj.label144:setAlign("left");
+    obj.label144:setWidth(10);
+    obj.label144:setText("/");
+    obj.label144:setName("label144");
+    obj.label144:setFontColor("white");
+    lfm_setPropAsString(obj.label144, "fontStyle",  "bold");
+    obj.label144:setFontFamily("Cambria");
 
-    obj.label149 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label149:setParent(obj.layout55);
-    obj.label149:setAlign("left");
-    obj.label149:setWidth(25);
-    obj.label149:setField("water");
-    obj.label149:setName("label149");
-    obj.label149:setFontColor("white");
-    lfm_setPropAsString(obj.label149, "fontStyle",  "bold");
-    obj.label149:setFontFamily("Cambria");
+    obj.label145 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label145:setParent(obj.layout55);
+    obj.label145:setAlign("left");
+    obj.label145:setWidth(25);
+    obj.label145:setField("water");
+    obj.label145:setName("label145");
+    obj.label145:setFontColor("white");
+    lfm_setPropAsString(obj.label145, "fontStyle",  "bold");
+    obj.label145:setFontFamily("Cambria");
 
     obj.layout56 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout56:setParent(obj.rectangle26);
@@ -3722,57 +3771,57 @@ local function constructNew_frmOurFichaL5R4e()
     obj.image6:setAlign("left");
     obj.image6:setStyle("proportional");
     obj.image6:setWidth(25);
-    obj.image6:setSRC("/Frames/miniArI.png");
+    obj.image6:setSRC("./assets/Frames/miniArI.png");
     obj.image6:setMargins({right=7, top=2.5, bottom=2.5});
     obj.image6:setName("image6");
 
-    obj.label150 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label150:setParent(obj.layout56);
-    obj.label150:setAlign("left");
-    obj.label150:setText("AR:");
-    obj.label150:setMargins({right=2});
-    obj.label150:setWidth(25);
-    obj.label150:setName("label150");
-    obj.label150:setFontColor("white");
-    lfm_setPropAsString(obj.label150, "fontStyle",  "bold");
-    obj.label150:setFontFamily("Cambria");
+    obj.label146 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label146:setParent(obj.layout56);
+    obj.label146:setAlign("left");
+    obj.label146:setText("AR:");
+    obj.label146:setMargins({right=2});
+    obj.label146:setWidth(25);
+    obj.label146:setName("label146");
+    obj.label146:setFontColor("white");
+    lfm_setPropAsString(obj.label146, "fontStyle",  "bold");
+    obj.label146:setFontFamily("Cambria");
 
-    obj.edit34 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit34:setParent(obj.layout56);
-    obj.edit34:setField("slotAr");
-    obj.edit34:setHorzTextAlign("center");
-    obj.edit34:setWidth(25);
-    obj.edit34:setAlign("left");
-    obj.edit34:setName("edit34");
-    obj.edit34:setFontColor("#cdcdcd");
-    obj.edit34:setFontFamily("Cambria");
-    obj.edit34:setTransparent(true);
+    obj.edit29 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit29:setParent(obj.layout56);
+    obj.edit29:setField("slotAr");
+    obj.edit29:setHorzTextAlign("center");
+    obj.edit29:setWidth(25);
+    obj.edit29:setAlign("left");
+    obj.edit29:setName("edit29");
+    obj.edit29:setFontColor("#cdcdcd");
+    obj.edit29:setFontFamily("Cambria");
+    obj.edit29:setTransparent(true);
 
-    obj.dataLink48 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink48:setParent(obj.layout56);
-    obj.dataLink48:setDefaultValue("0");
-    obj.dataLink48:setField("slotAr");
-    obj.dataLink48:setName("dataLink48");
+    obj.dataLink50 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink50:setParent(obj.layout56);
+    obj.dataLink50:setDefaultValue("0");
+    obj.dataLink50:setField("slotAr");
+    obj.dataLink50:setName("dataLink50");
 
-    obj.label151 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label151:setParent(obj.layout56);
-    obj.label151:setAlign("left");
-    obj.label151:setWidth(10);
-    obj.label151:setText("/");
-    obj.label151:setName("label151");
-    obj.label151:setFontColor("white");
-    lfm_setPropAsString(obj.label151, "fontStyle",  "bold");
-    obj.label151:setFontFamily("Cambria");
+    obj.label147 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label147:setParent(obj.layout56);
+    obj.label147:setAlign("left");
+    obj.label147:setWidth(10);
+    obj.label147:setText("/");
+    obj.label147:setName("label147");
+    obj.label147:setFontColor("white");
+    lfm_setPropAsString(obj.label147, "fontStyle",  "bold");
+    obj.label147:setFontFamily("Cambria");
 
-    obj.label152 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label152:setParent(obj.layout56);
-    obj.label152:setAlign("left");
-    obj.label152:setWidth(25);
-    obj.label152:setField("air");
-    obj.label152:setName("label152");
-    obj.label152:setFontColor("white");
-    lfm_setPropAsString(obj.label152, "fontStyle",  "bold");
-    obj.label152:setFontFamily("Cambria");
+    obj.label148 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label148:setParent(obj.layout56);
+    obj.label148:setAlign("left");
+    obj.label148:setWidth(25);
+    obj.label148:setField("air");
+    obj.label148:setName("label148");
+    obj.label148:setFontColor("white");
+    lfm_setPropAsString(obj.label148, "fontStyle",  "bold");
+    obj.label148:setFontFamily("Cambria");
 
     obj.layout57 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout57:setParent(obj.rectangle26);
@@ -3785,57 +3834,57 @@ local function constructNew_frmOurFichaL5R4e()
     obj.image7:setAlign("left");
     obj.image7:setStyle("proportional");
     obj.image7:setWidth(25);
-    obj.image7:setSRC("/Frames/miniFogoI.png");
+    obj.image7:setSRC("./assets/Frames/miniFogoI.png");
     obj.image7:setMargins({right=7, top=2.5, bottom=2.5});
     obj.image7:setName("image7");
 
-    obj.label153 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label153:setParent(obj.layout57);
-    obj.label153:setAlign("left");
-    obj.label153:setText("FOGO:");
-    obj.label153:setMargins({right=2});
-    obj.label153:setWidth(38);
-    obj.label153:setName("label153");
-    obj.label153:setFontColor("white");
-    lfm_setPropAsString(obj.label153, "fontStyle",  "bold");
-    obj.label153:setFontFamily("Cambria");
+    obj.label149 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label149:setParent(obj.layout57);
+    obj.label149:setAlign("left");
+    obj.label149:setText("FOGO:");
+    obj.label149:setMargins({right=2});
+    obj.label149:setWidth(38);
+    obj.label149:setName("label149");
+    obj.label149:setFontColor("white");
+    lfm_setPropAsString(obj.label149, "fontStyle",  "bold");
+    obj.label149:setFontFamily("Cambria");
 
-    obj.edit35 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit35:setParent(obj.layout57);
-    obj.edit35:setField("slotFogo");
-    obj.edit35:setHorzTextAlign("center");
-    obj.edit35:setWidth(25);
-    obj.edit35:setAlign("left");
-    obj.edit35:setName("edit35");
-    obj.edit35:setFontColor("#cdcdcd");
-    obj.edit35:setFontFamily("Cambria");
-    obj.edit35:setTransparent(true);
+    obj.edit30 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit30:setParent(obj.layout57);
+    obj.edit30:setField("slotFogo");
+    obj.edit30:setHorzTextAlign("center");
+    obj.edit30:setWidth(25);
+    obj.edit30:setAlign("left");
+    obj.edit30:setName("edit30");
+    obj.edit30:setFontColor("#cdcdcd");
+    obj.edit30:setFontFamily("Cambria");
+    obj.edit30:setTransparent(true);
 
-    obj.dataLink49 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink49:setParent(obj.layout57);
-    obj.dataLink49:setDefaultValue("0");
-    obj.dataLink49:setField("slotFogo");
-    obj.dataLink49:setName("dataLink49");
+    obj.dataLink51 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink51:setParent(obj.layout57);
+    obj.dataLink51:setDefaultValue("0");
+    obj.dataLink51:setField("slotFogo");
+    obj.dataLink51:setName("dataLink51");
 
-    obj.label154 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label154:setParent(obj.layout57);
-    obj.label154:setAlign("left");
-    obj.label154:setWidth(10);
-    obj.label154:setText("/");
-    obj.label154:setName("label154");
-    obj.label154:setFontColor("white");
-    lfm_setPropAsString(obj.label154, "fontStyle",  "bold");
-    obj.label154:setFontFamily("Cambria");
+    obj.label150 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label150:setParent(obj.layout57);
+    obj.label150:setAlign("left");
+    obj.label150:setWidth(10);
+    obj.label150:setText("/");
+    obj.label150:setName("label150");
+    obj.label150:setFontColor("white");
+    lfm_setPropAsString(obj.label150, "fontStyle",  "bold");
+    obj.label150:setFontFamily("Cambria");
 
-    obj.label155 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label155:setParent(obj.layout57);
-    obj.label155:setAlign("left");
-    obj.label155:setWidth(25);
-    obj.label155:setField("fire");
-    obj.label155:setName("label155");
-    obj.label155:setFontColor("white");
-    lfm_setPropAsString(obj.label155, "fontStyle",  "bold");
-    obj.label155:setFontFamily("Cambria");
+    obj.label151 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label151:setParent(obj.layout57);
+    obj.label151:setAlign("left");
+    obj.label151:setWidth(25);
+    obj.label151:setField("fire");
+    obj.label151:setName("label151");
+    obj.label151:setFontColor("white");
+    lfm_setPropAsString(obj.label151, "fontStyle",  "bold");
+    obj.label151:setFontFamily("Cambria");
 
     obj.layout58 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout58:setParent(obj.rectangle26);
@@ -3848,57 +3897,57 @@ local function constructNew_frmOurFichaL5R4e()
     obj.image8:setAlign("left");
     obj.image8:setStyle("proportional");
     obj.image8:setWidth(25);
-    obj.image8:setSRC("/Frames/miniTerraI.png");
+    obj.image8:setSRC("./assets/Frames/miniTerraI.png");
     obj.image8:setMargins({right=7, top=2.5, bottom=2.5});
     obj.image8:setName("image8");
 
-    obj.label156 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label156:setParent(obj.layout58);
-    obj.label156:setAlign("left");
-    obj.label156:setText("TERRA:");
-    obj.label156:setMargins({right=2});
-    obj.label156:setWidth(50);
-    obj.label156:setName("label156");
-    obj.label156:setFontColor("white");
-    lfm_setPropAsString(obj.label156, "fontStyle",  "bold");
-    obj.label156:setFontFamily("Cambria");
+    obj.label152 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label152:setParent(obj.layout58);
+    obj.label152:setAlign("left");
+    obj.label152:setText("TERRA:");
+    obj.label152:setMargins({right=2});
+    obj.label152:setWidth(50);
+    obj.label152:setName("label152");
+    obj.label152:setFontColor("white");
+    lfm_setPropAsString(obj.label152, "fontStyle",  "bold");
+    obj.label152:setFontFamily("Cambria");
 
-    obj.edit36 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit36:setParent(obj.layout58);
-    obj.edit36:setField("slotTerra");
-    obj.edit36:setHorzTextAlign("center");
-    obj.edit36:setWidth(25);
-    obj.edit36:setAlign("left");
-    obj.edit36:setName("edit36");
-    obj.edit36:setFontColor("#cdcdcd");
-    obj.edit36:setFontFamily("Cambria");
-    obj.edit36:setTransparent(true);
+    obj.edit31 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit31:setParent(obj.layout58);
+    obj.edit31:setField("slotTerra");
+    obj.edit31:setHorzTextAlign("center");
+    obj.edit31:setWidth(25);
+    obj.edit31:setAlign("left");
+    obj.edit31:setName("edit31");
+    obj.edit31:setFontColor("#cdcdcd");
+    obj.edit31:setFontFamily("Cambria");
+    obj.edit31:setTransparent(true);
 
-    obj.dataLink50 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink50:setParent(obj.layout58);
-    obj.dataLink50:setDefaultValue("0");
-    obj.dataLink50:setField("slotTerra");
-    obj.dataLink50:setName("dataLink50");
+    obj.dataLink52 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink52:setParent(obj.layout58);
+    obj.dataLink52:setDefaultValue("0");
+    obj.dataLink52:setField("slotTerra");
+    obj.dataLink52:setName("dataLink52");
 
-    obj.label157 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label157:setParent(obj.layout58);
-    obj.label157:setAlign("left");
-    obj.label157:setWidth(10);
-    obj.label157:setText("/");
-    obj.label157:setName("label157");
-    obj.label157:setFontColor("white");
-    lfm_setPropAsString(obj.label157, "fontStyle",  "bold");
-    obj.label157:setFontFamily("Cambria");
+    obj.label153 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label153:setParent(obj.layout58);
+    obj.label153:setAlign("left");
+    obj.label153:setWidth(10);
+    obj.label153:setText("/");
+    obj.label153:setName("label153");
+    obj.label153:setFontColor("white");
+    lfm_setPropAsString(obj.label153, "fontStyle",  "bold");
+    obj.label153:setFontFamily("Cambria");
 
-    obj.label158 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label158:setParent(obj.layout58);
-    obj.label158:setAlign("left");
-    obj.label158:setWidth(25);
-    obj.label158:setField("earth");
-    obj.label158:setName("label158");
-    obj.label158:setFontColor("white");
-    lfm_setPropAsString(obj.label158, "fontStyle",  "bold");
-    obj.label158:setFontFamily("Cambria");
+    obj.label154 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label154:setParent(obj.layout58);
+    obj.label154:setAlign("left");
+    obj.label154:setWidth(25);
+    obj.label154:setField("earth");
+    obj.label154:setName("label154");
+    obj.label154:setFontColor("white");
+    lfm_setPropAsString(obj.label154, "fontStyle",  "bold");
+    obj.label154:setFontFamily("Cambria");
 
     obj.layout59 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout59:setParent(obj.rectangle26);
@@ -3911,57 +3960,57 @@ local function constructNew_frmOurFichaL5R4e()
     obj.image9:setAlign("left");
     obj.image9:setStyle("proportional");
     obj.image9:setWidth(25);
-    obj.image9:setSRC("/Frames/miniVazioI.png");
+    obj.image9:setSRC("./assets/Frames/miniVazioI.png");
     obj.image9:setMargins({right=7, top=2.5, bottom=2.5});
     obj.image9:setName("image9");
 
-    obj.label159 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label159:setParent(obj.layout59);
-    obj.label159:setAlign("left");
-    obj.label159:setText("VAZIO:");
-    obj.label159:setMargins({right=2});
-    obj.label159:setWidth(43);
-    obj.label159:setName("label159");
-    obj.label159:setFontColor("white");
-    lfm_setPropAsString(obj.label159, "fontStyle",  "bold");
-    obj.label159:setFontFamily("Cambria");
+    obj.label155 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label155:setParent(obj.layout59);
+    obj.label155:setAlign("left");
+    obj.label155:setText("VAZIO:");
+    obj.label155:setMargins({right=2});
+    obj.label155:setWidth(43);
+    obj.label155:setName("label155");
+    obj.label155:setFontColor("white");
+    lfm_setPropAsString(obj.label155, "fontStyle",  "bold");
+    obj.label155:setFontFamily("Cambria");
 
-    obj.edit37 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit37:setParent(obj.layout59);
-    obj.edit37:setField("slotVazio");
-    obj.edit37:setHorzTextAlign("center");
-    obj.edit37:setWidth(25);
-    obj.edit37:setAlign("left");
-    obj.edit37:setName("edit37");
-    obj.edit37:setFontColor("#cdcdcd");
-    obj.edit37:setFontFamily("Cambria");
-    obj.edit37:setTransparent(true);
+    obj.edit32 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit32:setParent(obj.layout59);
+    obj.edit32:setField("slotVazio");
+    obj.edit32:setHorzTextAlign("center");
+    obj.edit32:setWidth(25);
+    obj.edit32:setAlign("left");
+    obj.edit32:setName("edit32");
+    obj.edit32:setFontColor("#cdcdcd");
+    obj.edit32:setFontFamily("Cambria");
+    obj.edit32:setTransparent(true);
 
-    obj.dataLink51 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink51:setParent(obj.layout59);
-    obj.dataLink51:setDefaultValue("0");
-    obj.dataLink51:setField("slotVazio");
-    obj.dataLink51:setName("dataLink51");
+    obj.dataLink53 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink53:setParent(obj.layout59);
+    obj.dataLink53:setDefaultValue("0");
+    obj.dataLink53:setField("slotVazio");
+    obj.dataLink53:setName("dataLink53");
 
-    obj.label160 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label160:setParent(obj.layout59);
-    obj.label160:setAlign("left");
-    obj.label160:setWidth(10);
-    obj.label160:setText("/");
-    obj.label160:setName("label160");
-    obj.label160:setFontColor("white");
-    lfm_setPropAsString(obj.label160, "fontStyle",  "bold");
-    obj.label160:setFontFamily("Cambria");
+    obj.label156 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label156:setParent(obj.layout59);
+    obj.label156:setAlign("left");
+    obj.label156:setWidth(10);
+    obj.label156:setText("/");
+    obj.label156:setName("label156");
+    obj.label156:setFontColor("white");
+    lfm_setPropAsString(obj.label156, "fontStyle",  "bold");
+    obj.label156:setFontFamily("Cambria");
 
-    obj.label161 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label161:setParent(obj.layout59);
-    obj.label161:setAlign("left");
-    obj.label161:setWidth(25);
-    obj.label161:setField("void");
-    obj.label161:setName("label161");
-    obj.label161:setFontColor("white");
-    lfm_setPropAsString(obj.label161, "fontStyle",  "bold");
-    obj.label161:setFontFamily("Cambria");
+    obj.label157 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label157:setParent(obj.layout59);
+    obj.label157:setAlign("left");
+    obj.label157:setWidth(25);
+    obj.label157:setField("void");
+    obj.label157:setName("label157");
+    obj.label157:setFontColor("white");
+    lfm_setPropAsString(obj.label157, "fontStyle",  "bold");
+    obj.label157:setFontFamily("Cambria");
 
     obj.button22 = GUI.fromHandle(_obj_newObject("button"));
     obj.button22:setParent(obj.rectangle26);
@@ -4072,23 +4121,23 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout60:setMargins({top=10, left=20, bottom=15});
     obj.layout60:setName("layout60");
 
-    obj.label162 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label162:setParent(obj.layout60);
-    obj.label162:setAlign("left");
-    obj.label162:setText("H I S T Ó R I A");
-    obj.label162:setWidth(150);
-    obj.label162:setFontSize(20);
-    obj.label162:setFontFamily("Constantia");
-    obj.label162:setName("label162");
-    obj.label162:setFontColor("white");
-    lfm_setPropAsString(obj.label162, "fontStyle",  "bold");
+    obj.label158 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label158:setParent(obj.layout60);
+    obj.label158:setAlign("left");
+    obj.label158:setText("H I S T Ó R I A");
+    obj.label158:setWidth(150);
+    obj.label158:setFontSize(20);
+    obj.label158:setFontFamily("Constantia");
+    obj.label158:setName("label158");
+    obj.label158:setFontColor("white");
+    lfm_setPropAsString(obj.label158, "fontStyle",  "bold");
 
-    obj.horzLine16 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine16:setParent(obj.layout60);
-    obj.horzLine16:setAlign("client");
-    obj.horzLine16:setMargins({right=20, top=14});
-    obj.horzLine16:setStrokeColor("#424242");
-    obj.horzLine16:setName("horzLine16");
+    obj.horzLine17 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine17:setParent(obj.layout60);
+    obj.horzLine17:setAlign("client");
+    obj.horzLine17:setMargins({right=20, top=14});
+    obj.horzLine17:setStrokeColor("#424242");
+    obj.horzLine17:setName("horzLine17");
 
     obj.richEdit1 = GUI.fromHandle(_obj_newObject("richEdit"));
     obj.richEdit1:setParent(obj.flowPart8);
@@ -4130,27 +4179,27 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout61:setMargins({top=60, left=20, bottom=15});
     obj.layout61:setName("layout61");
 
-    obj.label163 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label163:setParent(obj.layout61);
-    obj.label163:setAlign("left");
-    obj.label163:setText("A P A R Ê N C I A");
-    obj.label163:setWidth(160);
-    obj.label163:setFontSize(20);
-    obj.label163:setFontFamily("Constantia");
-    obj.label163:setName("label163");
-    obj.label163:setFontColor("white");
-    lfm_setPropAsString(obj.label163, "fontStyle",  "bold");
+    obj.label159 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label159:setParent(obj.layout61);
+    obj.label159:setAlign("left");
+    obj.label159:setText("A P A R Ê N C I A");
+    obj.label159:setWidth(160);
+    obj.label159:setFontSize(20);
+    obj.label159:setFontFamily("Constantia");
+    obj.label159:setName("label159");
+    obj.label159:setFontColor("white");
+    lfm_setPropAsString(obj.label159, "fontStyle",  "bold");
 
-    obj.horzLine17 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine17:setParent(obj.layout61);
-    obj.horzLine17:setAlign("client");
-    obj.horzLine17:setMargins({right=20, top=14});
-    obj.horzLine17:setStrokeColor("#424242");
-    obj.horzLine17:setName("horzLine17");
+    obj.horzLine18 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine18:setParent(obj.layout61);
+    obj.horzLine18:setAlign("client");
+    obj.horzLine18:setMargins({right=20, top=14});
+    obj.horzLine18:setStrokeColor("#424242");
+    obj.horzLine18:setName("horzLine18");
 
     obj.image10 = GUI.fromHandle(_obj_newObject("image"));
     obj.image10:setParent(obj.flowPart9);
-    obj.image10:setURL("/Frames/avatar.jpg");
+    obj.image10:setField("imagemPJ");
     obj.image10:setStyle("autoFit");
     obj.image10:setEditable(true);
     obj.image10:setWidth(289);
@@ -4159,10 +4208,16 @@ local function constructNew_frmOurFichaL5R4e()
     obj.image10:setLeft(10.5);
     obj.image10:setName("image10");
 
+    obj.dataLink54 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink54:setParent(obj.flowPart9);
+    obj.dataLink54:setField("imagemPJ");
+    obj.dataLink54:setDefaultValue("./assets/Frames/avatar.jpg");
+    obj.dataLink54:setName("dataLink54");
+
     obj.layout62 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout62:setParent(obj.flowPart9);
     obj.layout62:setAlign("top");
-    obj.layout62:setFrameStyle("/Frames/frameFundo.xml");
+    obj.layout62:setFrameStyle("./assets/Frames/frameFundo.xml");
     obj.layout62:setMargins({left=10, right=20});
     obj.layout62:setHeight(500);
     obj.layout62:setName("layout62");
@@ -4174,23 +4229,23 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout63:setMargins({top=40, left=20, bottom=15});
     obj.layout63:setName("layout63");
 
-    obj.label164 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label164:setParent(obj.layout63);
-    obj.label164:setAlign("left");
-    obj.label164:setText("2 0   P E R G U N T A S");
-    obj.label164:setWidth(205);
-    obj.label164:setFontSize(20);
-    obj.label164:setFontFamily("Constantia");
-    obj.label164:setName("label164");
-    obj.label164:setFontColor("white");
-    lfm_setPropAsString(obj.label164, "fontStyle",  "bold");
+    obj.label160 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label160:setParent(obj.layout63);
+    obj.label160:setAlign("left");
+    obj.label160:setText("2 0   P E R G U N T A S");
+    obj.label160:setWidth(205);
+    obj.label160:setFontSize(20);
+    obj.label160:setFontFamily("Constantia");
+    obj.label160:setName("label160");
+    obj.label160:setFontColor("white");
+    lfm_setPropAsString(obj.label160, "fontStyle",  "bold");
 
-    obj.horzLine18 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine18:setParent(obj.layout63);
-    obj.horzLine18:setAlign("client");
-    obj.horzLine18:setMargins({right=20, top=14});
-    obj.horzLine18:setStrokeColor("#424242");
-    obj.horzLine18:setName("horzLine18");
+    obj.horzLine19 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine19:setParent(obj.layout63);
+    obj.horzLine19:setAlign("client");
+    obj.horzLine19:setMargins({right=20, top=14});
+    obj.horzLine19:setStrokeColor("#424242");
+    obj.horzLine19:setName("horzLine19");
 
     obj.rectangle30 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle30:setParent(obj.flowPart9);
@@ -4214,7 +4269,7 @@ local function constructNew_frmOurFichaL5R4e()
 
     obj.image11 = GUI.fromHandle(_obj_newObject("image"));
     obj.image11:setParent(obj.flowPart9);
-    obj.image11:setURL("/Frames/logo.png");
+    obj.image11:setURL("./assets/Frames/logo.png");
     obj.image11:setHeight(135);
     obj.image11:setStyle("proportional");
     obj.image11:setAlign("bottom");
@@ -4300,23 +4355,23 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout64:setMargins({top=10, left=20, bottom=15});
     obj.layout64:setName("layout64");
 
-    obj.label165 = GUI.fromHandle(_obj_newObject("label"));
-    obj.label165:setParent(obj.layout64);
-    obj.label165:setAlign("left");
-    obj.label165:setText("A N O T A Ç Õ E S");
-    obj.label165:setWidth(190);
-    obj.label165:setFontSize(20);
-    obj.label165:setFontFamily("Constantia");
-    obj.label165:setName("label165");
-    obj.label165:setFontColor("white");
-    lfm_setPropAsString(obj.label165, "fontStyle",  "bold");
+    obj.label161 = GUI.fromHandle(_obj_newObject("label"));
+    obj.label161:setParent(obj.layout64);
+    obj.label161:setAlign("left");
+    obj.label161:setText("A N O T A Ç Õ E S");
+    obj.label161:setWidth(190);
+    obj.label161:setFontSize(20);
+    obj.label161:setFontFamily("Constantia");
+    obj.label161:setName("label161");
+    obj.label161:setFontColor("white");
+    lfm_setPropAsString(obj.label161, "fontStyle",  "bold");
 
-    obj.horzLine19 = GUI.fromHandle(_obj_newObject("horzLine"));
-    obj.horzLine19:setParent(obj.layout64);
-    obj.horzLine19:setAlign("client");
-    obj.horzLine19:setMargins({right=20, top=14});
-    obj.horzLine19:setStrokeColor("#424242");
-    obj.horzLine19:setName("horzLine19");
+    obj.horzLine20 = GUI.fromHandle(_obj_newObject("horzLine"));
+    obj.horzLine20:setParent(obj.layout64);
+    obj.horzLine20:setAlign("client");
+    obj.horzLine20:setMargins({right=20, top=14});
+    obj.horzLine20:setStrokeColor("#424242");
+    obj.horzLine20:setName("horzLine20");
 
     obj.richEdit2 = GUI.fromHandle(_obj_newObject("richEdit"));
     obj.richEdit2:setParent(obj.layNote);
@@ -4330,7 +4385,7 @@ local function constructNew_frmOurFichaL5R4e()
     obj.layout65 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout65:setParent(obj);
     obj.layout65:setAlign("client");
-    obj.layout65:setFrameStyle("/Frames/frameFundo.xml");
+    obj.layout65:setFrameStyle("./assets/Frames/frameFundo.xml");
     obj.layout65:setName("layout65");
 
     obj._e_event0 = obj.dataLink1:addEventListener("onChange",
@@ -4346,7 +4401,7 @@ local function constructNew_frmOurFichaL5R4e()
             
             					local terra = (terr) * (lastro) + extra;
             
-            					sheet.Saud = terr*5;
+            					sheet.Saud = terr*5 + extra;
             					sheet.Esco = terra;
             					sheet.Mach = terra;
             					sheet.Feri = terra;
@@ -4355,7 +4410,7 @@ local function constructNew_frmOurFichaL5R4e()
             					sheet.Abat = terra;
             					sheet.Inco = terra;
             
-            					sheet.LSaud = terr*5;
+            					sheet.LSaud = terr*5 + extra;
             
             					if (sheet.PWound == true) then
             							sheet.LSaud = 0;
@@ -4692,12 +4747,12 @@ local function constructNew_frmOurFichaL5R4e()
     obj._e_event21 = obj.rclSkills:addEventListener("onCompare",
         function (_, nodeA, nodeB)
             if((nodeA.MarcadorSkillEscola or false) == false and (nodeB.MarcadorSkillEscola or false) == true) then
-            														return 1;
-            													elseif((nodeA.MarcadorSkillEscola or false) == true and (nodeB.MarcadorSkillEscola or false) == false) then
-            														return -1;
-            													else
-            														return Utils.compareStringPtBr(nodeA.nomeSkill, nodeB.nomeSkill);
-            													end;
+            								return 1;
+            							elseif((nodeA.MarcadorSkillEscola or false) == true and (nodeB.MarcadorSkillEscola or false) == false) then
+            								return -1;
+            							else
+            								return Utils.compareStringPtBr(nodeA.nomeSkill, nodeB.nomeSkill);
+            							end;
         end, obj);
 
     obj._e_event22 = obj.btnImagemFundo:addEventListener("onClick",
@@ -4705,247 +4760,273 @@ local function constructNew_frmOurFichaL5R4e()
             self.popImagemFundo:show('left', self.btnImagemFundo);
         end, obj);
 
-    obj._e_event23 = obj.btnFeri:addEventListener("onClick",
+    obj._e_event23 = obj.dataLink37:addEventListener("onChange",
+        function (_, field, oldValue, newValue)
+            if (sheet.mostraMacula == false) then
+            							self.labelmacula.visible = false;
+            							self.editmacula.visible = false;
+            						end
+            						if (sheet.mostraMacula == true) then
+            							self.labelmacula.visible = true;
+            							self.editmacula.visible = true;
+            						end
+        end, obj);
+
+    obj._e_event24 = obj.dataLink38:addEventListener("onChange",
+        function (_, field, oldValue, newValue)
+            if (sheet.mostraKarma == false) then
+            							self.labelkarma.visible = false;
+            							self.editkarma.visible = false;
+            						end
+            						if (sheet.mostraKarma == true) then
+            							self.labelkarma.visible = true;
+            							self.editkarma.visible = true;
+            						end
+        end, obj);
+
+    obj._e_event25 = obj.btnFeri:addEventListener("onClick",
         function (_)
             self.popFerimentos:show('left', self.btnFeri);
         end, obj);
 
-    obj._e_event24 = obj.button7:addEventListener("onClick",
+    obj._e_event26 = obj.button7:addEventListener("onClick",
         function (_)
             TrocarAba('F');
         end, obj);
 
-    obj._e_event25 = obj.button8:addEventListener("onClick",
+    obj._e_event27 = obj.button8:addEventListener("onClick",
         function (_)
             TrocarAba('M');
         end, obj);
 
-    obj._e_event26 = obj.button9:addEventListener("onClick",
+    obj._e_event28 = obj.button9:addEventListener("onClick",
         function (_)
             TrocarAba('S');
         end, obj);
 
-    obj._e_event27 = obj.button10:addEventListener("onClick",
+    obj._e_event29 = obj.button10:addEventListener("onClick",
         function (_)
             TrocarAba('H');
         end, obj);
 
-    obj._e_event28 = obj.button11:addEventListener("onClick",
+    obj._e_event30 = obj.button11:addEventListener("onClick",
         function (_)
             TrocarAba('A');
         end, obj);
 
-    obj._e_event29 = obj.button12:addEventListener("onClick",
+    obj._e_event31 = obj.button12:addEventListener("onClick",
         function (_)
             self.rclVantagens:append(); self.fpEsquerdaMec:needRepaint();
         end, obj);
 
-    obj._e_event30 = obj.rclVantagens:addEventListener("onSelect",
+    obj._e_event32 = obj.rclVantagens:addEventListener("onSelect",
         function (_)
             self.rclVantagens:sort();
         end, obj);
 
-    obj._e_event31 = obj.rclVantagens:addEventListener("onItemRemoved",
+    obj._e_event33 = obj.rclVantagens:addEventListener("onItemRemoved",
         function (_, node, form)
             self.fpEsquerdaMec:needRepaint();
         end, obj);
 
-    obj._e_event32 = obj.rclVantagens:addEventListener("onCompare",
+    obj._e_event34 = obj.rclVantagens:addEventListener("onCompare",
         function (_, nodeA, nodeB)
             return Utils.compareStringPtBr(nodeA.aqq, nodeB.aqq);
         end, obj);
 
-    obj._e_event33 = obj.button13:addEventListener("onClick",
+    obj._e_event35 = obj.button13:addEventListener("onClick",
         function (_)
             self.rclDesVantagens:append(); self.fpEsquerdaMec:needRepaint();
         end, obj);
 
-    obj._e_event34 = obj.rclDesVantagens:addEventListener("onSelect",
+    obj._e_event36 = obj.rclDesVantagens:addEventListener("onSelect",
         function (_)
             self.rclDesVantagens:sort();
         end, obj);
 
-    obj._e_event35 = obj.rclDesVantagens:addEventListener("onItemRemoved",
+    obj._e_event37 = obj.rclDesVantagens:addEventListener("onItemRemoved",
         function (_, node, form)
             self.fpEsquerdaMec:needRepaint();
         end, obj);
 
-    obj._e_event36 = obj.rclDesVantagens:addEventListener("onCompare",
+    obj._e_event38 = obj.rclDesVantagens:addEventListener("onCompare",
         function (_, nodeA, nodeB)
             return Utils.compareStringPtBr(nodeA.aqq, nodeB.aqq);
         end, obj);
 
-    obj._e_event37 = obj.button14:addEventListener("onClick",
+    obj._e_event39 = obj.button14:addEventListener("onClick",
         function (_)
             self.rclTecnicas:append(); self.fpEsquerdaMec:needRepaint();
         end, obj);
 
-    obj._e_event38 = obj.rclTecnicas:addEventListener("onItemRemoved",
+    obj._e_event40 = obj.rclTecnicas:addEventListener("onItemRemoved",
         function (_, node, form)
             self.fpEsquerdaMec:needRepaint();
         end, obj);
 
-    obj._e_event39 = obj.button15:addEventListener("onClick",
+    obj._e_event41 = obj.button15:addEventListener("onClick",
         function (_)
             self.rclKata:append(); self.fpDireitaMec:needRepaint();
         end, obj);
 
-    obj._e_event40 = obj.rclKata:addEventListener("onItemRemoved",
+    obj._e_event42 = obj.rclKata:addEventListener("onItemRemoved",
         function (_, node, form)
             self.fpDireitaMec:needRepaint();
         end, obj);
 
-    obj._e_event41 = obj.button16:addEventListener("onClick",
+    obj._e_event43 = obj.button16:addEventListener("onClick",
         function (_)
             self.rclArmas:append(); self.fpDireitaMec:needRepaint();
         end, obj);
 
-    obj._e_event42 = obj.rclArmas:addEventListener("onItemRemoved",
+    obj._e_event44 = obj.rclArmas:addEventListener("onItemRemoved",
         function (_, node, form)
             self.fpDireitaMec:needRepaint();
         end, obj);
 
-    obj._e_event43 = obj.button17:addEventListener("onClick",
+    obj._e_event45 = obj.button17:addEventListener("onClick",
         function (_)
             TrocarAba('F');
         end, obj);
 
-    obj._e_event44 = obj.button18:addEventListener("onClick",
+    obj._e_event46 = obj.button18:addEventListener("onClick",
         function (_)
             TrocarAba('M');
         end, obj);
 
-    obj._e_event45 = obj.button19:addEventListener("onClick",
+    obj._e_event47 = obj.button19:addEventListener("onClick",
         function (_)
             TrocarAba('S');
         end, obj);
 
-    obj._e_event46 = obj.button20:addEventListener("onClick",
+    obj._e_event48 = obj.button20:addEventListener("onClick",
         function (_)
             TrocarAba('H');
         end, obj);
 
-    obj._e_event47 = obj.button21:addEventListener("onClick",
+    obj._e_event49 = obj.button21:addEventListener("onClick",
         function (_)
             TrocarAba('A');
         end, obj);
 
-    obj._e_event48 = obj.button22:addEventListener("onClick",
+    obj._e_event50 = obj.button22:addEventListener("onClick",
         function (_)
             self.rclMagias:append();
         end, obj);
 
-    obj._e_event49 = obj.rclMagias:addEventListener("onSelect",
+    obj._e_event51 = obj.rclMagias:addEventListener("onSelect",
         function (_)
             self.rclMagias:sort();
         end, obj);
 
-    obj._e_event50 = obj.rclMagias:addEventListener("onItemAdded",
+    obj._e_event52 = obj.rclMagias:addEventListener("onItemAdded",
         function (_, node, form)
             self.rclMagias:sort();
         end, obj);
 
-    obj._e_event51 = obj.rclMagias:addEventListener("onItemRemoved",
+    obj._e_event53 = obj.rclMagias:addEventListener("onItemRemoved",
         function (_, node, form)
             self.rclMagias:sort();
         end, obj);
 
-    obj._e_event52 = obj.rclMagias:addEventListener("onCompare",
+    obj._e_event54 = obj.rclMagias:addEventListener("onCompare",
         function (_, nodeA, nodeB)
             if(nodeA.elemMagia == nodeB.elemMagia) then
-            										
-            											if (nodeA.lvlMagia or 0) > (nodeB.lvlMagia or 0) then
-            													return 1;
-            											elseif (nodeA.lvlMagia or 0) < (nodeB.lvlMagia or 0) then
-            													return -1;
-            											else   
-            													return Utils.compareStringPtBr(nodeA.nomeMagia, nodeB.nomeMagia);
-            											end;
-            										
-            										elseif(nodeA.elemMagia == "Water" and 
-            										(nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
-            											return -1;
-            										elseif(nodeA.elemMagia == "Air" and 
-            										(nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
-            											return -1;
-            										elseif(nodeA.elemMagia == "Fire" and 
-            										(nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
-            											return -1;
-            										elseif(nodeA.elemMagia == "Earth" and 
-            										(nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
-            											return -1;
-            										elseif(nodeA.elemMagia == "Void" and 
-            										(nodeB.elemMagia == "Universal")) then
-            											return -1;
-            										elseif(nodeA.elemMagia == "Universal" and 
-            										(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void")) then
-            											return 1;
-            										elseif(nodeA.elemMagia == "Void" and 
-            										(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth")) then
-            											return 1;
-            										elseif(nodeA.elemMagia == "Earth" and 
-            										(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire")) then
-            											return 1;
-            										elseif(nodeA.elemMagia == "Fire" and 
-            										(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air")) then
-            											return 1;
-            										elseif(nodeA.elemMagia == "Air" and 
-            										(nodeB.elemMagia == "Water")) then
-            											return 1;
-            										end;
+            			
+            				if (nodeA.lvlMagia or 0) > (nodeB.lvlMagia or 0) then
+            						return 1;
+            				elseif (nodeA.lvlMagia or 0) < (nodeB.lvlMagia or 0) then
+            						return -1;
+            				else   
+            						return Utils.compareStringPtBr(nodeA.nomeMagia, nodeB.nomeMagia);
+            				end;
+            			
+            			elseif(nodeA.elemMagia == "Water" and 
+            			(nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
+            				return -1;
+            			elseif(nodeA.elemMagia == "Air" and 
+            			(nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
+            				return -1;
+            			elseif(nodeA.elemMagia == "Fire" and 
+            			(nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
+            				return -1;
+            			elseif(nodeA.elemMagia == "Earth" and 
+            			(nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
+            				return -1;
+            			elseif(nodeA.elemMagia == "Void" and 
+            			(nodeB.elemMagia == "Universal")) then
+            				return -1;
+            			elseif(nodeA.elemMagia == "Universal" and 
+            			(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void")) then
+            				return 1;
+            			elseif(nodeA.elemMagia == "Void" and 
+            			(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth")) then
+            				return 1;
+            			elseif(nodeA.elemMagia == "Earth" and 
+            			(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire")) then
+            				return 1;
+            			elseif(nodeA.elemMagia == "Fire" and 
+            			(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air")) then
+            				return 1;
+            			elseif(nodeA.elemMagia == "Air" and 
+            			(nodeB.elemMagia == "Water")) then
+            				return 1;
+            			end;
         end, obj);
 
-    obj._e_event53 = obj.button23:addEventListener("onClick",
+    obj._e_event55 = obj.button23:addEventListener("onClick",
         function (_)
             TrocarAba('F');
         end, obj);
 
-    obj._e_event54 = obj.button24:addEventListener("onClick",
+    obj._e_event56 = obj.button24:addEventListener("onClick",
         function (_)
             TrocarAba('M');
         end, obj);
 
-    obj._e_event55 = obj.button25:addEventListener("onClick",
+    obj._e_event57 = obj.button25:addEventListener("onClick",
         function (_)
             TrocarAba('S');
         end, obj);
 
-    obj._e_event56 = obj.button26:addEventListener("onClick",
+    obj._e_event58 = obj.button26:addEventListener("onClick",
         function (_)
             TrocarAba('H');
         end, obj);
 
-    obj._e_event57 = obj.button27:addEventListener("onClick",
+    obj._e_event59 = obj.button27:addEventListener("onClick",
         function (_)
             TrocarAba('A');
         end, obj);
 
-    obj._e_event58 = obj.button28:addEventListener("onClick",
+    obj._e_event60 = obj.button28:addEventListener("onClick",
         function (_)
             TrocarAba('F');
         end, obj);
 
-    obj._e_event59 = obj.button29:addEventListener("onClick",
+    obj._e_event61 = obj.button29:addEventListener("onClick",
         function (_)
             TrocarAba('M');
         end, obj);
 
-    obj._e_event60 = obj.button30:addEventListener("onClick",
+    obj._e_event62 = obj.button30:addEventListener("onClick",
         function (_)
             TrocarAba('S');
         end, obj);
 
-    obj._e_event61 = obj.button31:addEventListener("onClick",
+    obj._e_event63 = obj.button31:addEventListener("onClick",
         function (_)
             TrocarAba('H');
         end, obj);
 
-    obj._e_event62 = obj.button32:addEventListener("onClick",
+    obj._e_event64 = obj.button32:addEventListener("onClick",
         function (_)
             TrocarAba('A');
         end, obj);
 
     function obj:_releaseEvents()
+        __o_rrpgObjs.removeEventListenerById(self._e_event64);
+        __o_rrpgObjs.removeEventListenerById(self._e_event63);
         __o_rrpgObjs.removeEventListenerById(self._e_event62);
         __o_rrpgObjs.removeEventListenerById(self._e_event61);
         __o_rrpgObjs.removeEventListenerById(self._e_event60);
@@ -5028,12 +5109,10 @@ local function constructNew_frmOurFichaL5R4e()
         if self.layout10 ~= nil then self.layout10:destroy(); self.layout10 = nil; end;
         if self.horzLine7 ~= nil then self.horzLine7:destroy(); self.horzLine7 = nil; end;
         if self.dataLink33 ~= nil then self.dataLink33:destroy(); self.dataLink33 = nil; end;
-        if self.edit36 ~= nil then self.edit36:destroy(); self.edit36 = nil; end;
+        if self.layout64 ~= nil then self.layout64:destroy(); self.layout64 = nil; end;
         if self.edit9 ~= nil then self.edit9:destroy(); self.edit9 = nil; end;
         if self.label43 ~= nil then self.label43:destroy(); self.label43 = nil; end;
         if self.label97 ~= nil then self.label97:destroy(); self.label97 = nil; end;
-        if self.edit33 ~= nil then self.edit33:destroy(); self.edit33 = nil; end;
-        if self.layout64 ~= nil then self.layout64:destroy(); self.layout64 = nil; end;
         if self.label77 ~= nil then self.label77:destroy(); self.label77 = nil; end;
         if self.edit29 ~= nil then self.edit29:destroy(); self.edit29 = nil; end;
         if self.label128 ~= nil then self.label128:destroy(); self.label128 = nil; end;
@@ -5043,6 +5122,7 @@ local function constructNew_frmOurFichaL5R4e()
         if self.label92 ~= nil then self.label92:destroy(); self.label92 = nil; end;
         if self.flowLayout1 ~= nil then self.flowLayout1:destroy(); self.flowLayout1 = nil; end;
         if self.layout47 ~= nil then self.layout47:destroy(); self.layout47 = nil; end;
+        if self.labelkarma ~= nil then self.labelkarma:destroy(); self.labelkarma = nil; end;
         if self.radioButton7 ~= nil then self.radioButton7:destroy(); self.radioButton7 = nil; end;
         if self.label148 ~= nil then self.label148:destroy(); self.label148 = nil; end;
         if self.flowPart1 ~= nil then self.flowPart1:destroy(); self.flowPart1 = nil; end;
@@ -5061,7 +5141,6 @@ local function constructNew_frmOurFichaL5R4e()
         if self.btnFeri ~= nil then self.btnFeri:destroy(); self.btnFeri = nil; end;
         if self.layMecanicas ~= nil then self.layMecanicas:destroy(); self.layMecanicas = nil; end;
         if self.layout23 ~= nil then self.layout23:destroy(); self.layout23 = nil; end;
-        if self.label164 ~= nil then self.label164:destroy(); self.label164 = nil; end;
         if self.label122 ~= nil then self.label122:destroy(); self.label122 = nil; end;
         if self.rectangle5 ~= nil then self.rectangle5:destroy(); self.rectangle5 = nil; end;
         if self.layout62 ~= nil then self.layout62:destroy(); self.layout62 = nil; end;
@@ -5072,8 +5151,8 @@ local function constructNew_frmOurFichaL5R4e()
         if self.layout9 ~= nil then self.layout9:destroy(); self.layout9 = nil; end;
         if self.edit11 ~= nil then self.edit11:destroy(); self.edit11 = nil; end;
         if self.image1 ~= nil then self.image1:destroy(); self.image1 = nil; end;
-        if self.rectangle17 ~= nil then self.rectangle17:destroy(); self.rectangle17 = nil; end;
         if self.dataLink44 ~= nil then self.dataLink44:destroy(); self.dataLink44 = nil; end;
+        if self.rectangle17 ~= nil then self.rectangle17:destroy(); self.rectangle17 = nil; end;
         if self.dataLink9 ~= nil then self.dataLink9:destroy(); self.dataLink9 = nil; end;
         if self.label15 ~= nil then self.label15:destroy(); self.label15 = nil; end;
         if self.label99 ~= nil then self.label99:destroy(); self.label99 = nil; end;
@@ -5081,11 +5160,10 @@ local function constructNew_frmOurFichaL5R4e()
         if self.label161 ~= nil then self.label161:destroy(); self.label161 = nil; end;
         if self.layout32 ~= nil then self.layout32:destroy(); self.layout32 = nil; end;
         if self.label49 ~= nil then self.label49:destroy(); self.label49 = nil; end;
-        if self.label163 ~= nil then self.label163:destroy(); self.label163 = nil; end;
+        if self.labelhonra ~= nil then self.labelhonra:destroy(); self.labelhonra = nil; end;
         if self.layout37 ~= nil then self.layout37:destroy(); self.layout37 = nil; end;
         if self.label82 ~= nil then self.label82:destroy(); self.label82 = nil; end;
         if self.image11 ~= nil then self.image11:destroy(); self.image11 = nil; end;
-        if self.label162 ~= nil then self.label162:destroy(); self.label162 = nil; end;
         if self.layout36 ~= nil then self.layout36:destroy(); self.layout36 = nil; end;
         if self.layout52 ~= nil then self.layout52:destroy(); self.layout52 = nil; end;
         if self.label52 ~= nil then self.label52:destroy(); self.label52 = nil; end;
@@ -5124,11 +5202,13 @@ local function constructNew_frmOurFichaL5R4e()
         if self.label30 ~= nil then self.label30:destroy(); self.label30 = nil; end;
         if self.label51 ~= nil then self.label51:destroy(); self.label51 = nil; end;
         if self.image10 ~= nil then self.image10:destroy(); self.image10 = nil; end;
+        if self.edithonra ~= nil then self.edithonra:destroy(); self.edithonra = nil; end;
         if self.label19 ~= nil then self.label19:destroy(); self.label19 = nil; end;
         if self.btnImagemFundo ~= nil then self.btnImagemFundo:destroy(); self.btnImagemFundo = nil; end;
         if self.label116 ~= nil then self.label116:destroy(); self.label116 = nil; end;
         if self.label139 ~= nil then self.label139:destroy(); self.label139 = nil; end;
         if self.rectangle12 ~= nil then self.rectangle12:destroy(); self.rectangle12 = nil; end;
+        if self.labelmacula ~= nil then self.labelmacula:destroy(); self.labelmacula = nil; end;
         if self.layout35 ~= nil then self.layout35:destroy(); self.layout35 = nil; end;
         if self.popImagemFundo ~= nil then self.popImagemFundo:destroy(); self.popImagemFundo = nil; end;
         if self.layout11 ~= nil then self.layout11:destroy(); self.layout11 = nil; end;
@@ -5142,8 +5222,8 @@ local function constructNew_frmOurFichaL5R4e()
         if self.label89 ~= nil then self.label89:destroy(); self.label89 = nil; end;
         if self.label38 ~= nil then self.label38:destroy(); self.label38 = nil; end;
         if self.layout14 ~= nil then self.layout14:destroy(); self.layout14 = nil; end;
-        if self.edit27 ~= nil then self.edit27:destroy(); self.edit27 = nil; end;
         if self.label115 ~= nil then self.label115:destroy(); self.label115 = nil; end;
+        if self.edit27 ~= nil then self.edit27:destroy(); self.edit27 = nil; end;
         if self.label159 ~= nil then self.label159:destroy(); self.label159 = nil; end;
         if self.richEdit2 ~= nil then self.richEdit2:destroy(); self.richEdit2 = nil; end;
         if self.layout51 ~= nil then self.layout51:destroy(); self.layout51 = nil; end;
@@ -5171,6 +5251,7 @@ local function constructNew_frmOurFichaL5R4e()
         if self.rectangle10 ~= nil then self.rectangle10:destroy(); self.rectangle10 = nil; end;
         if self.label61 ~= nil then self.label61:destroy(); self.label61 = nil; end;
         if self.layout1 ~= nil then self.layout1:destroy(); self.layout1 = nil; end;
+        if self.editmacula ~= nil then self.editmacula:destroy(); self.editmacula = nil; end;
         if self.button30 ~= nil then self.button30:destroy(); self.button30 = nil; end;
         if self.label93 ~= nil then self.label93:destroy(); self.label93 = nil; end;
         if self.edit24 ~= nil then self.edit24:destroy(); self.edit24 = nil; end;
@@ -5207,6 +5288,7 @@ local function constructNew_frmOurFichaL5R4e()
         if self.rectangle20 ~= nil then self.rectangle20:destroy(); self.rectangle20 = nil; end;
         if self.label102 ~= nil then self.label102:destroy(); self.label102 = nil; end;
         if self.flowLayout4 ~= nil then self.flowLayout4:destroy(); self.flowLayout4 = nil; end;
+        if self.dataLink54 ~= nil then self.dataLink54:destroy(); self.dataLink54 = nil; end;
         if self.dataLink24 ~= nil then self.dataLink24:destroy(); self.dataLink24 = nil; end;
         if self.edit13 ~= nil then self.edit13:destroy(); self.edit13 = nil; end;
         if self.dataLink35 ~= nil then self.dataLink35:destroy(); self.dataLink35 = nil; end;
@@ -5214,17 +5296,17 @@ local function constructNew_frmOurFichaL5R4e()
         if self.button11 ~= nil then self.button11:destroy(); self.button11 = nil; end;
         if self.label81 ~= nil then self.label81:destroy(); self.label81 = nil; end;
         if self.dataLink22 ~= nil then self.dataLink22:destroy(); self.dataLink22 = nil; end;
+        if self.horzLine20 ~= nil then self.horzLine20:destroy(); self.horzLine20 = nil; end;
         if self.button6 ~= nil then self.button6:destroy(); self.button6 = nil; end;
         if self.button5 ~= nil then self.button5:destroy(); self.button5 = nil; end;
-        if self.edit37 ~= nil then self.edit37:destroy(); self.edit37 = nil; end;
         if self.flowLayout2 ~= nil then self.flowLayout2:destroy(); self.flowLayout2 = nil; end;
         if self.layout31 ~= nil then self.layout31:destroy(); self.layout31 = nil; end;
         if self.dataLink27 ~= nil then self.dataLink27:destroy(); self.dataLink27 = nil; end;
         if self.label10 ~= nil then self.label10:destroy(); self.label10 = nil; end;
-        if self.edit17 ~= nil then self.edit17:destroy(); self.edit17 = nil; end;
         if self.dataLink30 ~= nil then self.dataLink30:destroy(); self.dataLink30 = nil; end;
-        if self.layout2 ~= nil then self.layout2:destroy(); self.layout2 = nil; end;
         if self.radioButton2 ~= nil then self.radioButton2:destroy(); self.radioButton2 = nil; end;
+        if self.layout2 ~= nil then self.layout2:destroy(); self.layout2 = nil; end;
+        if self.edit17 ~= nil then self.edit17:destroy(); self.edit17 = nil; end;
         if self.button10 ~= nil then self.button10:destroy(); self.button10 = nil; end;
         if self.rectangle30 ~= nil then self.rectangle30:destroy(); self.rectangle30 = nil; end;
         if self.label39 ~= nil then self.label39:destroy(); self.label39 = nil; end;
@@ -5250,8 +5332,9 @@ local function constructNew_frmOurFichaL5R4e()
         if self.label84 ~= nil then self.label84:destroy(); self.label84 = nil; end;
         if self.image4 ~= nil then self.image4:destroy(); self.image4 = nil; end;
         if self.edit32 ~= nil then self.edit32:destroy(); self.edit32 = nil; end;
-        if self.horzLine6 ~= nil then self.horzLine6:destroy(); self.horzLine6 = nil; end;
         if self.dataLink38 ~= nil then self.dataLink38:destroy(); self.dataLink38 = nil; end;
+        if self.editstatus ~= nil then self.editstatus:destroy(); self.editstatus = nil; end;
+        if self.horzLine6 ~= nil then self.horzLine6:destroy(); self.horzLine6 = nil; end;
         if self.radioButton5 ~= nil then self.radioButton5:destroy(); self.radioButton5 = nil; end;
         if self.dataLink12 ~= nil then self.dataLink12:destroy(); self.dataLink12 = nil; end;
         if self.label110 ~= nil then self.label110:destroy(); self.label110 = nil; end;
@@ -5283,22 +5366,24 @@ local function constructNew_frmOurFichaL5R4e()
         if self.layout8 ~= nil then self.layout8:destroy(); self.layout8 = nil; end;
         if self.label27 ~= nil then self.label27:destroy(); self.label27 = nil; end;
         if self.label59 ~= nil then self.label59:destroy(); self.label59 = nil; end;
+        if self.checkBox7 ~= nil then self.checkBox7:destroy(); self.checkBox7 = nil; end;
         if self.label68 ~= nil then self.label68:destroy(); self.label68 = nil; end;
         if self.rclDesVantagens ~= nil then self.rclDesVantagens:destroy(); self.rclDesVantagens = nil; end;
-        if self.button20 ~= nil then self.button20:destroy(); self.button20 = nil; end;
         if self.dataLink23 ~= nil then self.dataLink23:destroy(); self.dataLink23 = nil; end;
+        if self.button20 ~= nil then self.button20:destroy(); self.button20 = nil; end;
         if self.label67 ~= nil then self.label67:destroy(); self.label67 = nil; end;
         if self.button1 ~= nil then self.button1:destroy(); self.button1 = nil; end;
         if self.label140 ~= nil then self.label140:destroy(); self.label140 = nil; end;
         if self.edit26 ~= nil then self.edit26:destroy(); self.edit26 = nil; end;
         if self.label69 ~= nil then self.label69:destroy(); self.label69 = nil; end;
-        if self.edit34 ~= nil then self.edit34:destroy(); self.edit34 = nil; end;
+        if self.dataLink53 ~= nil then self.dataLink53:destroy(); self.dataLink53 = nil; end;
         if self.label31 ~= nil then self.label31:destroy(); self.label31 = nil; end;
         if self.edit19 ~= nil then self.edit19:destroy(); self.edit19 = nil; end;
         if self.label105 ~= nil then self.label105:destroy(); self.label105 = nil; end;
         if self.label154 ~= nil then self.label154:destroy(); self.label154 = nil; end;
         if self.label34 ~= nil then self.label34:destroy(); self.label34 = nil; end;
         if self.edit5 ~= nil then self.edit5:destroy(); self.edit5 = nil; end;
+        if self.editkarma ~= nil then self.editkarma:destroy(); self.editkarma = nil; end;
         if self.label126 ~= nil then self.label126:destroy(); self.label126 = nil; end;
         if self.layout54 ~= nil then self.layout54:destroy(); self.layout54 = nil; end;
         if self.rclMagias ~= nil then self.rclMagias:destroy(); self.rclMagias = nil; end;
@@ -5376,7 +5461,6 @@ local function constructNew_frmOurFichaL5R4e()
         if self.layout43 ~= nil then self.layout43:destroy(); self.layout43 = nil; end;
         if self.label95 ~= nil then self.label95:destroy(); self.label95 = nil; end;
         if self.label83 ~= nil then self.label83:destroy(); self.label83 = nil; end;
-        if self.label165 ~= nil then self.label165:destroy(); self.label165 = nil; end;
         if self.dataLink39 ~= nil then self.dataLink39:destroy(); self.dataLink39 = nil; end;
         if self.flowLayout3 ~= nil then self.flowLayout3:destroy(); self.flowLayout3 = nil; end;
         if self.label98 ~= nil then self.label98:destroy(); self.label98 = nil; end;
@@ -5390,10 +5474,10 @@ local function constructNew_frmOurFichaL5R4e()
         if self.rectangle21 ~= nil then self.rectangle21:destroy(); self.rectangle21 = nil; end;
         if self.layNote ~= nil then self.layNote:destroy(); self.layNote = nil; end;
         if self.radioButton4 ~= nil then self.radioButton4:destroy(); self.radioButton4 = nil; end;
-        if self.edit35 ~= nil then self.edit35:destroy(); self.edit35 = nil; end;
-        if self.label26 ~= nil then self.label26:destroy(); self.label26 = nil; end;
         if self.layout65 ~= nil then self.layout65:destroy(); self.layout65 = nil; end;
+        if self.label26 ~= nil then self.label26:destroy(); self.label26 = nil; end;
         if self.dataLink13 ~= nil then self.dataLink13:destroy(); self.dataLink13 = nil; end;
+        if self.checkBox6 ~= nil then self.checkBox6:destroy(); self.checkBox6 = nil; end;
         if self.label112 ~= nil then self.label112:destroy(); self.label112 = nil; end;
         if self.flowPart2 ~= nil then self.flowPart2:destroy(); self.flowPart2 = nil; end;
         if self.image2 ~= nil then self.image2:destroy(); self.image2 = nil; end;
@@ -5447,12 +5531,15 @@ local function constructNew_frmOurFichaL5R4e()
         if self.fpEsquerdaMec ~= nil then self.fpEsquerdaMec:destroy(); self.fpEsquerdaMec = nil; end;
         if self.horzLine18 ~= nil then self.horzLine18:destroy(); self.horzLine18 = nil; end;
         if self.dataLink1 ~= nil then self.dataLink1:destroy(); self.dataLink1 = nil; end;
+        if self.labelgloria ~= nil then self.labelgloria:destroy(); self.labelgloria = nil; end;
+        if self.dataLink52 ~= nil then self.dataLink52:destroy(); self.dataLink52 = nil; end;
         if self.rectangle27 ~= nil then self.rectangle27:destroy(); self.rectangle27 = nil; end;
         if self.button12 ~= nil then self.button12:destroy(); self.button12 = nil; end;
         if self.label36 ~= nil then self.label36:destroy(); self.label36 = nil; end;
         if self.rectangle3 ~= nil then self.rectangle3:destroy(); self.rectangle3 = nil; end;
         if self.horzLine15 ~= nil then self.horzLine15:destroy(); self.horzLine15 = nil; end;
         if self.dataLink26 ~= nil then self.dataLink26:destroy(); self.dataLink26 = nil; end;
+        if self.labelstatus ~= nil then self.labelstatus:destroy(); self.labelstatus = nil; end;
         if self.button17 ~= nil then self.button17:destroy(); self.button17 = nil; end;
         if self.label85 ~= nil then self.label85:destroy(); self.label85 = nil; end;
         if self.label46 ~= nil then self.label46:destroy(); self.label46 = nil; end;
@@ -5473,9 +5560,10 @@ local function constructNew_frmOurFichaL5R4e()
         if self.horzLine13 ~= nil then self.horzLine13:destroy(); self.horzLine13 = nil; end;
         if self.dataLink11 ~= nil then self.dataLink11:destroy(); self.dataLink11 = nil; end;
         if self.rectangle13 ~= nil then self.rectangle13:destroy(); self.rectangle13 = nil; end;
-        if self.label141 ~= nil then self.label141:destroy(); self.label141 = nil; end;
         if self.dataLink46 ~= nil then self.dataLink46:destroy(); self.dataLink46 = nil; end;
+        if self.label141 ~= nil then self.label141:destroy(); self.label141 = nil; end;
         if self.button19 ~= nil then self.button19:destroy(); self.button19 = nil; end;
+        if self.editgloria ~= nil then self.editgloria:destroy(); self.editgloria = nil; end;
         if self.button14 ~= nil then self.button14:destroy(); self.button14 = nil; end;
         if self.dataLink50 ~= nil then self.dataLink50:destroy(); self.dataLink50 = nil; end;
         if self.label134 ~= nil then self.label134:destroy(); self.label134 = nil; end;

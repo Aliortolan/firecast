@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout name="layNote" align="client" visible="false">
+	<AsTabs />
+		<DivisorD texto="A N O T A Ç Õ E S" largura="190" topo="10"/>
+		<richEdit align="client" field="anotacao" backgroundColor="#272727" defaultFontColor="white" margins="{left=20, right=20, bottom=40}"/>
+</layout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout name="layMagias" align="client" visible="false">
+	<AsTabs />
+		 <!-- ESPAÇOS DE MAGIA -->
+		<DivisorD texto="L I S T A   D E   M A G I A S" largura="245" topo="10"/>
+		<rectangle align="top" height="30" xradius="5" yradius="5" cornerType="round" color="#212121" margins="{left=20, right=20}">
+			<layout width="185" align="left" margins="{left=5}">
+				<image align="left" style="proportional" width="25" src="./assets/Frames/miniAguaI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
+				<label align="left" text="ÁGUA:" margins="{right=2}" width="38"/>
+				<edit field="slotAgua" horzTextAlign="center" width="25" align="left" />
+				<dataLink defaultValue="0" field="slotAgua" />
+				<label align="left" width="10" text="/"/>
+				<label align="left" width="25" field="water"/>
+			</layout>
+			<layout width="185" align="left">
+				<image align="left" style="proportional" width="25" src="./assets/Frames/miniArI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
+				<label align="left" text="AR:" margins="{right=2}" width="25"/>
+				<edit field="slotAr" horzTextAlign="center" width="25" align="left" />
+				<dataLink defaultValue="0" field="slotAr" />
+				<label align="left" width="10" text="/"/>
+				<label align="left" width="25" field="air"/>
+			</layout>
+			
+			<layout width="185" align="left">
+				<image align="left" style="proportional" width="25" src="./assets/Frames/miniFogoI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
+				<label align="left" text="FOGO:" margins="{right=2}" width="38"/>
+				<edit field="slotFogo" horzTextAlign="center" width="25" align="left" />
+				<dataLink defaultValue="0" field="slotFogo" />
+				<label align="left" width="10" text="/"/>
+				<label align="left" width="25" field="fire"/>
+			</layout>
+			
+			<layout width="185" align="left">
+				<image align="left" style="proportional" width="25" src="./assets/Frames/miniTerraI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
+				<label align="left" text="TERRA:" margins="{right=2}" width="50"/>
+				<edit field="slotTerra" horzTextAlign="center" width="25" align="left" />
+				<dataLink defaultValue="0" field="slotTerra" />
+				<label align="left" width="10" text="/"/>
+				<label align="left" width="25" field="earth"/>
+			</layout>
+			
+			<layout width="185" align="left">
+				<image align="left" style="proportional" width="25" src="./assets/Frames/miniVazioI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
+				<label align="left" text="VAZIO:" margins="{right=2}" width="43"/>
+				<edit field="slotVazio" horzTextAlign="center" width="25" align="left" />
+				<dataLink defaultValue="0" field="slotVazio" />
+				<label align="left" width="10" text="/"/>
+				<label align="left" width="25" field="void"/>
+			</layout>
+			<button align="right" text="🞦" width="30" onClick='self.rclMagias:append();'/>
+		</rectangle>
+		
+	<recordList align="client" layout="horizontalTiles" name="rclMagias" field="magias" templateForm="templateMagias" 
+	onSelect="self.rclMagias:sort();" onItemAdded="self.rclMagias:sort();" onItemRemoved="self.rclMagias:sort();" margins="{left = 15, right = 15, top = 5, bottom = 15}">
+		<event name="onCompare">
+		<![CDATA[               
+			if(nodeA.elemMagia == nodeB.elemMagia) then
+			
+				if (nodeA.lvlMagia or 0) > (nodeB.lvlMagia or 0) then
+						return 1;
+				elseif (nodeA.lvlMagia or 0) < (nodeB.lvlMagia or 0) then
+						return -1;
+				else   
+						return Utils.compareStringPtBr(nodeA.nomeMagia, nodeB.nomeMagia);
+				end;
+			
+			elseif(nodeA.elemMagia == "Water" and 
+			(nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
+				return -1;
+			elseif(nodeA.elemMagia == "Air" and 
+			(nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
+				return -1;
+			elseif(nodeA.elemMagia == "Fire" and 
+			(nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
+				return -1;
+			elseif(nodeA.elemMagia == "Earth" and 
+			(nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
+				return -1;
+			elseif(nodeA.elemMagia == "Void" and 
+			(nodeB.elemMagia == "Universal")) then
+				return -1;
+			elseif(nodeA.elemMagia == "Universal" and 
+			(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void")) then
+				return 1;
+			elseif(nodeA.elemMagia == "Void" and 
+			(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth")) then
+				return 1;
+			elseif(nodeA.elemMagia == "Earth" and 
+			(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire")) then
+				return 1;
+			elseif(nodeA.elemMagia == "Fire" and 
+			(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air")) then
+				return 1;
+			elseif(nodeA.elemMagia == "Air" and 
+			(nodeB.elemMagia == "Water")) then
+				return 1;
+			end;
+		]]>
+		</event>
+	</recordList>
+</layout>
