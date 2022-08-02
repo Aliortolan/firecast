@@ -2,9 +2,6 @@
 
 <form formType="sheetTemplate" dataType="L5R_4e_Otimizado" title="L5R 4e (Otimizado)" name="frmOurFichaL5R4e">
 
-
-
-
 	<!-- Máximo de ferimentos -->
 	<dataLink fields="{'lastroTerra', 'extraFerimentos', 'BHealth', 'earth', 'PWound'}" defaultValues="{'2', '0'}"> 
 			<event name="onChange">
@@ -342,58 +339,58 @@
 	</dataLink>
 
 <style>
-rectangle.LinhadeFora{
-	align: client; 
-	color: transparent; 
-	strokeColor: #272727; 
-	strokeSize: 2; 
-	xradius: 25; 
-	yradius: 25; 
-	cornerType: bevel; 
-	margins: {top=20, bottom=20};
-}
+	rectangle.LinhadeFora{
+		align: client; 
+		color: transparent; 
+		strokeColor: #272727; 
+		strokeSize: 2; 
+		xradius: 25; 
+		yradius: 25; 
+		cornerType: bevel; 
+		margins: {top=20, bottom=20};
+	}
 
-rectangle.LinhaDeDentro{
-	align: client; 
-	color: transparent; 
-	strokeColor: #272727; 
-	strokeSize: 1; 
-	xradius: 23; 
-	yradius: 23; 
-	cornerType: bevel; 
-	margins: {top=5, right=5, bottom=5, left=5};
-}
+	rectangle.LinhaDeDentro{
+		align: client; 
+		color: transparent; 
+		strokeColor: #272727; 
+		strokeSize: 1; 
+		xradius: 23; 
+		yradius: 23; 
+		cornerType: bevel; 
+		margins: {top=5, right=5, bottom=5, left=5};
+	}
 
-rectangle.Fundo{
-	align: client; 
-	color: #272727; 
-	xradius: 20; 
-	yradius: 20; 
-	cornerType: bevel; 
-	margins: {top=10, right=10, bottom=10, left=10};
-}
-label{
-	fontColor: white;
-	fontStyle: bold;
-	fontFamily: Cambria;
-}
-checkBox{
-	fontColor: white;
-	fontFamily: Cambria;
-}
-edit{
-	fontColor: #cdcdcd;
-	fontFamily: Cambria;
-	transparent: true;
-}
-button.Tab{
-	align: left;
-	margins: {right=2};
-	width: 100;
-	fontFamily: Constantia;
-	fontStyle: bold;
-	fontSize: 10;
-}
+	rectangle.Fundo{
+		align: client; 
+		color: #272727; 
+		xradius: 20; 
+		yradius: 20; 
+		cornerType: bevel; 
+		margins: {top=10, right=10, bottom=10, left=10};
+	}
+	label{
+		fontColor: white;
+		fontStyle: bold;
+		fontFamily: Cambria;
+	}
+	checkBox{
+		fontColor: white;
+		fontFamily: Cambria;
+	}
+	edit{
+		fontColor: #cdcdcd;
+		fontFamily: Cambria;
+		transparent: true;
+	}
+	button.Tab{
+		align: left;
+		margins: {right=2};
+		width: 100;
+		fontFamily: Constantia;
+		fontStyle: bold;
+		fontSize: 10;
+	}
 </style>
 
 <script>
@@ -442,20 +439,18 @@ button.Tab{
 				<rectangle class="LinhadeFora">
 					<rectangle class="LinhadeDentro">
 						<rectangle class="Fundo">
-							 
+
+							<!-- ABA "FRENTE" -->
 							<import file="./layouts/layoutFrente.xml"/>
-							
+							<!-- ABA "MECÂNICAS" -->
 							<import file="./layouts/layoutMecanica.xml"/>
-							
+							<!-- ABA "MAGIA" -->
 							<import file="./layouts/layoutMagia.xml"/>
-							
+							<!-- ABA "HISTÓRIA" -->
 							<import file="./layouts/layoutHistoria.xml"/>
+							<!-- ABA "ANOTAÇÕES" -->
+							<import file="./layouts/layoutAnotacoes.xml"/>
 							
-							<layout name="layNote" align="client" visible="false">
-							<AsTabs />
-								<DivisorD texto="A N O T A Ç Õ E S" largura="190" topo="10"/>
-								<richEdit align="client" field="anotacao" backgroundColor="#272727" defaultFontColor="white" margins="{left=20, right=20, bottom=40}"/>
-							</layout>
 						</rectangle>
 					</rectangle>
 				</rectangle>
@@ -463,5 +458,5 @@ button.Tab{
 
 		</flowLayout>
 	</scrollBox>
-	<layout align="client" frameStyle="/Frames/frameFundo.xml" />
+	<layout align="client" frameStyle="./assets/Frames/frameFundo.xml" />
 </form>

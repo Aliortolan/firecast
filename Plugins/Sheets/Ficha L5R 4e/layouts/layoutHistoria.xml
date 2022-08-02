@@ -15,14 +15,14 @@
 			<!-- APARÊNCIA -->
 			<DivisorD texto="A P A R Ê N C I A" largura="160" topo="60"/>
 			<image field="imagemPJ" style="autofit" editable="true" width="289" height="500" top="105" left="10.5" />
-				<dataLink field="imagemPJ" defaultValue="/Frames/avatar.jpg" />
-			<layout align="top" frameStyle="/Frames/frameFundo.xml" margins="{left=10, right=20}" height="500"/>
+				<dataLink field="imagemPJ" defaultValue="./assets/Frames/avatar.jpg" />
+			<layout align="top" frameStyle="./assets/Frames/frameFundo.xml" margins="{left=10, right=20}" height="500"/>
 			<!-- PERGUNTAS -->
 			<DivisorD texto="2 0   P E R G U N T A S" largura="205" topo="40"/>
 			<rectangle align="client" margins="{left=10, top=10, right=20, bottom=50}" color="#272727" xradius="5" yradius="5" cornerType="round">
 				<textEditor field="20questoes" align="client" margins="{left=5, top=5, right=5, bottom=5}" fontColor="#cdcdcd" fontFamily="Cambria" transparent="true"/>
 			</rectangle>
-			<image url="/Frames/logo.png" height="135" style="proportional" align="bottom" margins="{bottom=80}"/>
+			<image url="./assets/Frames/logo.png" height="135" style="proportional" align="bottom" margins="{bottom=80}"/>
 		</flowPart>
 	</flowLayout>
 </layout>

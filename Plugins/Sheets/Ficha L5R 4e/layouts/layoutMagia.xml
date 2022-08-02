@@ -6,7 +6,7 @@
 		<DivisorD texto="L I S T A   D E   M A G I A S" largura="245" topo="10"/>
 		<rectangle align="top" height="30" xradius="5" yradius="5" cornerType="round" color="#212121" margins="{left=20, right=20}">
 			<layout width="185" align="left" margins="{left=5}">
-				<image align="left" style="proportional" width="25" src="/Frames/miniAguaI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
+				<image align="left" style="proportional" width="25" src="./assets/Frames/miniAguaI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
 				<label align="left" text="ÁGUA:" margins="{right=2}" width="38"/>
 				<edit field="slotAgua" horzTextAlign="center" width="25" align="left" />
 				<dataLink defaultValue="0" field="slotAgua" />
@@ -14,7 +14,7 @@
 				<label align="left" width="25" field="water"/>
 			</layout>
 			<layout width="185" align="left">
-				<image align="left" style="proportional" width="25" src="/Frames/miniArI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
+				<image align="left" style="proportional" width="25" src="./assets/Frames/miniArI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
 				<label align="left" text="AR:" margins="{right=2}" width="25"/>
 				<edit field="slotAr" horzTextAlign="center" width="25" align="left" />
 				<dataLink defaultValue="0" field="slotAr" />
@@ -23,7 +23,7 @@
 			</layout>
 			
 			<layout width="185" align="left">
-				<image align="left" style="proportional" width="25" src="/Frames/miniFogoI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
+				<image align="left" style="proportional" width="25" src="./assets/Frames/miniFogoI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
 				<label align="left" text="FOGO:" margins="{right=2}" width="38"/>
 				<edit field="slotFogo" horzTextAlign="center" width="25" align="left" />
 				<dataLink defaultValue="0" field="slotFogo" />
@@ -32,7 +32,7 @@
 			</layout>
 			
 			<layout width="185" align="left">
-				<image align="left" style="proportional" width="25" src="/Frames/miniTerraI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
+				<image align="left" style="proportional" width="25" src="./assets/Frames/miniTerraI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
 				<label align="left" text="TERRA:" margins="{right=2}" width="50"/>
 				<edit field="slotTerra" horzTextAlign="center" width="25" align="left" />
 				<dataLink defaultValue="0" field="slotTerra" />
@@ -41,7 +41,7 @@
 			</layout>
 			
 			<layout width="185" align="left">
-				<image align="left" style="proportional" width="25" src="/Frames/miniVazioI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
+				<image align="left" style="proportional" width="25" src="./assets/Frames/miniVazioI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
 				<label align="left" text="VAZIO:" margins="{right=2}" width="43"/>
 				<edit field="slotVazio" horzTextAlign="center" width="25" align="left" />
 				<dataLink defaultValue="0" field="slotVazio" />

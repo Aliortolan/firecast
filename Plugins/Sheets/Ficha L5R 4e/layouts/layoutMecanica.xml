@@ -89,7 +89,7 @@
 				<textEditor align="client" margins="{left=5, top=5, right=5, bottom=5}" field="inventario" fontColor="#cdcdcd" fontFamily="Cambria" transparent="true" fontSize="13"/>
 			</rectangle>
 			
-			<image url="/Frames/logo.png" height="135" style="proportional" align="bottom" margins="{bottom=80}"/>
+			<image url="./assets/Frames/logo.png" height="135" style="proportional" align="bottom" margins="{bottom=80}"/>
 		</flowPart>
 	</flowLayout>
 </layout>

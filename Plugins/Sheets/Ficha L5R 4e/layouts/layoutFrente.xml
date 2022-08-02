@@ -1,3 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<style>
+	.atributos{
+		width: 30;
+		horzTextAlign: center;
+		fontSize: 20;
+		fontStyle: bold;
+		type: number;
+		min: 0;
+		max: 99;
+	}
+</style>
+
 <layout name="layFrente" align="client">
 	<flowLayout align="top" autoHeight="true" horzAlign="center">
 		<flowPart minWidth="300" maxWidth="650" height="1600">
@@ -85,7 +99,7 @@
 			<Divisor texto="A T R I B U T O S" largura="160" topo="40" />
 			
 			<layout align="top" height="300" margins="{left=20, right=20}">
-				<image align="client" src="/Frames/rings.png" style="proportional"/>
+				<image align="client" src="./assets/Frames/rings.png" style="proportional"/>
 				
 				<!-- LEGENDAS -->
 				<label fontSize="16.0" text="Vigor" left="100" top="18" />
@@ -98,24 +112,25 @@
 				<label fontSize="16.0" text="Inteligência" left="523" top="185" />
 				
 				<!-- ATRIBUTOS -->
-				<edit horzTextAlign="center" width="30" fontSize="20.0" field="stamina" left="153" top="16" fontStyle="bold" type="number" min="0" max="99"/>
+				<edit class = "atributos" field="stamina" left="153" top="16"/>
 				<dataLink defaultValue="2" field="stamina"/>
-				<edit horzTextAlign="center" width="30" fontSize="20.0" field="willpower" left="136" top="64" fontStyle="bold" type="number" min="0" max="99"/>
+				<edit class = "atributos" field="willpower" left="136" top="64"/>
 				<dataLink defaultValue="2" field="willpower"/>
-				<edit horzTextAlign="center" width="30" fontSize="20.0" field="strength" left="115" top="133" fontStyle="bold" type="number" min="0" max="99"/>
+				<edit class = "atributos" field="strength" left="115" top="133"/>
 				<dataLink defaultValue="2" field="strength"/>
-				<edit horzTextAlign="center" width="30" fontSize="20.0" field="perception" left="98" top="180" fontStyle="bold" type="number" min="0" max="99"/>
+				<edit class = "atributos" field="perception" left="98" top="180"/>
 				<dataLink defaultValue="2" field="perception"/>
-				<edit horzTextAlign="center" width="30" fontSize="20.0" field="reflexes" left="428" top="16" fontStyle="bold" type="number" min="0" max="99"/>
+				<edit class = "atributos" field="reflexes" left="428" top="16"/>
 				<dataLink defaultValue="2" field="reflexes"/>
-				<edit horzTextAlign="center" width="30" fontSize="20.0" field="awareness" left="445" top="64" fontStyle="bold" type="number" min="0" max="99"/>
+				<edit class = "atributos" field="awareness" left="445" top="64"/>
 				<dataLink defaultValue="2" field="awareness"/>
-				<edit horzTextAlign="center" width="30" fontSize="20.0" field="agility" left="466" top="133" fontStyle="bold" type="number" min="0" max="99"/>
+				<edit class = "atributos" field="agility" left="466" top="133"/>
 				<dataLink defaultValue="2" field="agility"/>
-				<edit horzTextAlign="center" width="30" fontSize="20.0" field="intelligence" left="483" top="180" fontStyle="bold" type="number" min="0" max="99"/>
+				<edit class = "atributos" field="intelligence" left="483" top="180"/>
 				<dataLink defaultValue="2" field="intelligence"/>
-				<edit horzTextAlign="center" width="30" fontSize="20.0" field="void" left="290" top="164" fontStyle="bold" type="number" min="0" max="99"/>
+				<edit class = "atributos" field="void" left="290" top="164"/>
 				<dataLink defaultValue="2" field="void"/>
+
 				<label fontSize="20.0" left="324" top="94" height="30" field="air"/>
 				<dataLink defaultValue="2" field="air"/>
 				<label fontSize="20.0" left="275" top="94" height="30" field="earth"/>
@@ -416,7 +431,7 @@
 				</layout>
 			</layout>
 			
-			<image url="/Frames/logo.png" height="135" style="proportional" align="bottom" margins="{bottom=80}"/>
+			<image url="./assets/Frames/logo.png" height="135" style="proportional" align="bottom" margins="{bottom=80}"/>
 		</flowPart>
 	</flowLayout>
 </layout>
