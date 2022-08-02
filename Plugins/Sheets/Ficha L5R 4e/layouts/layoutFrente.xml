@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<style>
-	.atributos{
-		width: 30;
-		horzTextAlign: center;
-		fontSize: 20;
-		fontStyle: bold;
-		type: number;
-		min: 0;
-		max: 99;
-	}
-</style>
-
 <layout name="layFrente" align="client">
+	<style>
+		.atributos{
+			width: 30;
+			horzTextAlign: center;
+			fontSize: 20;
+			fontStyle: bold;
+			type: number;
+			min: 0;
+			max: 99;
+		}
+	</style>
 	<flowLayout align="top" autoHeight="true" horzAlign="center">
 		<flowPart minWidth="300" maxWidth="650" height="1600">
 		<template name="Divisor">
@@ -171,7 +170,7 @@
 			
 			<layout align="top" height="1000">
 				<rectangle margins="{left=25, right=17}" align="top" height="30" xradius="5" yradius="5" cornerType="round" color="#212121">
-					<label align="left" width="254" text="PERÍCIAS" margins="{left=5}"/>
+					<label align="left" width="240" text="PERÍCIAS" margins="{left=5}"/>
 					<label align="left" width="70" text="TIPOS"/>
 					<label align="left" width="57" text="RANK"/>
 					<label align="left" width="90" text="ATRIBUTO"/>
@@ -207,16 +206,16 @@
 					<horzLine align="client" margins="{right=20, top=14}" strokeColor="#424242" />
 				</layout>
 			</template>
-			
+
 			<!-- INICIATIVA -->
 			<DivisorD texto="I N I C I A T I V A" largura="160" topo="60"/>
 				<button name="btnImagemFundo" left="270" top="20" text="⚙" height="30" width="30" onClick="self.popImagemFundo:show('left', self.btnImagemFundo);"/>
-						
+
 				<popup name="popImagemFundo" width="260" height="175" backOpacity="0" drawContainer="false">
 					<rectangle align="client" color="#353535" padding="{top=10, left=10, bottom=10, right=10}" xradius= "10" yradius="10" cornerType="bevel">
 						<label align="top" text="V A L O R E S  O P C I O N A I S" margins="{bottom=5}" fontStyle="bold" fontFamily="Constantia"/>
 						<horzLine align="top" margins="{bottom=5}" strokeColor="#424242" />
-					
+
 						<checkBox align="top" text="Mácula" margins="{bottom=5, top=5}" fontStyle="bold" fontFamily="Constantia" field="mostraMacula"/>
 						<dataLink field="mostraMacula">
 						<event name="onChange">
@@ -246,7 +245,7 @@
 						<label align="top" text="I M A G E M  D E  F U N D O" margins="{bottom=5, top=10}" fontStyle="bold" fontFamily="Constantia"/>
 						<horzLine align="top" margins="{bottom=5}" strokeColor="#424242" />
 						<edit align="client" padding="{top=10, left=10, bottom=10, right=10}" transparent="false" field="URLImagemFundo" width="240"/>
-						
+
 					</rectangle>
 				</popup>
 				<layout align="top" height="120" margins="{left=20}">
@@ -262,7 +261,7 @@
 						</rectangle>
 						<label align="left" text="Reflexos" width="155" margins="{left=35}"/>
 					</layout>
-					
+
 					<layout align="top" height="30">
 						<label align="left" text="Modificadores:" width="100"/>
 						<label align="left" text="+" horzTextAlign="trailing" width="15"/>
@@ -281,10 +280,10 @@
 						<label align="left" width="25" field="addMod"/>
 					</layout>
 				</layout>
-			
+
 			<!-- ARMADURA -->
 			<DivisorD texto="A R M A D U R A" largura="160" topo="40"/>
-			
+
 			<layout align="top" height="350" margins="{left=20}">
 				<layout align="top" height="30">
 					<label align="left" text="Tipo:" width="80"/>
@@ -306,19 +305,19 @@
 					<label align="left" field="NA"/>
 				</layout>
 			</layout>
-			
+
 			<!-- FERIMENTOS -->
 			<DivisorD texto="F E R I M E N T O S" largura="180" topo="40"/>
-			
+
 			<layout align="top" height="430" margins="{left=20, right=20}">										
-			
+
 				<layout align="top" height="400">
 					<rectangle align="top" height="30" xradius="5" yradius="5" cornerType="round" color="black"> 
 						<label align="left" text="NÍVEL" width="97" margins="{left=5}"/>
 						<label align="left" text="PEN." width="50"/>
 						<label align="left" text="FERIMENTOS" width="80"/>
 						<button name="btnFeri" align="right" text="𝐢" width="30" onClick="self.popFerimentos:show('left', self.btnFeri);"/> />
-						
+
 						<popup name="popFerimentos" width="260" height="280" backOpacity="0" drawContainer="false">
 							<rectangle align="client" color="#353535" padding="{top=10, left=10, bottom=10, right=10}" xradius= "10" yradius="10" cornerType="bevel">
 								<label align="top" text="C O N F I G U R A Ç Õ E S" margins="{bottom=5}" fontStyle="bold" fontFamily="Constantia"/>
@@ -341,7 +340,7 @@
 							</rectangle>
 						</popup>
 					</rectangle>
-					
+
 					<layout align="top" height="30">
 						<label align="left" width="100" text="Saudável" margins="{left=5}"/>
 						<label align="left" text="+0" width="50"/>
@@ -349,7 +348,7 @@
 						<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
 						<label align="left" horzTextAlign="center" fontSize="16.0" field="Saud" width="30"/>
 						<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LSaud"/>
-						
+
 					</layout>
 					<layout align="top" height="30">
 						<label align="left" width="100" text="Escoriado" margins="{left=5}"/>
@@ -358,7 +357,7 @@
 						<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
 						<label align="left" horzTextAlign="center" fontSize="16.0" field="Esco" width="30"/>
 						<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LEsco"/>
-						
+
 					</layout>
 					<layout align="top" height="30">
 						<label align="left" width="100" text="Machucado" margins="{left=5}"/>
@@ -367,7 +366,7 @@
 						<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
 						<label align="left" horzTextAlign="center" fontSize="16.0" field="Mach" width="30"/>
 						<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LMach"/>
-						
+
 					</layout>
 					<layout align="top" height="30">
 						<label align="left" width="100" text="Ferido" margins="{left=5}"/>
@@ -376,7 +375,7 @@
 						<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
 						<label align="left" horzTextAlign="center" fontSize="16.0" field="Feri" width="30"/>
 						<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LFeri"/>
-						
+
 					</layout>
 					<layout align="top" height="30">
 						<label align="left" width="100" text="Ser. Ferido" margins="{left=5}"/>
@@ -385,7 +384,7 @@
 						<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
 						<label align="left" horzTextAlign="center" fontSize="16.0" field="Seri" width="30"/>
 						<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LSeri"/>
-						
+
 					</layout>
 					<layout align="top" height="30">
 						<label align="left" width="100" text="Incapacitado" margins="{left=5}"/>
@@ -394,7 +393,7 @@
 						<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
 						<label align="left" horzTextAlign="center" fontSize="16.0" field="Inca" width="30"/>
 						<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LInca"/>
-						
+
 					</layout>
 					<layout align="top" height="30">
 						<label align="left" width="100" text="Abatido" margins="{left=5}"/>
@@ -403,7 +402,7 @@
 						<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
 						<label align="left" horzTextAlign="center" fontSize="16.0" field="Abat" width="30"/>
 						<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LAbat"/>
-						
+
 					</layout>
 					<layout align="top" height="30">
 						<label align="left" width="100" text="Inconsciente" margins="{left=5}"/>
@@ -412,7 +411,7 @@
 						<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
 						<label align="left" horzTextAlign="center" fontSize="16.0" field="Inco" width="30"/>
 						<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LInco"/>
-						
+
 					</layout>
 					
 					<layout align="top" height="30" margins="{top=20}">

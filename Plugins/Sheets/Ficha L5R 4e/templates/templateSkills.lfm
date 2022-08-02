@@ -32,9 +32,9 @@ edit{
 			field="atributoSkill" values="{'StaminON', 'WillpoweON', 'StrengtON', 'PerceptioON', 'ReflexeON', 'AwarenesON', 'AgilitON', 'IntelligencON', 'VoiON'}"/>
 		</rectangle>
 		
-		<edit field="rolagem" align="left" width="50" margins="{right=2}"/>
+		<edit field="rolagem" align="left" width="100" margins="{right=2}"/>
 		<dataLink defaultValue="xky" fields = "{'rankSkill',  'atributoSkill', 'stamina', 'willpower', 'strength', 'perception', 'reflexes', 'awareness', 'agility', 'intelligence', 'void'}">
-			<event name = "onChange">
+			<!-- <event name = "onChange">
 				<![CDATA[
 					require ("ndb.lua");
 					local node = NDB.getRoot(sheet);
@@ -61,10 +61,10 @@ edit{
 
 					sheet.rolagem = tonumber(tonumber(sheet.rankSkill) + tonumber(trait)) .."k" ..trait
 				]]>
-			</event>	
+			</event>	 -->
 		</dataLink>
 
-		<edit field="bonus" align="left" width="60" margins="{right=2}" textPrompt = "+xky" transparent = "false"/>
+		<!-- <edit field="bonus" align="left" width="60" margins="{right=2}" textPrompt = "+xky" transparent = "false"/> -->
 
 		<popup name="popUp_Enfases" width="200" height="150" backOpacity="0" drawContainer="false">
 			<rectangle align="client" color="#0e0e0e" padding="{top=10, left=10, bottom=10, right=10}" xradius= "10" yradius="10" cornerType="bevel">
