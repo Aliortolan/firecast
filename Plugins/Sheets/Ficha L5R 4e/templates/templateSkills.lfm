@@ -24,7 +24,7 @@ edit{
 			<comboBox align="client" field="tipoSkill" items="{'Alta', 'Baixa', 'Bugei', 'Mercante'}" values="{'Alta', 'Baixa', 'Bugei', 'Mercante'}" margins="{right=2, left=2}"/>
 		</rectangle>
 		
-		<edit field="rankSkill" align="left" width="42" margins="{right=2}" horzTextAlign="center" type="number" min="0" max="10" fontStyle="bold" fontColor="white"/>
+		<edit field="rankSkill" align="left" width="42" margins="{right=2}" horzTextAlign="center" type="number" min="0" max="99" fontStyle="bold" fontColor="white"/>
 		<dataLink defaultValue="1" field="rankSkill" />
 		
 		<rectangle color="#212121" align="left" width="90" margins="{right=2}">

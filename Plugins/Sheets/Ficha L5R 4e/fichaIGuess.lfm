@@ -317,8 +317,6 @@
 			</event>
 	</dataLink>
 
-	
-
 	<!-- Iniciativa -->
 	<dataLink fields="{'addRolaIni', 'addMantemIni', 'reflexes', 'nivelSb'}" defaultValues="{'0', '0'}"> 
 			<event name="onChange">
@@ -343,61 +341,98 @@
 			</event>
 	</dataLink>
 
+<style>
+rectangle.LinhadeFora{
+	align: client; 
+	color: transparent; 
+	strokeColor: #272727; 
+	strokeSize: 2; 
+	xradius: 25; 
+	yradius: 25; 
+	cornerType: bevel; 
+	margins: {top=20, bottom=20};
+}
 
-	<style>
-		rectangle.LinhadeFora{
-			align: client; 
-			color: transparent; 
-			strokeColor: #272727; 
-			strokeSize: 2; 
-			xradius: 25; 
-			yradius: 25; 
-			cornerType: bevel; 
-			margins: {top=20, bottom=20};
-		}
+rectangle.LinhaDeDentro{
+	align: client; 
+	color: transparent; 
+	strokeColor: #272727; 
+	strokeSize: 1; 
+	xradius: 23; 
+	yradius: 23; 
+	cornerType: bevel; 
+	margins: {top=5, right=5, bottom=5, left=5};
+}
 
-		rectangle.LinhaDeDentro{
-			align: client; 
-			color: transparent; 
-			strokeColor: #272727; 
-			strokeSize: 1; 
-			xradius: 23; 
-			yradius: 23; 
-			cornerType: bevel; 
-			margins: {top=5, right=5, bottom=5, left=5};
-		}
+rectangle.Fundo{
+	align: client; 
+	color: #272727; 
+	xradius: 20; 
+	yradius: 20; 
+	cornerType: bevel; 
+	margins: {top=10, right=10, bottom=10, left=10};
+}
+label{
+	fontColor: white;
+	fontStyle: bold;
+	fontFamily: Cambria;
+}
+checkBox{
+	fontColor: white;
+	fontFamily: Cambria;
+}
+edit{
+	fontColor: #cdcdcd;
+	fontFamily: Cambria;
+	transparent: true;
+}
+button.Tab{
+	align: left;
+	margins: {right=2};
+	width: 100;
+	fontFamily: Constantia;
+	fontStyle: bold;
+	fontSize: 10;
+}
+</style>
 
-		rectangle.Fundo{
-			align: client; 
-			color: #272727; 
-			xradius: 20; 
-			yradius: 20; 
-			cornerType: bevel; 
-			margins: {top=10, right=10, bottom=10, left=10};
-		}
-		label{
-			fontColor: white;
-			fontStyle: bold;
-			fontFamily: Cambria;
-		}
-		checkBox{
-			fontColor: white;
-			fontFamily: Cambria;
-		}
-		edit{
-			fontColor: #cdcdcd;
-			fontFamily: Cambria;
-			transparent: true;
-		}
-		button.Tab{
-			align: left;
-			margins: {right=2};
-			width: 100;
-			fontFamily: Constantia;
-			fontStyle: bold;
-			fontSize: 10;
-		}
-	</style>
+<script>
+<![CDATA[
+	local function TrocarAba(a)
+		if(a == 'F') then
+			self.layFrente.visible = true;
+			self.layMecanicas.visible = false;
+			self.layMagias.visible = false;
+			self.layBG.visible = false;
+			self.layNote.visible = false;
+		elseif(a == 'M') then
+			self.layFrente.visible = false;
+			self.layMecanicas.visible = true;
+			self.layMagias.visible = false;
+			self.layBG.visible = false;
+			self.layNote.visible = false;
+		elseif(a == 'S') then
+			self.layFrente.visible = false;
+			self.layMecanicas.visible = false;
+			self.layMagias.visible = true;
+			self.layBG.visible = false;
+			self.layNote.visible = false;
+		elseif(a == 'H') then
+			self.layFrente.visible = false;
+			self.layMecanicas.visible = false;
+			self.layMagias.visible = false;
+			self.layBG.visible = true;
+			self.layNote.visible = false;
+		elseif(a == 'A') then
+			self.layFrente.visible = false;
+			self.layMecanicas.visible = false;
+			self.layMagias.visible = false;
+			self.layBG.visible = false;
+			self.layNote.visible = true;
+		end;
+	end;
+]]>
+</script>
 
 	<image field="URLImagemFundo" align="client" style="autofit" src=""/>
 	<scrollBox align="client">
@@ -407,568 +442,25 @@
 				<rectangle class="LinhadeFora">
 					<rectangle class="LinhadeDentro">
 						<rectangle class="Fundo">
-							 <!-- ABA FRENTE -->
-							<import file = "layoutFrente.xml"/>
-
-								<AsTabs />								
-									<!-- CABEÇALHO -->
-									<Divisor texto="P E R S O N A G E M" largura="190" topo="10" />
-									
-									<flowLayout align="top" autoHeight="true">
-										<flowPart maxWidth="350" minWidth="350" height="120">
-											<template name="CampoA">
-												<layout align="top" height="30" margins="{left=25}">
-													<label align="left" text="$(legenda):" width="$(largura)"/>
-													<edit field="$(campo)" align="client" margins="{right=10}" />
-													<dataLink field="$(campo)" defaultValue="—" />
-												</layout>
-											</template>
-											
-											<CampoA legenda="Nome" largura="40" campo="nomeChar" />
-											<CampoA legenda="Clã" largura="25" campo="claChar" />
-											<CampoA legenda="Escola" largura="45" campo="escolaChar" />
-											
-										</flowPart>
-										<flowPart maxWidth="150" minWidth="150" height="120">
-											
-											<layout align="top" height="30">
-												<label text="Nível:" align="left" width="100"/>
-												<rectangle left="80" top="2.5" width="25" height="25" xradius="20" yradius="20" cornerType="round" color="#101010">
-													<label field="nivelSb" horzTextAlign="center" align="client"/><dataLink field="nivelSb" defaultValue="0" />
-												</rectangle>
-											</layout>
-											<layout align="top" height="30">
-												<label text="Sabedoria:" align="left" width="100" />
-												<rectangle left="80" top="2.5" width="25" height="25" xradius="20" yradius="20" cornerType="round" color="#101010">
-													<label field="sabedoria" horzTextAlign="center" align="client"/><dataLink field="sabedoria" defaultValue="0" />
-												</rectangle>
-												<label fontSize="10.0" text="+" left="110" top="8.5" />
-												<edit left="117" top="2.5" fontSize="10.0" vertTextAlign="center" width="30" height="25" type="number" min="0" max="999" field="maisSab"/>
-											</layout>
-											<layout align="top" height="30">
-												<label text="Experiência:" align="left" width="80" />
-												<edit field="xpGastar" align="client" type="number" min="0" max="999" />
-												<dataLink field="xpGastar" defaultValue="0" />
-											</layout>
-											<layout align="top" height="30">
-												<label text="Karma:" align="left" width="80" name="labelkarma"/>
-												<edit field="karma" align="client" type="number" min="0" max="999" name="editkarma"/>
-												<dataLink field="karma" defaultValue="0" />
-											</layout>
-								
-										</flowPart>
-										<flowPart maxWidth="150" minWidth="150" height="120">
-											<template name="CampoB">
-												<layout align="top" height="30" margins="{left=10}">
-													<label align="left" text="$(legenda):" width="$(largura)" name="label$(campo)"/>
-													<edit horzTextAlign="center" field="$(campo)" align="client" margins="{right=10}" type="float" min="-999.0" max="999.0" name="edit$(campo)"/>
-													<dataLink field="$(campo)" defaultValue="0" />
-												</layout>
-											</template>
-											
-											<CampoB legenda="Honra" largura="50" campo="honra" />
-											<CampoB legenda="Glória" largura="50" campo="gloria" />
-											<CampoB legenda="Status" largura="50" campo="status" />
-											<CampoB legenda="Mácula" largura="50" campo="macula" />
-											
-											
-										</flowPart>
-									</flowLayout>
-									
-									<!-- ANÉIS E ATRIBUTOS -->
-									<Divisor texto="A T R I B U T O S" largura="160" topo="40" />
-									
-									<layout align="top" height="300" margins="{left=20, right=20}">
-										<image align="client" src="/Frames/rings.png" style="proportional"/>
-										
-										<!-- LEGENDAS -->
-										<label fontSize="16.0" text="Vigor" left="100" top="18" />
-										<label fontSize="16.0" text="Vontade" left="63" top="68" />
-										<label fontSize="16.0" text="Força" left="60" top="135" />
-										<label fontSize="16.0" text="Percepção" left="8" top="185" />
-										<label fontSize="16.0" text="Reflexos" left="470" top="18" />
-										<label fontSize="16.0" text="Astúcia" left="488" top="68" />
-										<label fontSize="16.0" text="Agilidade" left="508" top="135" />
-										<label fontSize="16.0" text="Inteligência" left="523" top="185" />
-										
-										<!-- ATRIBUTOS -->
-										<edit horzTextAlign="center" width="30" fontSize="20.0" field="stamina" left="153" top="16" fontStyle="bold" type="number" min="0" max="10"/>
-										<dataLink defaultValue="2" field="stamina"/>
-										<edit horzTextAlign="center" width="30" fontSize="20.0" field="willpower" left="136" top="64" fontStyle="bold" type="number" min="0" max="10"/>
-										<dataLink defaultValue="2" field="willpower"/>
-										<edit horzTextAlign="center" width="30" fontSize="20.0" field="strength" left="115" top="133" fontStyle="bold" type="number" min="0" max="10"/>
-										<dataLink defaultValue="2" field="strength"/>
-										<edit horzTextAlign="center" width="30" fontSize="20.0" field="perception" left="98" top="180" fontStyle="bold" type="number" min="0" max="10"/>
-										<dataLink defaultValue="2" field="perception"/>
-										<edit horzTextAlign="center" width="30" fontSize="20.0" field="reflexes" left="428" top="16" fontStyle="bold" type="number" min="0" max="10"/>
-										<dataLink defaultValue="2" field="reflexes"/>
-										<edit horzTextAlign="center" width="30" fontSize="20.0" field="awareness" left="445" top="64" fontStyle="bold" type="number" min="0" max="10"/>
-										<dataLink defaultValue="2" field="awareness"/>
-										<edit horzTextAlign="center" width="30" fontSize="20.0" field="agility" left="466" top="133" fontStyle="bold" type="number" min="0" max="10"/>
-										<dataLink defaultValue="2" field="agility"/>
-										<edit horzTextAlign="center" width="30" fontSize="20.0" field="intelligence" left="483" top="180" fontStyle="bold" type="number" min="0" max="10"/>
-										<dataLink defaultValue="2" field="intelligence"/>
-										<edit horzTextAlign="center" width="30" fontSize="20.0" field="void" left="290" top="164" fontStyle="bold" type="number" min="0" max="10"/>
-										<dataLink defaultValue="2" field="void"/>
-				
-										<label fontSize="20.0" left="324" top="94" height="30" field="air"/>
-										<dataLink defaultValue="2" field="air"/>
-										<label fontSize="20.0" left="275" top="94" height="30" field="earth"/>
-										<dataLink defaultValue="2" field="earth"/>
-										<label fontSize="20.0" left="260" top="138" height="30" field="water"/>
-										<dataLink defaultValue="2" field="water"/>
-										<label fontSize="20.0" left="339" top="138" height="30" field="fire"/>
-										<dataLink defaultValue="2" field="fire"/>
-									</layout>
-									
-									<layout align="top" height="40" margins="{top=10}">
-										<flowLayout align="top" horzAlign="center" height="40"><flowPart width="160">
-											<layout align="top" height="20">
-												<radioButton width="20" align="left" field="VOIDescala" fieldValue="0void" groupName="VOIDGrupo" checked="true"/>
-												<radioButton width="20" align="left" field="VOIDescala" fieldValue="1void" groupName="VOIDGrupo"/> 
-												<radioButton width="20" align="left" field="VOIDescala" fieldValue="2void" groupName="VOIDGrupo"/> 
-												<radioButton width="20" align="left" field="VOIDescala" fieldValue="3void" groupName="VOIDGrupo"/> 
-												<radioButton width="20" align="left" field="VOIDescala" fieldValue="4void" groupName="VOIDGrupo"/> 
-												<radioButton width="20" align="left" field="VOIDescala" fieldValue="5void" groupName="VOIDGrupo"/> 
-												<radioButton width="20" align="left" field="VOIDescala" fieldValue="6void" groupName="VOIDGrupo"/> 
-												<radioButton width="20" align="left" field="VOIDescala" fieldValue="7void" groupName="VOIDGrupo"/>
-											</layout>
-											<layout align="top" height="20">
-												<label text="0" align="left" width="20" horzTextAlign="center" />
-												<label text="1" align="left" width="20" horzTextAlign="center" />
-												<label text="2" align="left" width="20" horzTextAlign="center" />
-												<label text="3" align="left" width="20" horzTextAlign="center" />
-												<label text="4" align="left" width="20" horzTextAlign="center" />
-												<label text="5" align="left" width="20" horzTextAlign="center" />
-												<label text="6" align="left" width="20" horzTextAlign="center" />
-												<label text="7" align="left" width="20" horzTextAlign="center" />
-											</layout>
-										</flowPart></flowLayout>	
-									</layout>
-									
-									<!-- HABILIDADES -->
-									<Divisor texto="P E R Í C I A S" largura="130" topo="40"/>
-									
-									<layout align="top" height="1000">
-										<rectangle margins="{left=25, right=17}" align="top" height="30" xradius="5" yradius="5" cornerType="round" color="#212121">
-											<label align="left" width="254" text="PERÍCIAS" margins="{left=5}"/>
-											<label align="left" width="70" text="TIPOS"/>
-											<label align="left" width="57" text="RANK"/>
-											<label align="left" width="90" text="ATRIBUTO"/>
-											<label align="left" width="105" text="ROLAGEM"/>
-											<button align="right" width="30" text="🞦" hint="Nova Perícia" onClick='self.rclSkills:append();'/>
-										</rectangle>
-										
-										<recordList align="top" name="rclSkills" field="pericias" templateForm="templateSkills" left="5" height="720" minQt="7" 
-										onSelect="self.rclSkills:sort();" onItemAdded="self.rclSkills:sort();" onItemRemoved="self.rclSkills:sort();">
-												<event name="onCompare">
-													<![CDATA[               
-
-													if((nodeA.MarcadorSkillEscola or false) == false and (nodeB.MarcadorSkillEscola or false) == true) then
-														return 1;
-													elseif((nodeA.MarcadorSkillEscola or false) == true and (nodeB.MarcadorSkillEscola or false) == false) then
-														return -1;
-													else
-														return Utils.compareStringPtBr(nodeA.nomeSkill, nodeB.nomeSkill);
-													end;               
-
-													]]>
-												</event>
-										</recordList>
-									</layout>
-									
-								</flowPart>
-								<flowPart minWidth="100" maxWidth="350" height="1600">
-									<rectangle width="300" height="1530" color="#202020" />
-									<rectangle width="320" height="1530" color="#202020" xradius="20" yradius="20" cornerType="bevel" />
-									
-									
-									<template name="DivisorD">
-										<layout align="top" height="30" margins="{top=$(topo), left=20, bottom=15}">
-											<label align="left" text="$(texto)" width="$(largura)" fontSize="20" fontFamily="Constantia" />
-											<horzLine align="client" margins="{right=20, top=14}" strokeColor="#424242" />
-										</layout>
-									</template>
-									
-									<!-- INICIATIVA -->
-									<DivisorD texto="I N I C I A T I V A" largura="160" topo="60"/>
-										<button name="btnImagemFundo" left="270" top="20" text="⚙" height="30" width="30" onClick="self.popImagemFundo:show('left', self.btnImagemFundo);"/>
-												
-												<popup name="popImagemFundo" width="260" height="175" backOpacity="0" drawContainer="false">
-													<rectangle align="client" color="#353535" padding="{top=10, left=10, bottom=10, right=10}" xradius= "10" yradius="10" cornerType="bevel">
-														<label align="top" text="V A L O R E S  O P C I O N A I S" margins="{bottom=5}" fontStyle="bold" fontFamily="Constantia"/>
-														<horzLine align="top" margins="{bottom=5}" strokeColor="#424242" />
-													
-														<checkBox align="top" text="Mácula" margins="{bottom=5, top=5}" fontStyle="bold" fontFamily="Constantia" field="mostraMacula"/>
-														<dataLink field="mostraMacula">
-														<event name="onChange">
-														if (sheet.mostraMacula == false) then
-															self.labelmacula.visible = false;
-															self.editmacula.visible = false;
-														end
-
-														if (sheet.mostraMacula == true) then
-															self.labelmacula.visible = true;
-															self.editmacula.visible = true;
-														end
-														</event>
-														</dataLink>
-
-														<checkBox align="top" text="Karma" margins="{bottom=5, top=5}" fontStyle="bold" fontFamily="Constantia" field="mostraKarma"/>
-														<dataLink field="mostraKarma">
-														<event name="onChange">
-														if (sheet.mostraKarma == false) then
-															self.labelkarma.visible = false;
-															self.editkarma.visible = false;
-														end
-
-														if (sheet.mostraKarma == true) then
-															self.labelkarma.visible = true;
-															self.editkarma.visible = true;
-														end
-														</event>
-														</dataLink>
-
-														<label align="top" text="I M A G E M  D E  F U N D O" margins="{bottom=5, top=10}" fontStyle="bold" fontFamily="Constantia"/>
-														<horzLine align="top" margins="{bottom=5}" strokeColor="#424242" />
-														<edit align="client" padding="{top=10, left=10, bottom=10, right=10}" transparent="false" field="URLImagemFundo" width="240"/>
-
-														
-													</rectangle>
-												</popup>
-
-										<layout align="top" height="120" margins="{left=20}">
-											<layout align="top" height="30">
-												<rectangle top="2.5" left="0" width="25" height="25" xradius="20" yradius="20" cornerType="round" color="black">
-													<label field="nivelSb" horzTextAlign="center" align="client"/>  
-												</rectangle>
-												<label align="left" text="Nível" width="155" margins="{left=35}"/>
-											</layout>
-											<layout align="top" height="30">
-												<rectangle top="2.5" left="0" width="25" height="25" xradius="20" yradius="20" cornerType="round" color="black">
-													<label field="reflexes" horzTextAlign="center" align="client"/>  
-												</rectangle>
-												<label align="left" text="Reflexos" width="155" margins="{left=35}"/>
-											</layout>
-											
-											<layout align="top" height="30">
-												<label align="left" text="Modificadores:" width="100"/>
-												<label align="left" text="+" horzTextAlign="trailing" width="15"/>
-												<edit align="left" horzTextAlign="center" width="25" type="number" field="addRolaIni"/>
-												<label align="left" text="k" width="15" horzTextAlign="center"/>
-												<edit align="left" horzTextAlign="center" width="25" type="number" field="addMantemIni"/>
-												<label align="left" text="+" width="10"/>
-												<edit align="left" width="25" type="number" field="addMod"/><dataLink defaultValue="0" field="addMod"/> 
-											</layout>	
-											<layout align="top" height="30">	
-												<label align="left" text="Iniciativa Atual:" width="115"/>
-												<label align="left" horzTextAlign="center" width="25" field="rolaIni"/>
-												<label align="left" text="k" width="15" horzTextAlign="center"/>
-												<label align="left" horzTextAlign="center" width="25" field="mantemIni"/>
-												<label align="left" text="+" width="10"/>
-												<label align="left" width="25" field="addMod"/>
-											</layout>
-										</layout>
-									
-									<!-- ARMADURA -->
-									<DivisorD texto="A R M A D U R A" largura="160" topo="40"/>
-									
-									<layout align="top" height="350" margins="{left=20}">
-										<layout align="top" height="30">
-											<label align="left" text="Tipo:" width="80"/>
-											<edit align="client" field="tipoArmadura"/>
-											<dataLink field="tipoArmadura" defaultValue="—" />
-										</layout>	
-										<layout align="top" height="30">	
-											<label align="left" text="Bônus:" width="80"/>
-											<edit align="client" field="bonusNA" type="number"/>
-											<dataLink field="bonusNA" defaultValue="0" />
-										</layout>	
-										<layout align="top" height="30">
-											<label align="left" text="Redução:" width="80"/>
-											<edit align="client" field="Reducao" type="number"/>
-											<dataLink field="Reducao" defaultValue="0" />
-										</layout>	
-										<layout align="top" height="30">
-											<label align="left" text="NA Atual:" width="80"/>
-											<label align="left" field="NA"/>
-										</layout>
-									</layout>
-									
-									<!-- FERIMENTOS -->
-									<DivisorD texto="F E R I M E N T O S" largura="180" topo="40"/>
-									
-									<layout align="top" height="430" margins="{left=20, right=20}">										
-									
-										<layout align="top" height="400">
-											<rectangle align="top" height="30" xradius="5" yradius="5" cornerType="round" color="black"> 
-												<label align="left" text="NÍVEL" width="97" margins="{left=5}"/>
-												<label align="left" text="PEN." width="50"/>
-												<label align="left" text="FERIMENTOS" width="80"/>
-												<button name="btnFeri" align="right" text="𝐢" width="30" onClick="self.popFerimentos:show('left', self.btnFeri);"/> />
-												
-												<popup name="popFerimentos" width="260" height="280" backOpacity="0" drawContainer="false">
-													<rectangle align="client" color="#353535" padding="{top=10, left=10, bottom=10, right=10}" xradius= "10" yradius="10" cornerType="bevel">
-														<label align="top" text="C O N F I G U R A Ç Õ E S" margins="{bottom=5}" fontStyle="bold" fontFamily="Constantia"/>
-														<horzLine align="top" margins="{bottom=5}" strokeColor="#424242" />
-														<checkBox align="top" height="30" text="Permanent Wound" field="PWound"/>
-														<checkBox align="top" height="30" text="Bad Health" field="BHealth"/>
-														<checkBox align="top" height="30" text="Low Pain Threshold" field="LPThold"/>
-														<checkBox align="top" height="30" text="Strength of the Earth" field="SotEarth"/>
-														<checkBox align="top" height="30" text="Quick Healer" field="QHealer"/>
-														<layout align="top" height="30" margins="{top=15}">
-															<label align="left" width="190" text="Multiplicador do Anel de Terra:"/>
-															<edit field="lastroTerra" align="client" type="number"/>
-															<dataLink field="lastroTerra" defaultValue="2" />
-														</layout>
-														<layout align="top" height="30">
-															<label align="left" width="190" text="Ferimentos a mais por nível:"/>
-															<edit field="extraFerimentos" align="client" type="number"/>
-															<dataLink field="extraFerimentos" defaultValue="0" />
-														</layout>
-													</rectangle>
-												</popup>
-											</rectangle>
-											
-											<layout align="top" height="30">
-												<label align="left" width="100" text="Saudável" margins="{left=5}"/>
-												<label align="left" text="+0" width="50"/>
-												<label align="left" fontSize="16.0" field="FSaud" width="35" horzTextAlign="center"/>
-												<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
-												<label align="left" horzTextAlign="center" fontSize="16.0" field="Saud" width="30"/>
-												<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LSaud"/>
-												
-											</layout>
-											<layout align="top" height="30">
-												<label align="left" width="100" text="Escoriado" margins="{left=5}"/>
-												<label align="left" field="Escoriado" width="50"/>
-												<label align="left" fontSize="16.0" field="FEsco" width="35" horzTextAlign="center"/>
-												<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
-												<label align="left" horzTextAlign="center" fontSize="16.0" field="Esco" width="30"/>
-												<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LEsco"/>
-												
-											</layout>
-											<layout align="top" height="30">
-												<label align="left" width="100" text="Machucado" margins="{left=5}"/>
-												<label align="left" field="Machucado" width="50"/>
-												<label align="left" fontSize="16.0" field="FMach" width="35" horzTextAlign="center"/>
-												<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
-												<label align="left" horzTextAlign="center" fontSize="16.0" field="Mach" width="30"/>
-												<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LMach"/>
-												
-											</layout>
-											<layout align="top" height="30">
-												<label align="left" width="100" text="Ferido" margins="{left=5}"/>
-												<label align="left" field="Ferido" width="50"/>
-												<label align="left" fontSize="16.0" field="FFeri" width="35" horzTextAlign="center"/>
-												<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
-												<label align="left" horzTextAlign="center" fontSize="16.0" field="Feri" width="30"/>
-												<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LFeri"/>
-												
-											</layout>
-											<layout align="top" height="30">
-												<label align="left" width="100" text="Ser. Ferido" margins="{left=5}"/>
-												<label align="left" field="SerFerido" width="50"/>
-												<label align="left" fontSize="16.0" field="FSeri" width="35" horzTextAlign="center"/>
-												<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
-												<label align="left" horzTextAlign="center" fontSize="16.0" field="Seri" width="30"/>
-												<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LSeri"/>
-												
-											</layout>
-											<layout align="top" height="30">
-												<label align="left" width="100" text="Incapacitado" margins="{left=5}"/>
-												<label align="left" field="Incapacitado" width="50"/>
-												<label align="left" fontSize="16.0" field="FInca" width="35" horzTextAlign="center"/>
-												<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
-												<label align="left" horzTextAlign="center" fontSize="16.0" field="Inca" width="30"/>
-												<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LInca"/>
-												
-											</layout>
-											<layout align="top" height="30">
-												<label align="left" width="100" text="Abatido" margins="{left=5}"/>
-												<label align="left" field="Abatido" width="50"/>
-												<label align="left" fontSize="16.0" field="FAbat" width="35" horzTextAlign="center"/>
-												<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
-												<label align="left" horzTextAlign="center" fontSize="16.0" field="Abat" width="30"/>
-												<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LAbat"/>
-												
-											</layout>
-											<layout align="top" height="30">
-												<label align="left" width="100" text="Inconsciente" margins="{left=5}"/>
-												<label align="left" text="X" width="50"/>
-												<label align="left" fontSize="16.0" field="FInco" width="35" horzTextAlign="center"/>
-												<label align="left" text="de" fontStyle="" fontColor="#959595" horzTextAlign="center" width="40"/>
-												<label align="left" horzTextAlign="center" fontSize="16.0" field="Inco" width="30"/>
-												<label horzTextAlign="trailing" fontSize="12.0" fontStyle="" fontColor="#959595" top="15" left="157" field="LInco"/>
-												
-											</layout>
-											
-											<layout align="top" height="30" margins="{top=20}">
-												<layout align="left" width="145">
-													<label align="left" text="Ferimentos:" width="75" margins="{left=5}"/>
-													<edit align="client" field="ferimentos" type="number"/>
-													<dataLink defaultValue="0" field="ferimentos"/>
-												</layout>
-												
-												<layout align="left" width="160">
-													<label align="left" text="Regeneração:" width="85"/>
-													<label align="left" horzTextAlign="center" field="RecuFerimento" width="20"/>
-													<label align="left" fontStyle="" text="/ dia"/>
-												</layout>
-											</layout>
-										</layout>
-									</layout>
-									
-									<image url="/Frames/logo.png" height="135" style="proportional" align="bottom" margins="{bottom=80}"/>
-								</flowPart>
-							</flowLayout>
-							</layout>
+							 
+							<import file="./layouts/layoutFrente.xml"/>
 							
-							<!-- ABA MAGIA -->
-							<import file = "layoutMagia.xml"/>
+							<import file="./layouts/layoutMecanica.xml"/>
 							
-							<layout name="layMagias" align="client" visible="false">
-							<AsTabs />
-								 <!-- ESPAÇOS DE MAGIA -->
-								<DivisorD texto="L I S T A   D E   M A G I A S" largura="245" topo="10"/>
-								<rectangle align="top" height="30" xradius="5" yradius="5" cornerType="round" color="#212121" margins="{left=20, right=20}">
-									<layout width="185" align="left" margins="{left=5}">
-										<image align="left" style="proportional" width="25" src="/Frames/miniAguaI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
-										<label align="left" text="ÁGUA:" margins="{right=2}" width="38"/>
-										<edit field="slotAgua" horzTextAlign="center" width="25" align="left" />
-										<dataLink defaultValue="0" field="slotAgua" />
-										<label align="left" width="10" text="/"/>
-										<label align="left" width="25" field="water"/>
-									</layout>
-
-									<layout width="185" align="left">
-										<image align="left" style="proportional" width="25" src="/Frames/miniArI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
-										<label align="left" text="AR:" margins="{right=2}" width="25"/>
-										<edit field="slotAr" horzTextAlign="center" width="25" align="left" />
-										<dataLink defaultValue="0" field="slotAr" />
-										<label align="left" width="10" text="/"/>
-										<label align="left" width="25" field="air"/>
-									</layout>
-									
-									<layout width="185" align="left">
-										<image align="left" style="proportional" width="25" src="/Frames/miniFogoI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
-										<label align="left" text="FOGO:" margins="{right=2}" width="38"/>
-										<edit field="slotFogo" horzTextAlign="center" width="25" align="left" />
-										<dataLink defaultValue="0" field="slotFogo" />
-										<label align="left" width="10" text="/"/>
-										<label align="left" width="25" field="fire"/>
-									</layout>
-									
-									<layout width="185" align="left">
-										<image align="left" style="proportional" width="25" src="/Frames/miniTerraI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
-										<label align="left" text="TERRA:" margins="{right=2}" width="50"/>
-										<edit field="slotTerra" horzTextAlign="center" width="25" align="left" />
-										<dataLink defaultValue="0" field="slotTerra" />
-										<label align="left" width="10" text="/"/>
-										<label align="left" width="25" field="earth"/>
-									</layout>
-									
-									<layout width="185" align="left">
-										<image align="left" style="proportional" width="25" src="/Frames/miniVazioI.png" margins="{right=7, top=2.5, bottom=2.5}"/>
-										<label align="left" text="VAZIO:" margins="{right=2}" width="43"/>
-										<edit field="slotVazio" horzTextAlign="center" width="25" align="left" />
-										<dataLink defaultValue="0" field="slotVazio" />
-										<label align="left" width="10" text="/"/>
-										<label align="left" width="25" field="void"/>
-									</layout>
-									<button align="right" text="🞦" width="30" onClick='self.rclMagias:append();'/>
-								</rectangle>
-								
-								<recordList align="client" layout="horizontalTiles" name="rclMagias" field="magias" templateForm="templateMagias" 
-								onSelect="self.rclMagias:sort();" onItemAdded="self.rclMagias:sort();" onItemRemoved="self.rclMagias:sort();" margins="{left = 15, right = 15, top = 5, bottom = 15}">
-									<event name="onCompare">
-									<![CDATA[               
-										if(nodeA.elemMagia == nodeB.elemMagia) then
-										
-											if (nodeA.lvlMagia or 0) > (nodeB.lvlMagia or 0) then
-													return 1;
-											elseif (nodeA.lvlMagia or 0) < (nodeB.lvlMagia or 0) then
-													return -1;
-											else   
-													return Utils.compareStringPtBr(nodeA.nomeMagia, nodeB.nomeMagia);
-											end;
-										
-										elseif(nodeA.elemMagia == "Water" and 
-										(nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
-											return -1;
-										elseif(nodeA.elemMagia == "Air" and 
-										(nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
-											return -1;
-										elseif(nodeA.elemMagia == "Fire" and 
-										(nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
-											return -1;
-										elseif(nodeA.elemMagia == "Earth" and 
-										(nodeB.elemMagia == "Void" or nodeB.elemMagia == "Universal")) then
-											return -1;
-										elseif(nodeA.elemMagia == "Void" and 
-										(nodeB.elemMagia == "Universal")) then
-											return -1;
-										elseif(nodeA.elemMagia == "Universal" and 
-										(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth" or nodeB.elemMagia == "Void")) then
-											return 1;
-										elseif(nodeA.elemMagia == "Void" and 
-										(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire" or nodeB.elemMagia == "Earth")) then
-											return 1;
-										elseif(nodeA.elemMagia == "Earth" and 
-										(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air" or nodeB.elemMagia == "Fire")) then
-											return 1;
-										elseif(nodeA.elemMagia == "Fire" and 
-										(nodeB.elemMagia == "Water" or nodeB.elemMagia == "Air")) then
-											return 1;
-										elseif(nodeA.elemMagia == "Air" and 
-										(nodeB.elemMagia == "Water")) then
-											return 1;
-										end;
-									]]>
-									</event>
-								</recordList>
-								
-							</layout>
+							<import file="./layouts/layoutMagia.xml"/>
 							
-							<layout name="layBG" align="client" visible="false">
-								<flowLayout align="top" autoHeight="true" horzAlign="center">
-									<flowPart minWidth="300" maxWidth="650" height="1600">
-									<AsTabs />
-									<!-- HISTÓRIA -->
-									<DivisorD texto="H I S T Ó R I A" largura="150" topo="10"/>
-									<richEdit align="client" field="background" backgroundColor="#272727" defaultFontColor="white" margins="{left=20, right=10, bottom=100}"/>
-									
-									</flowPart>
-									<flowPart minWidth="100" maxWidth="350" height="1600">
-										<rectangle width="300" height="1530" color="#202020" />
-										<rectangle width="320" height="1530" color="#202020" xradius="20" yradius="20" cornerType="bevel" />
-										<!-- APARÊNCIA -->
-										<DivisorD texto="A P A R Ê N C I A" largura="160" topo="60"/>
-										<image field="imagemPJ" style="autofit" editable="true" width="289" height="500" top="105" left="10.5" />
-											<dataLink field="imagemPJ" defaultValue="/Frames/avatar.jpg" />
-										<layout align="top" frameStyle="/Frames/frameFundo.xml" margins="{left=10, right=20}" height="500"/>
-										<!-- PERGUNTAS -->
-										<DivisorD texto="2 0   P E R G U N T A S" largura="205" topo="40"/>
-										<rectangle align="client" margins="{left=10, top=10, right=20, bottom=50}" color="#272727" xradius="5" yradius="5" cornerType="round">
-											<textEditor field="20questoes" align="client" margins="{left=5, top=5, right=5, bottom=5}" fontColor="#cdcdcd" fontFamily="Cambria" transparent="true"/>
-										</rectangle>
-										<image url="/Frames/logo.png" height="135" style="proportional" align="bottom" margins="{bottom=80}"/>
-									</flowPart>
-								</flowLayout>
-							</layout>
+							<import file="./layouts/layoutHistoria.xml"/>
 							
-							<!-- ABA ANOTAÇÕES -->
 							<layout name="layNote" align="client" visible="false">
 							<AsTabs />
 								<DivisorD texto="A N O T A Ç Õ E S" largura="190" topo="10"/>
 								<richEdit align="client" field="anotacao" backgroundColor="#272727" defaultFontColor="white" margins="{left=20, right=20, bottom=40}"/>
 							</layout>
-							
 						</rectangle>
 					</rectangle>
 				</rectangle>
 			</flowPart>
-			
+
 		</flowLayout>
 	</scrollBox>
 	<layout align="client" frameStyle="/Frames/frameFundo.xml" />
