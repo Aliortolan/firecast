@@ -32,7 +32,7 @@
 		<AsTabs />								
 			<!-- CABEÇALHO -->
 			<Divisor texto="P E R S O N A G E M" largura="190" topo="10" />
-			
+
 			<flowLayout align="top" autoHeight="true">
 				<flowPart maxWidth="350" minWidth="350" height="120">
 					<template name="CampoA">
@@ -42,11 +42,11 @@
 							<dataLink field="$(campo)" defaultValue="—" />
 						</layout>
 					</template>
-					
+
 					<CampoA legenda="Nome" largura="40" campo="nomeChar" />
 					<CampoA legenda="Clã" largura="25" campo="claChar" />
 					<CampoA legenda="Escola" largura="45" campo="escolaChar" />
-					
+
 				</flowPart>
 				<flowPart maxWidth="150" minWidth="150" height="120">
 					
@@ -74,7 +74,7 @@
 						<edit field="karma" align="client" type="number" min="0" max="999" name="editkarma"/>
 						<dataLink field="karma" defaultValue="0" />
 					</layout>
-		
+
 				</flowPart>
 				<flowPart maxWidth="150" minWidth="150" height="120">
 					<template name="CampoB">
@@ -84,22 +84,22 @@
 							<dataLink field="$(campo)" defaultValue="0" />
 						</layout>
 					</template>
-					
+
 					<CampoB legenda="Honra" largura="50" campo="honra" />
 					<CampoB legenda="Glória" largura="50" campo="gloria" />
 					<CampoB legenda="Status" largura="50" campo="status" />
 					<CampoB legenda="Mácula" largura="50" campo="macula" />
-					
-					
+
+
 				</flowPart>
 			</flowLayout>
-			
+
 			<!-- ANÉIS E ATRIBUTOS -->
 			<Divisor texto="A T R I B U T O S" largura="160" topo="40" />
-			
+
 			<layout align="top" height="300" margins="{left=20, right=20}">
 				<image align="client" src="./assets/Frames/rings.png" style="proportional"/>
-				
+
 				<!-- LEGENDAS -->
 				<label fontSize="16.0" text="Vigor" left="100" top="18" />
 				<label fontSize="16.0" text="Vontade" left="63" top="68" />
@@ -112,32 +112,23 @@
 				
 				<!-- ATRIBUTOS -->
 				<edit class = "atributos" field="stamina" left="153" top="16"/>
-				<dataLink defaultValue="2" field="stamina"/>
 				<edit class = "atributos" field="willpower" left="136" top="64"/>
-				<dataLink defaultValue="2" field="willpower"/>
 				<edit class = "atributos" field="strength" left="115" top="133"/>
-				<dataLink defaultValue="2" field="strength"/>
 				<edit class = "atributos" field="perception" left="98" top="180"/>
-				<dataLink defaultValue="2" field="perception"/>
 				<edit class = "atributos" field="reflexes" left="428" top="16"/>
-				<dataLink defaultValue="2" field="reflexes"/>
 				<edit class = "atributos" field="awareness" left="445" top="64"/>
-				<dataLink defaultValue="2" field="awareness"/>
 				<edit class = "atributos" field="agility" left="466" top="133"/>
-				<dataLink defaultValue="2" field="agility"/>
 				<edit class = "atributos" field="intelligence" left="483" top="180"/>
-				<dataLink defaultValue="2" field="intelligence"/>
 				<edit class = "atributos" field="void" left="290" top="164"/>
-				<dataLink defaultValue="2" field="void"/>
+				
+				<dataLink fields="{'stamina', 'willpower', 'strength', 'perception', 'reflexes', 'awareness', 'agility', 'intelligence', 'void'}"
+				defaultValues = "{2,2,2,2,2,2,2,2,2}"/>
 
+				<!-- Como os atributos iniciam com um valor, o anel já é calculado -->
 				<label fontSize="20.0" left="324" top="94" height="30" field="air"/>
-				<dataLink defaultValue="2" field="air"/>
 				<label fontSize="20.0" left="275" top="94" height="30" field="earth"/>
-				<dataLink defaultValue="2" field="earth"/>
 				<label fontSize="20.0" left="260" top="138" height="30" field="water"/>
-				<dataLink defaultValue="2" field="water"/>
 				<label fontSize="20.0" left="339" top="138" height="30" field="fire"/>
-				<dataLink defaultValue="2" field="fire"/>
 			</layout>
 			
 			<layout align="top" height="40" margins="{top=10}">

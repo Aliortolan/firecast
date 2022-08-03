@@ -144,7 +144,7 @@ local function constructNew_templateSkills()
     obj.dataLink4 = GUI.fromHandle(_obj_newObject("dataLink"));
     obj.dataLink4:setParent(obj.layout1);
     obj.dataLink4:setDefaultValue("xky");
-    obj.dataLink4:setFields({'rankSkill',  'atributoSkill', 'stamina', 'willpower', 'strength', 'perception', 'reflexes', 'awareness', 'agility', 'intelligence', 'void'});
+    obj.dataLink4:setField("rolagem");
     obj.dataLink4:setName("dataLink4");
 
     obj.popUp_Enfases = GUI.fromHandle(_obj_newObject("popup"));

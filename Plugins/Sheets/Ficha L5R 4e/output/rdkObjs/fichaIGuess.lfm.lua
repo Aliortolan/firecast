@@ -97,40 +97,25 @@ local function constructNew_frmOurFichaL5R4e()
     obj.dataLink12:setName("dataLink12");
 
 
-	local function TrocarAba(a)
-		if(a == 'F') then
-			self.layFrente.visible = true;
-			self.layMecanicas.visible = false;
-			self.layMagias.visible = false;
-			self.layBG.visible = false;
-			self.layNote.visible = false;
-		elseif(a == 'M') then
-			self.layFrente.visible = false;
-			self.layMecanicas.visible = true;
-			self.layMagias.visible = false;
-			self.layBG.visible = false;
-			self.layNote.visible = false;
-		elseif(a == 'S') then
-			self.layFrente.visible = false;
-			self.layMecanicas.visible = false;
-			self.layMagias.visible = true;
-			self.layBG.visible = false;
-			self.layNote.visible = false;
-		elseif(a == 'H') then
-			self.layFrente.visible = false;
-			self.layMecanicas.visible = false;
-			self.layMagias.visible = false;
-			self.layBG.visible = true;
-			self.layNote.visible = false;
-		elseif(a == 'A') then
+		local function TrocarAba(a)
 			self.layFrente.visible = false;
 			self.layMecanicas.visible = false;
 			self.layMagias.visible = false;
 			self.layBG.visible = false;
-			self.layNote.visible = true;
+			self.layNote.visible = false;
+			if(a == 'F') then
+				self.layFrente.visible = true;
+			elseif(a == 'M') then
+				self.layMecanicas.visible = true;
+			elseif(a == 'S') then
+				self.layMagias.visible = true;
+			elseif(a == 'H') then
+				self.layBG.visible = true;
+			elseif(a == 'A') then
+				self.layNote.visible = true;
+			end;
 		end;
-	end;
-
+	
 
 
     obj.image1 = GUI.fromHandle(_obj_newObject("image"));
@@ -908,12 +893,6 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit6:setFontFamily("Cambria");
     obj.edit6:setTransparent(true);
 
-    obj.dataLink24 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink24:setParent(obj.layout14);
-    obj.dataLink24:setDefaultValue("2");
-    obj.dataLink24:setField("stamina");
-    obj.dataLink24:setName("dataLink24");
-
     obj.edit7 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit7:setParent(obj.layout14);
     obj.edit7:setField("willpower");
@@ -930,12 +909,6 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit7:setFontColor("#cdcdcd");
     obj.edit7:setFontFamily("Cambria");
     obj.edit7:setTransparent(true);
-
-    obj.dataLink25 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink25:setParent(obj.layout14);
-    obj.dataLink25:setDefaultValue("2");
-    obj.dataLink25:setField("willpower");
-    obj.dataLink25:setName("dataLink25");
 
     obj.edit8 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit8:setParent(obj.layout14);
@@ -954,12 +927,6 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit8:setFontFamily("Cambria");
     obj.edit8:setTransparent(true);
 
-    obj.dataLink26 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink26:setParent(obj.layout14);
-    obj.dataLink26:setDefaultValue("2");
-    obj.dataLink26:setField("strength");
-    obj.dataLink26:setName("dataLink26");
-
     obj.edit9 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit9:setParent(obj.layout14);
     obj.edit9:setField("perception");
@@ -976,12 +943,6 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit9:setFontColor("#cdcdcd");
     obj.edit9:setFontFamily("Cambria");
     obj.edit9:setTransparent(true);
-
-    obj.dataLink27 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink27:setParent(obj.layout14);
-    obj.dataLink27:setDefaultValue("2");
-    obj.dataLink27:setField("perception");
-    obj.dataLink27:setName("dataLink27");
 
     obj.edit10 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit10:setParent(obj.layout14);
@@ -1000,12 +961,6 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit10:setFontFamily("Cambria");
     obj.edit10:setTransparent(true);
 
-    obj.dataLink28 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink28:setParent(obj.layout14);
-    obj.dataLink28:setDefaultValue("2");
-    obj.dataLink28:setField("reflexes");
-    obj.dataLink28:setName("dataLink28");
-
     obj.edit11 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit11:setParent(obj.layout14);
     obj.edit11:setField("awareness");
@@ -1022,12 +977,6 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit11:setFontColor("#cdcdcd");
     obj.edit11:setFontFamily("Cambria");
     obj.edit11:setTransparent(true);
-
-    obj.dataLink29 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink29:setParent(obj.layout14);
-    obj.dataLink29:setDefaultValue("2");
-    obj.dataLink29:setField("awareness");
-    obj.dataLink29:setName("dataLink29");
 
     obj.edit12 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit12:setParent(obj.layout14);
@@ -1046,12 +995,6 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit12:setFontFamily("Cambria");
     obj.edit12:setTransparent(true);
 
-    obj.dataLink30 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink30:setParent(obj.layout14);
-    obj.dataLink30:setDefaultValue("2");
-    obj.dataLink30:setField("agility");
-    obj.dataLink30:setName("dataLink30");
-
     obj.edit13 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit13:setParent(obj.layout14);
     obj.edit13:setField("intelligence");
@@ -1068,12 +1011,6 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit13:setFontColor("#cdcdcd");
     obj.edit13:setFontFamily("Cambria");
     obj.edit13:setTransparent(true);
-
-    obj.dataLink31 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink31:setParent(obj.layout14);
-    obj.dataLink31:setDefaultValue("2");
-    obj.dataLink31:setField("intelligence");
-    obj.dataLink31:setName("dataLink31");
 
     obj.edit14 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit14:setParent(obj.layout14);
@@ -1092,11 +1029,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit14:setFontFamily("Cambria");
     obj.edit14:setTransparent(true);
 
-    obj.dataLink32 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink32:setParent(obj.layout14);
-    obj.dataLink32:setDefaultValue("2");
-    obj.dataLink32:setField("void");
-    obj.dataLink32:setName("dataLink32");
+    obj.dataLink24 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink24:setParent(obj.layout14);
+    obj.dataLink24:setFields({'stamina', 'willpower', 'strength', 'perception', 'reflexes', 'awareness', 'agility', 'intelligence', 'void'});
+    obj.dataLink24:setDefaultValues({2,2,2,2,2,2,2,2,2});
+    obj.dataLink24:setName("dataLink24");
 
     obj.label20 = GUI.fromHandle(_obj_newObject("label"));
     obj.label20:setParent(obj.layout14);
@@ -1110,12 +1047,6 @@ local function constructNew_frmOurFichaL5R4e()
     lfm_setPropAsString(obj.label20, "fontStyle",  "bold");
     obj.label20:setFontFamily("Cambria");
 
-    obj.dataLink33 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink33:setParent(obj.layout14);
-    obj.dataLink33:setDefaultValue("2");
-    obj.dataLink33:setField("air");
-    obj.dataLink33:setName("dataLink33");
-
     obj.label21 = GUI.fromHandle(_obj_newObject("label"));
     obj.label21:setParent(obj.layout14);
     obj.label21:setFontSize(20.0);
@@ -1127,12 +1058,6 @@ local function constructNew_frmOurFichaL5R4e()
     obj.label21:setFontColor("white");
     lfm_setPropAsString(obj.label21, "fontStyle",  "bold");
     obj.label21:setFontFamily("Cambria");
-
-    obj.dataLink34 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink34:setParent(obj.layout14);
-    obj.dataLink34:setDefaultValue("2");
-    obj.dataLink34:setField("earth");
-    obj.dataLink34:setName("dataLink34");
 
     obj.label22 = GUI.fromHandle(_obj_newObject("label"));
     obj.label22:setParent(obj.layout14);
@@ -1146,12 +1071,6 @@ local function constructNew_frmOurFichaL5R4e()
     lfm_setPropAsString(obj.label22, "fontStyle",  "bold");
     obj.label22:setFontFamily("Cambria");
 
-    obj.dataLink35 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink35:setParent(obj.layout14);
-    obj.dataLink35:setDefaultValue("2");
-    obj.dataLink35:setField("water");
-    obj.dataLink35:setName("dataLink35");
-
     obj.label23 = GUI.fromHandle(_obj_newObject("label"));
     obj.label23:setParent(obj.layout14);
     obj.label23:setFontSize(20.0);
@@ -1163,12 +1082,6 @@ local function constructNew_frmOurFichaL5R4e()
     obj.label23:setFontColor("white");
     lfm_setPropAsString(obj.label23, "fontStyle",  "bold");
     obj.label23:setFontFamily("Cambria");
-
-    obj.dataLink36 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink36:setParent(obj.layout14);
-    obj.dataLink36:setDefaultValue("2");
-    obj.dataLink36:setField("fire");
-    obj.dataLink36:setName("dataLink36");
 
     obj.layout15 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout15:setParent(obj.flowPart2);
@@ -1577,10 +1490,10 @@ local function constructNew_frmOurFichaL5R4e()
     obj.checkBox1:setName("checkBox1");
     obj.checkBox1:setFontColor("white");
 
-    obj.dataLink37 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink37:setParent(obj.rectangle10);
-    obj.dataLink37:setField("mostraMacula");
-    obj.dataLink37:setName("dataLink37");
+    obj.dataLink25 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink25:setParent(obj.rectangle10);
+    obj.dataLink25:setField("mostraMacula");
+    obj.dataLink25:setName("dataLink25");
 
     obj.checkBox2 = GUI.fromHandle(_obj_newObject("checkBox"));
     obj.checkBox2:setParent(obj.rectangle10);
@@ -1593,10 +1506,10 @@ local function constructNew_frmOurFichaL5R4e()
     obj.checkBox2:setName("checkBox2");
     obj.checkBox2:setFontColor("white");
 
-    obj.dataLink38 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink38:setParent(obj.rectangle10);
-    obj.dataLink38:setField("mostraKarma");
-    obj.dataLink38:setName("dataLink38");
+    obj.dataLink26 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink26:setParent(obj.rectangle10);
+    obj.dataLink26:setField("mostraKarma");
+    obj.dataLink26:setName("dataLink26");
 
     obj.label40 = GUI.fromHandle(_obj_newObject("label"));
     obj.label40:setParent(obj.rectangle10);
@@ -1794,11 +1707,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit18:setFontFamily("Cambria");
     obj.edit18:setTransparent(true);
 
-    obj.dataLink39 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink39:setParent(obj.layout24);
-    obj.dataLink39:setDefaultValue("0");
-    obj.dataLink39:setField("addMod");
-    obj.dataLink39:setName("dataLink39");
+    obj.dataLink27 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink27:setParent(obj.layout24);
+    obj.dataLink27:setDefaultValue("0");
+    obj.dataLink27:setField("addMod");
+    obj.dataLink27:setName("dataLink27");
 
     obj.layout25 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout25:setParent(obj.layout21);
@@ -1926,11 +1839,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit19:setFontFamily("Cambria");
     obj.edit19:setTransparent(true);
 
-    obj.dataLink40 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink40:setParent(obj.layout28);
-    obj.dataLink40:setField("tipoArmadura");
-    obj.dataLink40:setDefaultValue("—");
-    obj.dataLink40:setName("dataLink40");
+    obj.dataLink28 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink28:setParent(obj.layout28);
+    obj.dataLink28:setField("tipoArmadura");
+    obj.dataLink28:setDefaultValue("—");
+    obj.dataLink28:setName("dataLink28");
 
     obj.layout29 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout29:setParent(obj.layout27);
@@ -1958,11 +1871,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit20:setFontFamily("Cambria");
     obj.edit20:setTransparent(true);
 
-    obj.dataLink41 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink41:setParent(obj.layout29);
-    obj.dataLink41:setField("bonusNA");
-    obj.dataLink41:setDefaultValue("0");
-    obj.dataLink41:setName("dataLink41");
+    obj.dataLink29 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink29:setParent(obj.layout29);
+    obj.dataLink29:setField("bonusNA");
+    obj.dataLink29:setDefaultValue("0");
+    obj.dataLink29:setName("dataLink29");
 
     obj.layout30 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout30:setParent(obj.layout27);
@@ -1990,11 +1903,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit21:setFontFamily("Cambria");
     obj.edit21:setTransparent(true);
 
-    obj.dataLink42 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink42:setParent(obj.layout30);
-    obj.dataLink42:setField("Reducao");
-    obj.dataLink42:setDefaultValue("0");
-    obj.dataLink42:setName("dataLink42");
+    obj.dataLink30 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink30:setParent(obj.layout30);
+    obj.dataLink30:setField("Reducao");
+    obj.dataLink30:setDefaultValue("0");
+    obj.dataLink30:setName("dataLink30");
 
     obj.layout31 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout31:setParent(obj.layout27);
@@ -2219,11 +2132,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit22:setFontFamily("Cambria");
     obj.edit22:setTransparent(true);
 
-    obj.dataLink43 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink43:setParent(obj.layout35);
-    obj.dataLink43:setField("lastroTerra");
-    obj.dataLink43:setDefaultValue("2");
-    obj.dataLink43:setName("dataLink43");
+    obj.dataLink31 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink31:setParent(obj.layout35);
+    obj.dataLink31:setField("lastroTerra");
+    obj.dataLink31:setDefaultValue("2");
+    obj.dataLink31:setName("dataLink31");
 
     obj.layout36 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout36:setParent(obj.rectangle14);
@@ -2251,11 +2164,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit23:setFontFamily("Cambria");
     obj.edit23:setTransparent(true);
 
-    obj.dataLink44 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink44:setParent(obj.layout36);
-    obj.dataLink44:setField("extraFerimentos");
-    obj.dataLink44:setDefaultValue("0");
-    obj.dataLink44:setName("dataLink44");
+    obj.dataLink32 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink32:setParent(obj.layout36);
+    obj.dataLink32:setField("extraFerimentos");
+    obj.dataLink32:setDefaultValue("0");
+    obj.dataLink32:setName("dataLink32");
 
     obj.layout37 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout37:setParent(obj.layout34);
@@ -2883,11 +2796,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit24:setFontFamily("Cambria");
     obj.edit24:setTransparent(true);
 
-    obj.dataLink45 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink45:setParent(obj.layout46);
-    obj.dataLink45:setDefaultValue("0");
-    obj.dataLink45:setField("ferimentos");
-    obj.dataLink45:setName("dataLink45");
+    obj.dataLink33 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink33:setParent(obj.layout46);
+    obj.dataLink33:setDefaultValue("0");
+    obj.dataLink33:setField("ferimentos");
+    obj.dataLink33:setName("dataLink33");
 
     obj.layout47 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout47:setParent(obj.layout45);
@@ -3496,11 +3409,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit25:setFontFamily("Cambria");
     obj.edit25:setTransparent(true);
 
-    obj.dataLink46 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink46:setParent(obj.rectangle23);
-    obj.dataLink46:setDefaultValue("0");
-    obj.dataLink46:setField("koku");
-    obj.dataLink46:setName("dataLink46");
+    obj.dataLink34 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink34:setParent(obj.rectangle23);
+    obj.dataLink34:setDefaultValue("0");
+    obj.dataLink34:setField("koku");
+    obj.dataLink34:setName("dataLink34");
 
     obj.label140 = GUI.fromHandle(_obj_newObject("label"));
     obj.label140:setParent(obj.rectangle23);
@@ -3524,11 +3437,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit26:setFontFamily("Cambria");
     obj.edit26:setTransparent(true);
 
-    obj.dataLink47 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink47:setParent(obj.rectangle23);
-    obj.dataLink47:setDefaultValue("0");
-    obj.dataLink47:setField("bu");
-    obj.dataLink47:setName("dataLink47");
+    obj.dataLink35 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink35:setParent(obj.rectangle23);
+    obj.dataLink35:setDefaultValue("0");
+    obj.dataLink35:setField("bu");
+    obj.dataLink35:setName("dataLink35");
 
     obj.label141 = GUI.fromHandle(_obj_newObject("label"));
     obj.label141:setParent(obj.rectangle23);
@@ -3552,11 +3465,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit27:setFontFamily("Cambria");
     obj.edit27:setTransparent(true);
 
-    obj.dataLink48 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink48:setParent(obj.rectangle23);
-    obj.dataLink48:setDefaultValue("0");
-    obj.dataLink48:setField("zeni");
-    obj.dataLink48:setName("dataLink48");
+    obj.dataLink36 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink36:setParent(obj.rectangle23);
+    obj.dataLink36:setDefaultValue("0");
+    obj.dataLink36:setField("zeni");
+    obj.dataLink36:setName("dataLink36");
 
     obj.rectangle24 = GUI.fromHandle(_obj_newObject("rectangle"));
     obj.rectangle24:setParent(obj.fpDireitaMec);
@@ -3734,11 +3647,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit28:setFontFamily("Cambria");
     obj.edit28:setTransparent(true);
 
-    obj.dataLink49 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink49:setParent(obj.layout55);
-    obj.dataLink49:setDefaultValue("0");
-    obj.dataLink49:setField("slotAgua");
-    obj.dataLink49:setName("dataLink49");
+    obj.dataLink37 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink37:setParent(obj.layout55);
+    obj.dataLink37:setDefaultValue("0");
+    obj.dataLink37:setField("slotAgua");
+    obj.dataLink37:setName("dataLink37");
 
     obj.label144 = GUI.fromHandle(_obj_newObject("label"));
     obj.label144:setParent(obj.layout55);
@@ -3797,11 +3710,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit29:setFontFamily("Cambria");
     obj.edit29:setTransparent(true);
 
-    obj.dataLink50 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink50:setParent(obj.layout56);
-    obj.dataLink50:setDefaultValue("0");
-    obj.dataLink50:setField("slotAr");
-    obj.dataLink50:setName("dataLink50");
+    obj.dataLink38 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink38:setParent(obj.layout56);
+    obj.dataLink38:setDefaultValue("0");
+    obj.dataLink38:setField("slotAr");
+    obj.dataLink38:setName("dataLink38");
 
     obj.label147 = GUI.fromHandle(_obj_newObject("label"));
     obj.label147:setParent(obj.layout56);
@@ -3860,11 +3773,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit30:setFontFamily("Cambria");
     obj.edit30:setTransparent(true);
 
-    obj.dataLink51 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink51:setParent(obj.layout57);
-    obj.dataLink51:setDefaultValue("0");
-    obj.dataLink51:setField("slotFogo");
-    obj.dataLink51:setName("dataLink51");
+    obj.dataLink39 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink39:setParent(obj.layout57);
+    obj.dataLink39:setDefaultValue("0");
+    obj.dataLink39:setField("slotFogo");
+    obj.dataLink39:setName("dataLink39");
 
     obj.label150 = GUI.fromHandle(_obj_newObject("label"));
     obj.label150:setParent(obj.layout57);
@@ -3923,11 +3836,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit31:setFontFamily("Cambria");
     obj.edit31:setTransparent(true);
 
-    obj.dataLink52 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink52:setParent(obj.layout58);
-    obj.dataLink52:setDefaultValue("0");
-    obj.dataLink52:setField("slotTerra");
-    obj.dataLink52:setName("dataLink52");
+    obj.dataLink40 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink40:setParent(obj.layout58);
+    obj.dataLink40:setDefaultValue("0");
+    obj.dataLink40:setField("slotTerra");
+    obj.dataLink40:setName("dataLink40");
 
     obj.label153 = GUI.fromHandle(_obj_newObject("label"));
     obj.label153:setParent(obj.layout58);
@@ -3986,11 +3899,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.edit32:setFontFamily("Cambria");
     obj.edit32:setTransparent(true);
 
-    obj.dataLink53 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink53:setParent(obj.layout59);
-    obj.dataLink53:setDefaultValue("0");
-    obj.dataLink53:setField("slotVazio");
-    obj.dataLink53:setName("dataLink53");
+    obj.dataLink41 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink41:setParent(obj.layout59);
+    obj.dataLink41:setDefaultValue("0");
+    obj.dataLink41:setField("slotVazio");
+    obj.dataLink41:setName("dataLink41");
 
     obj.label156 = GUI.fromHandle(_obj_newObject("label"));
     obj.label156:setParent(obj.layout59);
@@ -4208,11 +4121,11 @@ local function constructNew_frmOurFichaL5R4e()
     obj.image10:setLeft(10.5);
     obj.image10:setName("image10");
 
-    obj.dataLink54 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink54:setParent(obj.flowPart9);
-    obj.dataLink54:setField("imagemPJ");
-    obj.dataLink54:setDefaultValue("./assets/Frames/avatar.jpg");
-    obj.dataLink54:setName("dataLink54");
+    obj.dataLink42 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink42:setParent(obj.flowPart9);
+    obj.dataLink42:setField("imagemPJ");
+    obj.dataLink42:setDefaultValue("./assets/Frames/avatar.jpg");
+    obj.dataLink42:setName("dataLink42");
 
     obj.layout62 = GUI.fromHandle(_obj_newObject("layout"));
     obj.layout62:setParent(obj.flowPart9);
@@ -4443,116 +4356,88 @@ local function constructNew_frmOurFichaL5R4e()
     obj._e_event2 = obj.dataLink3:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             if (sheet.earth ~= nil) then
-            					local ferimentos = (tonumber(sheet.ferimentos) or 0);
-            					local lastro = sheet.lastroTerra;
-            					local extra = sheet.extraFerimentos;
-            
-            					if sheet.PWound == true then
-            							ferimentos = ferimentos + sheet.Saud;
-            					end;
-            
-            					local terr = sheet.earth;
-            
-            					if (sheet.BHealth == true) then
-            							terr = terr - 1;
-            					end;
-            
-            					local terra = (terr) * (lastro) + extra;
-            
-            					local FSaud = ferimentos;
-            
-            					if FSaud >= sheet.Saud then
-            							sheet.FSaud = sheet.Saud;
-            					else
-            							sheet.FSaud = FSaud;
-            					end;
-            
-            					local FEsco = FSaud - terr*5;
-            
-            					if FEsco >= sheet.Esco then
-            							sheet.FEsco = sheet.Esco;
-            					else
-            							sheet.FEsco = FEsco;
-            					end;
-            
-            					local FMach = FEsco - terra;
-            
-            					if FMach >= sheet.Mach then
-            							sheet.FMach = sheet.Mach;
-            					else
-            							sheet.FMach = FMach;
-            					end;
-            
-            					local FFeri = FMach - terra;
-            
-            					if FFeri >= sheet.Feri then
-            							sheet.FFeri = sheet.Feri;
-            					else
-            							sheet.FFeri = FFeri;
-            					end;
-            
-            					local FSeri = FFeri - terra;
-            
-            					if FSeri >= sheet.Seri then
-            							sheet.FSeri = sheet.Seri;
-            					else
-            							sheet.FSeri = FSeri;
-            					end;
-            
-            					local FInca = FSeri - terra;
-            
-            					if FInca >= sheet.Inca then
-            							sheet.FInca = sheet.Inca;
-            					else
-            							sheet.FInca = FInca;
-            					end;
-            
-            					local FAbat = FInca - terra;
-            
-            					if FAbat >= sheet.Abat then
-            							sheet.FAbat = sheet.Abat;
-            					else
-            							sheet.FAbat = FAbat;
-            					end;
-            
-            					local FInco = FAbat - terra;
-            							sheet.FInco = FInco;
-            
-            					if FSaud < 0 then
-            							sheet.FSaud = 0;
-            					end;
-            
-            					if (FEsco < 0) then
-            							sheet.FEsco = 0;
-            					end;
-            
-            					if (ferimentos < sheet.Saud) then
-            							sheet.FEsco = 0;
-            					end;
-            
-            					if (FMach < 0) or (ferimentos < sheet.Esco) then
-            							sheet.FMach = 0;
-            					end;
-            
-            					if (FFeri < 0) or (ferimentos < sheet.Mach) then
-            							sheet.FFeri = 0;
-            					end;
-            
-            					if (FSeri < 0) or (ferimentos < sheet.Feri) then
-            							sheet.FSeri = 0;
-            					end;
-            
-            					if (FInca < 0) or (ferimentos < sheet.Seri) then
-            							sheet.FInca = 0;
-            					end;
-            
-            					if (FAbat < 0) or (ferimentos < sheet.Inca) then
-            							sheet.FAbat = 0;
-            					end;
-            
-            					if (FInco < 0) or (ferimentos < sheet.Abat) then
-            							sheet.FInco = 0;
-            					end
+            				local ferimentos = (tonumber(sheet.ferimentos) or 0);
+            				local lastro = sheet.lastroTerra;
+            				local extra = sheet.extraFerimentos;
+            				if sheet.PWound == true then
+            						ferimentos = ferimentos + sheet.Saud;
+            				end;
+            				local terr = sheet.earth;
+            				if (sheet.BHealth == true) then
+            						terr = terr - 1;
+            				end;
+            				local terra = (terr) * (lastro) + extra;
+            				local FSaud = ferimentos;
+            				if FSaud >= sheet.Saud then
+            						sheet.FSaud = sheet.Saud;
+            				else
+            						sheet.FSaud = FSaud;
+            				end;
+            				local FEsco = FSaud - terr*5;
+            				if FEsco >= sheet.Esco then
+            						sheet.FEsco = sheet.Esco;
+            				else
+            						sheet.FEsco = FEsco;
+            				end;
+            				local FMach = FEsco - terra;
+            				if FMach >= sheet.Mach then
+            						sheet.FMach = sheet.Mach;
+            				else
+            						sheet.FMach = FMach;
+            				end;
+            				local FFeri = FMach - terra;
+            				if FFeri >= sheet.Feri then
+            						sheet.FFeri = sheet.Feri;
+            				else
+            						sheet.FFeri = FFeri;
+            				end;
+            				local FSeri = FFeri - terra;
+            				if FSeri >= sheet.Seri then
+            						sheet.FSeri = sheet.Seri;
+            				else
+            						sheet.FSeri = FSeri;
+            				end;
+            				local FInca = FSeri - terra;
+            				if FInca >= sheet.Inca then
+            						sheet.FInca = sheet.Inca;
+            				else
+            						sheet.FInca = FInca;
+            				end;
+            				local FAbat = FInca - terra;
+            				if FAbat >= sheet.Abat then
+            						sheet.FAbat = sheet.Abat;
+            				else
+            						sheet.FAbat = FAbat;
+            				end;
+            				local FInco = FAbat - terra;
+            						sheet.FInco = FInco;
+            				if FSaud < 0 then
+            						sheet.FSaud = 0;
+            				end;
+            				if (FEsco < 0) then
+            						sheet.FEsco = 0;
+            				end;
+            				if (ferimentos < sheet.Saud) then
+            						sheet.FEsco = 0;
+            				end;
+            				if (FMach < 0) or (ferimentos < sheet.Esco) then
+            						sheet.FMach = 0;
+            				end;
+            				if (FFeri < 0) or (ferimentos < sheet.Mach) then
+            						sheet.FFeri = 0;
+            				end;
+            				if (FSeri < 0) or (ferimentos < sheet.Feri) then
+            						sheet.FSeri = 0;
+            				end;
+            				if (FInca < 0) or (ferimentos < sheet.Seri) then
+            						sheet.FInca = 0;
+            				end;
+            				if (FAbat < 0) or (ferimentos < sheet.Inca) then
+            						sheet.FAbat = 0;
+            				end;
+            				if (FInco < 0) or (ferimentos < sheet.Abat) then
+            						sheet.FInco = 0;
+            				end
             
             			end
         end, obj);
@@ -4561,9 +4446,7 @@ local function constructNew_frmOurFichaL5R4e()
         function (_, field, oldValue, newValue)
             if (sheet.earth ~= nil and sheet.air ~= nil and sheet.water ~= nil and sheet.fire ~= nil and sheet.void ~= nil and sheet.maisSab ~= nil) then
             			local countSum = (tonumber(sheet.countSum) or 0);
-            
-            
-            					sheet.sabedoria = math.floor(sheet.earth + sheet.air + sheet.water + sheet.fire + sheet.void)*10 + sheet.maisSab + countSum;
+            				sheet.sabedoria = math.floor(sheet.earth + sheet.air + sheet.water + sheet.fire + sheet.void)*10 + sheet.maisSab + countSum;
             			end
         end, obj);
 
@@ -4688,7 +4571,6 @@ local function constructNew_frmOurFichaL5R4e()
             
             					sheet.RolaIni = math.floor(reflexes+nivelSb+addRolaIni);
             					sheet.MantemIni = math.floor(reflexes+addMantemIni);
-            
             			end
         end, obj);
 
@@ -4760,7 +4642,7 @@ local function constructNew_frmOurFichaL5R4e()
             self.popImagemFundo:show('left', self.btnImagemFundo);
         end, obj);
 
-    obj._e_event23 = obj.dataLink37:addEventListener("onChange",
+    obj._e_event23 = obj.dataLink25:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             if (sheet.mostraMacula == false) then
             							self.labelmacula.visible = false;
@@ -4772,7 +4654,7 @@ local function constructNew_frmOurFichaL5R4e()
             						end
         end, obj);
 
-    obj._e_event24 = obj.dataLink38:addEventListener("onChange",
+    obj._e_event24 = obj.dataLink26:addEventListener("onChange",
         function (_, field, oldValue, newValue)
             if (sheet.mostraKarma == false) then
             							self.labelkarma.visible = false;
@@ -5151,7 +5033,6 @@ local function constructNew_frmOurFichaL5R4e()
         if self.layout9 ~= nil then self.layout9:destroy(); self.layout9 = nil; end;
         if self.edit11 ~= nil then self.edit11:destroy(); self.edit11 = nil; end;
         if self.image1 ~= nil then self.image1:destroy(); self.image1 = nil; end;
-        if self.dataLink44 ~= nil then self.dataLink44:destroy(); self.dataLink44 = nil; end;
         if self.rectangle17 ~= nil then self.rectangle17:destroy(); self.rectangle17 = nil; end;
         if self.dataLink9 ~= nil then self.dataLink9:destroy(); self.dataLink9 = nil; end;
         if self.label15 ~= nil then self.label15:destroy(); self.label15 = nil; end;
@@ -5235,7 +5116,6 @@ local function constructNew_frmOurFichaL5R4e()
         if self.dataLink40 ~= nil then self.dataLink40:destroy(); self.dataLink40 = nil; end;
         if self.rectangle9 ~= nil then self.rectangle9:destroy(); self.rectangle9 = nil; end;
         if self.button28 ~= nil then self.button28:destroy(); self.button28 = nil; end;
-        if self.dataLink47 ~= nil then self.dataLink47:destroy(); self.dataLink47 = nil; end;
         if self.layout30 ~= nil then self.layout30:destroy(); self.layout30 = nil; end;
         if self.layout60 ~= nil then self.layout60:destroy(); self.layout60 = nil; end;
         if self.label73 ~= nil then self.label73:destroy(); self.label73 = nil; end;
@@ -5264,10 +5144,8 @@ local function constructNew_frmOurFichaL5R4e()
         if self.label129 ~= nil then self.label129:destroy(); self.label129 = nil; end;
         if self.button13 ~= nil then self.button13:destroy(); self.button13 = nil; end;
         if self.textEditor2 ~= nil then self.textEditor2:destroy(); self.textEditor2 = nil; end;
-        if self.dataLink45 ~= nil then self.dataLink45:destroy(); self.dataLink45 = nil; end;
         if self.fpDireitaMec ~= nil then self.fpDireitaMec:destroy(); self.fpDireitaMec = nil; end;
         if self.label37 ~= nil then self.label37:destroy(); self.label37 = nil; end;
-        if self.dataLink43 ~= nil then self.dataLink43:destroy(); self.dataLink43 = nil; end;
         if self.horzLine5 ~= nil then self.horzLine5:destroy(); self.horzLine5 = nil; end;
         if self.layout26 ~= nil then self.layout26:destroy(); self.layout26 = nil; end;
         if self.edit8 ~= nil then self.edit8:destroy(); self.edit8 = nil; end;
@@ -5288,11 +5166,10 @@ local function constructNew_frmOurFichaL5R4e()
         if self.rectangle20 ~= nil then self.rectangle20:destroy(); self.rectangle20 = nil; end;
         if self.label102 ~= nil then self.label102:destroy(); self.label102 = nil; end;
         if self.flowLayout4 ~= nil then self.flowLayout4:destroy(); self.flowLayout4 = nil; end;
-        if self.dataLink54 ~= nil then self.dataLink54:destroy(); self.dataLink54 = nil; end;
-        if self.dataLink24 ~= nil then self.dataLink24:destroy(); self.dataLink24 = nil; end;
         if self.edit13 ~= nil then self.edit13:destroy(); self.edit13 = nil; end;
-        if self.dataLink35 ~= nil then self.dataLink35:destroy(); self.dataLink35 = nil; end;
+        if self.dataLink24 ~= nil then self.dataLink24:destroy(); self.dataLink24 = nil; end;
         if self.label132 ~= nil then self.label132:destroy(); self.label132 = nil; end;
+        if self.dataLink35 ~= nil then self.dataLink35:destroy(); self.dataLink35 = nil; end;
         if self.button11 ~= nil then self.button11:destroy(); self.button11 = nil; end;
         if self.label81 ~= nil then self.label81:destroy(); self.label81 = nil; end;
         if self.dataLink22 ~= nil then self.dataLink22:destroy(); self.dataLink22 = nil; end;
@@ -5303,10 +5180,10 @@ local function constructNew_frmOurFichaL5R4e()
         if self.layout31 ~= nil then self.layout31:destroy(); self.layout31 = nil; end;
         if self.dataLink27 ~= nil then self.dataLink27:destroy(); self.dataLink27 = nil; end;
         if self.label10 ~= nil then self.label10:destroy(); self.label10 = nil; end;
-        if self.dataLink30 ~= nil then self.dataLink30:destroy(); self.dataLink30 = nil; end;
         if self.radioButton2 ~= nil then self.radioButton2:destroy(); self.radioButton2 = nil; end;
-        if self.layout2 ~= nil then self.layout2:destroy(); self.layout2 = nil; end;
         if self.edit17 ~= nil then self.edit17:destroy(); self.edit17 = nil; end;
+        if self.layout2 ~= nil then self.layout2:destroy(); self.layout2 = nil; end;
+        if self.dataLink30 ~= nil then self.dataLink30:destroy(); self.dataLink30 = nil; end;
         if self.button10 ~= nil then self.button10:destroy(); self.button10 = nil; end;
         if self.rectangle30 ~= nil then self.rectangle30:destroy(); self.rectangle30 = nil; end;
         if self.label39 ~= nil then self.label39:destroy(); self.label39 = nil; end;
@@ -5332,17 +5209,17 @@ local function constructNew_frmOurFichaL5R4e()
         if self.label84 ~= nil then self.label84:destroy(); self.label84 = nil; end;
         if self.image4 ~= nil then self.image4:destroy(); self.image4 = nil; end;
         if self.edit32 ~= nil then self.edit32:destroy(); self.edit32 = nil; end;
-        if self.dataLink38 ~= nil then self.dataLink38:destroy(); self.dataLink38 = nil; end;
-        if self.editstatus ~= nil then self.editstatus:destroy(); self.editstatus = nil; end;
         if self.horzLine6 ~= nil then self.horzLine6:destroy(); self.horzLine6 = nil; end;
+        if self.editstatus ~= nil then self.editstatus:destroy(); self.editstatus = nil; end;
+        if self.dataLink38 ~= nil then self.dataLink38:destroy(); self.dataLink38 = nil; end;
         if self.radioButton5 ~= nil then self.radioButton5:destroy(); self.radioButton5 = nil; end;
         if self.dataLink12 ~= nil then self.dataLink12:destroy(); self.dataLink12 = nil; end;
         if self.label110 ~= nil then self.label110:destroy(); self.label110 = nil; end;
         if self.label151 ~= nil then self.label151:destroy(); self.label151 = nil; end;
         if self.layout58 ~= nil then self.layout58:destroy(); self.layout58 = nil; end;
         if self.dataLink28 ~= nil then self.dataLink28:destroy(); self.dataLink28 = nil; end;
-        if self.dataLink42 ~= nil then self.dataLink42:destroy(); self.dataLink42 = nil; end;
         if self.label138 ~= nil then self.label138:destroy(); self.label138 = nil; end;
+        if self.dataLink42 ~= nil then self.dataLink42:destroy(); self.dataLink42 = nil; end;
         if self.label40 ~= nil then self.label40:destroy(); self.label40 = nil; end;
         if self.dataLink4 ~= nil then self.dataLink4:destroy(); self.dataLink4 = nil; end;
         if self.image5 ~= nil then self.image5:destroy(); self.image5 = nil; end;
@@ -5376,7 +5253,6 @@ local function constructNew_frmOurFichaL5R4e()
         if self.label140 ~= nil then self.label140:destroy(); self.label140 = nil; end;
         if self.edit26 ~= nil then self.edit26:destroy(); self.edit26 = nil; end;
         if self.label69 ~= nil then self.label69:destroy(); self.label69 = nil; end;
-        if self.dataLink53 ~= nil then self.dataLink53:destroy(); self.dataLink53 = nil; end;
         if self.label31 ~= nil then self.label31:destroy(); self.label31 = nil; end;
         if self.edit19 ~= nil then self.edit19:destroy(); self.edit19 = nil; end;
         if self.label105 ~= nil then self.label105:destroy(); self.label105 = nil; end;
@@ -5422,7 +5298,6 @@ local function constructNew_frmOurFichaL5R4e()
         if self.rectangle6 ~= nil then self.rectangle6:destroy(); self.rectangle6 = nil; end;
         if self.label21 ~= nil then self.label21:destroy(); self.label21 = nil; end;
         if self.label120 ~= nil then self.label120:destroy(); self.label120 = nil; end;
-        if self.dataLink49 ~= nil then self.dataLink49:destroy(); self.dataLink49 = nil; end;
         if self.dataLink2 ~= nil then self.dataLink2:destroy(); self.dataLink2 = nil; end;
         if self.horzLine1 ~= nil then self.horzLine1:destroy(); self.horzLine1 = nil; end;
         if self.layBG ~= nil then self.layBG:destroy(); self.layBG = nil; end;
@@ -5433,8 +5308,8 @@ local function constructNew_frmOurFichaL5R4e()
         if self.label54 ~= nil then self.label54:destroy(); self.label54 = nil; end;
         if self.rclKata ~= nil then self.rclKata:destroy(); self.rclKata = nil; end;
         if self.rclSkills ~= nil then self.rclSkills:destroy(); self.rclSkills = nil; end;
-        if self.dataLink37 ~= nil then self.dataLink37:destroy(); self.dataLink37 = nil; end;
         if self.horzLine16 ~= nil then self.horzLine16:destroy(); self.horzLine16 = nil; end;
+        if self.dataLink37 ~= nil then self.dataLink37:destroy(); self.dataLink37 = nil; end;
         if self.textEditor1 ~= nil then self.textEditor1:destroy(); self.textEditor1 = nil; end;
         if self.flowLayout6 ~= nil then self.flowLayout6:destroy(); self.flowLayout6 = nil; end;
         if self.dataLink29 ~= nil then self.dataLink29:destroy(); self.dataLink29 = nil; end;
@@ -5532,7 +5407,6 @@ local function constructNew_frmOurFichaL5R4e()
         if self.horzLine18 ~= nil then self.horzLine18:destroy(); self.horzLine18 = nil; end;
         if self.dataLink1 ~= nil then self.dataLink1:destroy(); self.dataLink1 = nil; end;
         if self.labelgloria ~= nil then self.labelgloria:destroy(); self.labelgloria = nil; end;
-        if self.dataLink52 ~= nil then self.dataLink52:destroy(); self.dataLink52 = nil; end;
         if self.rectangle27 ~= nil then self.rectangle27:destroy(); self.rectangle27 = nil; end;
         if self.button12 ~= nil then self.button12:destroy(); self.button12 = nil; end;
         if self.label36 ~= nil then self.label36:destroy(); self.label36 = nil; end;
@@ -5543,9 +5417,8 @@ local function constructNew_frmOurFichaL5R4e()
         if self.button17 ~= nil then self.button17:destroy(); self.button17 = nil; end;
         if self.label85 ~= nil then self.label85:destroy(); self.label85 = nil; end;
         if self.label46 ~= nil then self.label46:destroy(); self.label46 = nil; end;
-        if self.dataLink48 ~= nil then self.dataLink48:destroy(); self.dataLink48 = nil; end;
-        if self.checkBox2 ~= nil then self.checkBox2:destroy(); self.checkBox2 = nil; end;
         if self.button25 ~= nil then self.button25:destroy(); self.button25 = nil; end;
+        if self.checkBox2 ~= nil then self.checkBox2:destroy(); self.checkBox2 = nil; end;
         if self.rectangle31 ~= nil then self.rectangle31:destroy(); self.rectangle31 = nil; end;
         if self.layFrente ~= nil then self.layFrente:destroy(); self.layFrente = nil; end;
         if self.label153 ~= nil then self.label153:destroy(); self.label153 = nil; end;
@@ -5553,19 +5426,16 @@ local function constructNew_frmOurFichaL5R4e()
         if self.label87 ~= nil then self.label87:destroy(); self.label87 = nil; end;
         if self.label104 ~= nil then self.label104:destroy(); self.label104 = nil; end;
         if self.label25 ~= nil then self.label25:destroy(); self.label25 = nil; end;
-        if self.dataLink51 ~= nil then self.dataLink51:destroy(); self.dataLink51 = nil; end;
         if self.edit22 ~= nil then self.edit22:destroy(); self.edit22 = nil; end;
         if self.label5 ~= nil then self.label5:destroy(); self.label5 = nil; end;
         if self.layout6 ~= nil then self.layout6:destroy(); self.layout6 = nil; end;
         if self.horzLine13 ~= nil then self.horzLine13:destroy(); self.horzLine13 = nil; end;
         if self.dataLink11 ~= nil then self.dataLink11:destroy(); self.dataLink11 = nil; end;
         if self.rectangle13 ~= nil then self.rectangle13:destroy(); self.rectangle13 = nil; end;
-        if self.dataLink46 ~= nil then self.dataLink46:destroy(); self.dataLink46 = nil; end;
         if self.label141 ~= nil then self.label141:destroy(); self.label141 = nil; end;
         if self.button19 ~= nil then self.button19:destroy(); self.button19 = nil; end;
         if self.editgloria ~= nil then self.editgloria:destroy(); self.editgloria = nil; end;
         if self.button14 ~= nil then self.button14:destroy(); self.button14 = nil; end;
-        if self.dataLink50 ~= nil then self.dataLink50:destroy(); self.dataLink50 = nil; end;
         if self.label134 ~= nil then self.label134:destroy(); self.label134 = nil; end;
         if self.checkBox1 ~= nil then self.checkBox1:destroy(); self.checkBox1 = nil; end;
         if self.rectangle24 ~= nil then self.rectangle24:destroy(); self.rectangle24 = nil; end;

@@ -2,439 +2,90 @@
 
 <form formType="sheetTemplate" dataType="L5R_4e_Otimizado" title="L5R 4e (Otimizado)" name="frmOurFichaL5R4e">
 
-	<!-- Máximo de ferimentos -->
-	<dataLink fields="{'lastroTerra', 'extraFerimentos', 'BHealth', 'earth', 'PWound'}" defaultValues="{'2', '0'}"> 
-			<event name="onChange">
-			if (sheet.earth ~= nil) then
-					local terr = sheet.earth;
-					local lastro = sheet.lastroTerra;
-					local extra = sheet.extraFerimentos;
-
-					if (sheet.BHealth == true) then
-							terr = terr - 1;
-					end;
-
-					local terra = (terr) * (lastro) + extra;
-
-					sheet.Saud = terr*5 + extra;
-					sheet.Esco = terra;
-					sheet.Mach = terra;
-					sheet.Feri = terra;
-					sheet.Seri = terra;
-					sheet.Inca = terra;
-					sheet.Abat = terra;
-					sheet.Inco = terra;
-
-					sheet.LSaud = terr*5 + extra;
-
-					if (sheet.PWound == true) then
-							sheet.LSaud = 0;
-					end;
-
-					sheet.LEsco = sheet.LSaud+terra;
-					sheet.LMach = sheet.LEsco+terra;
-					sheet.LFeri = sheet.LMach+terra;
-					sheet.LSeri = sheet.LFeri+terra;
-					sheet.LInca = sheet.LSeri+terra;
-					sheet.LAbat = sheet.LInca+terra;
-					sheet.LInco = sheet.LAbat+terra;
-					
-			end
-			</event>
-
-	</dataLink>
-	<!-- Recuperação de ferimentos -->
-	<dataLink fields="{'QHealer', 'nivelSb', 'stamina'}"> 
-			<event name="onChange">
-			if (sheet.stamina ~= nil) and (sheet.nivelSb ~= nil) then
-
-			local RecuFerimento = sheet.stamina * 2 + sheet.nivelSb;
-					if (sheet.QHealer == true) then
-					RecuFerimento = (sheet.stamina + 2) * 2 + sheet.nivelSb;
-					end;
-
-			sheet.RecuFerimento = RecuFerimento;
-			end
-			</event>
-
-	</dataLink>
-	<!-- Atual de ferimentos -->
-	<dataLink fields="{'ferimentos', 'earth', 'PWound', 'BHealth', 'lastroTerra', 'LEsco'}">
-			<event name="onChange">
-			if (sheet.earth ~= nil) then
-					local ferimentos = (tonumber(sheet.ferimentos) or 0);
-					local lastro = sheet.lastroTerra;
-					local extra = sheet.extraFerimentos;
-
-					if sheet.PWound == true then
-							ferimentos = ferimentos + sheet.Saud;
-					end;
-
-					local terr = sheet.earth;
-
-					if (sheet.BHealth == true) then
-							terr = terr - 1;
-					end;
-
-					local terra = (terr) * (lastro) + extra;
-
-					local FSaud = ferimentos;
-
-					if FSaud &gt;= sheet.Saud then
-							sheet.FSaud = sheet.Saud;
-					else
-							sheet.FSaud = FSaud;
-					end;
-
-					local FEsco = FSaud - terr*5;
-
-					if FEsco &gt;= sheet.Esco then
-							sheet.FEsco = sheet.Esco;
-					else
-							sheet.FEsco = FEsco;
-					end;
-
-					local FMach = FEsco - terra;
-
-					if FMach &gt;= sheet.Mach then
-							sheet.FMach = sheet.Mach;
-					else
-							sheet.FMach = FMach;
-					end;
-
-					local FFeri = FMach - terra;
-
-					if FFeri &gt;= sheet.Feri then
-							sheet.FFeri = sheet.Feri;
-					else
-							sheet.FFeri = FFeri;
-					end;
-
-					local FSeri = FFeri - terra;
-
-					if FSeri &gt;= sheet.Seri then
-							sheet.FSeri = sheet.Seri;
-					else
-							sheet.FSeri = FSeri;
-					end;
-
-					local FInca = FSeri - terra;
-
-					if FInca &gt;= sheet.Inca then
-							sheet.FInca = sheet.Inca;
-					else
-							sheet.FInca = FInca;
-					end;
-
-					local FAbat = FInca - terra;
-
-					if FAbat &gt;= sheet.Abat then
-							sheet.FAbat = sheet.Abat;
-					else
-							sheet.FAbat = FAbat;
-					end;
-
-					local FInco = FAbat - terra;
-							sheet.FInco = FInco;
-
-					if FSaud &lt; 0 then
-							sheet.FSaud = 0;
-					end;
-
-					if (FEsco &lt; 0) then
-							sheet.FEsco = 0;
-					end;
-
-					if (ferimentos &lt; sheet.Saud) then
-							sheet.FEsco = 0;
-					end;
-
-					if (FMach &lt; 0) or (ferimentos &lt; sheet.Esco) then
-							sheet.FMach = 0;
-					end;
-
-					if (FFeri &lt; 0) or (ferimentos &lt; sheet.Mach) then
-							sheet.FFeri = 0;
-					end;
-
-					if (FSeri &lt; 0) or (ferimentos &lt; sheet.Feri) then
-							sheet.FSeri = 0;
-					end;
-
-					if (FInca &lt; 0) or (ferimentos &lt; sheet.Seri) then
-							sheet.FInca = 0;
-					end;
-
-					if (FAbat &lt; 0) or (ferimentos &lt; sheet.Inca) then
-							sheet.FAbat = 0;
-					end;
-
-					if (FInco &lt; 0) or (ferimentos &lt; sheet.Abat) then
-							sheet.FInco = 0;
-					end
-
-			end
-
-			</event>
-	</dataLink>
-	<!-- Cálculo da sabedoria -->
-	<dataLink fields="{'maisSab', 'earth', 'air', 'water', 'fire', 'void', 'countSum'}" defaultValue="0"> 
-			<event name="onChange">
-			if (sheet.earth ~= nil and sheet.air ~= nil and sheet.water ~= nil and sheet.fire ~= nil and sheet.void ~= nil and sheet.maisSab ~= nil) then
-			local countSum = (tonumber(sheet.countSum) or 0);
-
-
-					sheet.sabedoria = math.floor(sheet.earth + sheet.air + sheet.water + sheet.fire + sheet.void)*10 + sheet.maisSab + countSum;
-			end
-			</event>
-
-	</dataLink>
-	<!-- Cálculo do nível -->
-	<dataLink field="sabedoria"> 
-			<event name="onChange">
-			if (sheet.sabedoria ~= nil) then
-					local sabedoria = tonumber(sheet.sabedoria);                      
-					local uwu;          
-
-					uwu = math.floor((sabedoria - 150) / 25);
-					
-							if 0 > uwu then
-									uwu = -1;
-							end;
-
-					sheet.nivelSb = uwu + 2;
-			end
-			</event>
-
-	</dataLink>
-	<!-- Penalidades -->
-	<dataLink fields="{'Escoriado', 'Machucado', 'Ferido', 'SerFerido', 'Incapacitado', 'Abatido', 'LPThold', 'SotEarth'}" defaultValues="{'+3', '+5', '+10', '+15', '+20', '+40'}"> 
-
-			<event name="onChange">
-			local Escoriado = 3;
-			local Machucado = 5;
-			local Ferido = 10;
-			local SerFerido = 15;
-			local Incapacitado = 20;
-			local Abatido = 40;
-			
-			if (sheet.LPThold == true) then    
-					Escoriado = Escoriado + 5;
-					Machucado = Machucado + 5;
-					Ferido = Ferido + 5;
-					SerFerido = SerFerido + 5;
-					Incapacitado = Incapacitado + 5;
-					Abatido = Abatido + 5;
-			end
-
-			if (sheet.SotEarth == true) then    
-					Escoriado = Escoriado - 3;
-					Machucado = Machucado - 3;
-					Ferido = Ferido - 3;
-					SerFerido = SerFerido - 3;
-					Incapacitado = Incapacitado - 3;
-					Abatido = Abatido - 3;
-			end
-
-			sheet.Escoriado = "+" .. tostring(Escoriado);
-			sheet.Machucado = "+" .. tostring(Machucado);
-			sheet.Ferido = "+" .. tostring(Ferido);
-			sheet.SerFerido = "+" .. tostring(SerFerido);
-			sheet.Incapacitado = "+" .. tostring(Incapacitado);
-			sheet.Abatido = "+" .. tostring(Abatido);
-			
-			</event>
-
-
-	</dataLink>
-
-	<!-- Cálculo dos anéis -->
-	<!-- TERRA -->
-	<dataLink fields="{'willpower', 'stamina'}"> 
-			<event name="onChange">
-			if (sheet.willpower and sheet.stamina ~= nil) then
-					local willpower = tonumber(sheet.willpower);                      
-					local stamina = tonumber(sheet.stamina);    
-
-					if willpower &lt; stamina then
-							sheet.earth = willpower;
-					else
-							sheet.earth = stamina;
-					end;
-
-			end
-			</event>
-	</dataLink>
-	<!-- ÁGUA -->
-	<dataLink fields="{'strength', 'perception'}"> 
-			<event name="onChange">
-			if (sheet.strength and sheet.perception ~= nil) then
-					local strength = tonumber(sheet.strength);                      
-					local perception = tonumber(sheet.perception);    
-
-					if strength &lt; perception then
-							sheet.water = strength;
-					else
-							sheet.water = perception;
-					end;
-
-			end
-			</event>
-	</dataLink>
-	<!-- FOGO -->
-	<dataLink fields="{'agility', 'intelligence'}"> 
-			<event name="onChange">
-			if (sheet.agility and sheet.intelligence ~= nil) then
-					local agility = tonumber(sheet.agility);                      
-					local intelligence = tonumber(sheet.intelligence);    
-
-					if agility &lt; intelligence then
-							sheet.fire = agility;
-					else
-							sheet.fire = intelligence;
-					end;
-
-			end
-			</event>
-	</dataLink>
-	<!-- AR -->
-	<dataLink fields="{'awareness', 'reflexes'}"> 
-			<event name="onChange">
-			if (sheet.reflexes and sheet.awareness ~= nil) then
-					local reflexes = tonumber(sheet.reflexes);                      
-					local awareness = tonumber(sheet.awareness);    
-
-					if reflexes &lt; awareness then
-							sheet.air = reflexes;
-					else
-							sheet.air = awareness;
-					end;
-
-			end
-			</event>
-	</dataLink>
-
-	<!-- Iniciativa -->
-	<dataLink fields="{'addRolaIni', 'addMantemIni', 'reflexes', 'nivelSb'}" defaultValues="{'0', '0'}"> 
-			<event name="onChange">
-			if (sheet.nivelSb and sheet.addRolaIni ~= nil and sheet.addMantemIni ~= nil) then
-					local reflexes = tonumber(sheet.reflexes);                      
-					local nivelSb = tonumber(sheet.nivelSb);  
-					local addMantemIni = tonumber(sheet.addMantemIni);
-					local addRolaIni = tonumber(sheet.addRolaIni);
-
-					sheet.RolaIni = math.floor(reflexes+nivelSb+addRolaIni);
-					sheet.MantemIni = math.floor(reflexes+addMantemIni);
-
-			end
-			</event>
-	</dataLink>
-	<!-- NA de Armadura -->
-	<dataLink fields="{'bonusNA', 'reflexes'}" defaultValue="0"> 
-			<event name="onChange">
-			if (sheet.bonusNA and sheet.reflexes ~= nil) then
-					sheet.NA = math.floor(5*sheet.reflexes)+5+sheet.bonusNA;
-			end
-			</event>
-	</dataLink>
-
-<style>
-	rectangle.LinhadeFora{
-		align: client; 
-		color: transparent; 
-		strokeColor: #272727; 
-		strokeSize: 2; 
-		xradius: 25; 
-		yradius: 25; 
-		cornerType: bevel; 
-		margins: {top=20, bottom=20};
-	}
-
-	rectangle.LinhaDeDentro{
-		align: client; 
-		color: transparent; 
-		strokeColor: #272727; 
-		strokeSize: 1; 
-		xradius: 23; 
-		yradius: 23; 
-		cornerType: bevel; 
-		margins: {top=5, right=5, bottom=5, left=5};
-	}
-
-	rectangle.Fundo{
-		align: client; 
-		color: #272727; 
-		xradius: 20; 
-		yradius: 20; 
-		cornerType: bevel; 
-		margins: {top=10, right=10, bottom=10, left=10};
-	}
-	label{
-		fontColor: white;
-		fontStyle: bold;
-		fontFamily: Cambria;
-	}
-	checkBox{
-		fontColor: white;
-		fontFamily: Cambria;
-	}
-	edit{
-		fontColor: #cdcdcd;
-		fontFamily: Cambria;
-		transparent: true;
-	}
-	button.Tab{
-		align: left;
-		margins: {right=2};
-		width: 100;
-		fontFamily: Constantia;
-		fontStyle: bold;
-		fontSize: 10;
-	}
-</style>
-
-<script>
-<![CDATA[
-	local function TrocarAba(a)
-		if(a == 'F') then
-			self.layFrente.visible = true;
-			self.layMecanicas.visible = false;
-			self.layMagias.visible = false;
-			self.layBG.visible = false;
-			self.layNote.visible = false;
-		elseif(a == 'M') then
-			self.layFrente.visible = false;
-			self.layMecanicas.visible = true;
-			self.layMagias.visible = false;
-			self.layBG.visible = false;
-			self.layNote.visible = false;
-		elseif(a == 'S') then
-			self.layFrente.visible = false;
-			self.layMecanicas.visible = false;
-			self.layMagias.visible = true;
-			self.layBG.visible = false;
-			self.layNote.visible = false;
-		elseif(a == 'H') then
-			self.layFrente.visible = false;
-			self.layMecanicas.visible = false;
-			self.layMagias.visible = false;
-			self.layBG.visible = true;
-			self.layNote.visible = false;
-		elseif(a == 'A') then
+	<!-- DataLinks de Ferimentos, Sabedoria, Anéis e Iniciativa -->
+	<import file="./assets/dataLink/dataLinks.xml"/>
+
+	<style>
+		rectangle.LinhadeFora{
+			align: client; 
+			color: transparent; 
+			strokeColor: #272727; 
+			strokeSize: 2; 
+			xradius: 25; 
+			yradius: 25; 
+			cornerType: bevel; 
+			margins: {top=20, bottom=20};
+		}
+
+		rectangle.LinhaDeDentro{
+			align: client; 
+			color: transparent; 
+			strokeColor: #272727; 
+			strokeSize: 1; 
+			xradius: 23; 
+			yradius: 23; 
+			cornerType: bevel; 
+			margins: {top=5, right=5, bottom=5, left=5};
+		}
+
+		rectangle.Fundo{
+			align: client; 
+			color: #272727; 
+			xradius: 20; 
+			yradius: 20; 
+			cornerType: bevel; 
+			margins: {top=10, right=10, bottom=10, left=10};
+		}
+		label{
+			fontColor: white;
+			fontStyle: bold;
+			fontFamily: Cambria;
+		}
+		checkBox{
+			fontColor: white;
+			fontFamily: Cambria;
+		}
+		edit{
+			fontColor: #cdcdcd;
+			fontFamily: Cambria;
+			transparent: true;
+		}
+		button.Tab{
+			align: left;
+			margins: {right=2};
+			width: 100;
+			fontFamily: Constantia;
+			fontStyle: bold;
+			fontSize: 10;
+		}
+	</style>
+
+	<script>
+	<![CDATA[
+		local function TrocarAba(a)
 			self.layFrente.visible = false;
 			self.layMecanicas.visible = false;
 			self.layMagias.visible = false;
 			self.layBG.visible = false;
-			self.layNote.visible = true;
+			self.layNote.visible = false;
+			if(a == 'F') then
+				self.layFrente.visible = true;
+			elseif(a == 'M') then
+				self.layMecanicas.visible = true;
+			elseif(a == 'S') then
+				self.layMagias.visible = true;
+			elseif(a == 'H') then
+				self.layBG.visible = true;
+			elseif(a == 'A') then
+				self.layNote.visible = true;
+			end;
 		end;
-	end;
-]]>
-</script>
+	]]>
+	</script>
 
 	<image field="URLImagemFundo" align="client" style="autofit" src=""/>
 	<scrollBox align="client">
 		<flowLayout align="top" autoHeight="true" horzAlign="center" maxControlsPerLine="3">
-			
 			<flowPart align="top" minWidth="400" maxWidth="1000" height="1600">
 				<rectangle class="LinhadeFora">
 					<rectangle class="LinhadeDentro">
@@ -450,7 +101,7 @@
 							<import file="./layouts/layoutHistoria.xml"/>
 							<!-- ABA "ANOTAÇÕES" -->
 							<import file="./layouts/layoutAnotacoes.xml"/>
-							
+
 						</rectangle>
 					</rectangle>
 				</rectangle>

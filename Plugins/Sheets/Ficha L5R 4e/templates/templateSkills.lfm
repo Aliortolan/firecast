@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form name="templateSkills" height="30">   
 <style>
-comboBox{
-	fontFamily: Cambria;
-	transparent: true;
-	fontColor: #cdcdcd;
-}
-edit{
-	fontFamily: Cambria;
-	transparent: true;
-	fontColor: #cdcdcd;
-}
+	comboBox{
+		fontFamily: Cambria;
+		transparent: true;
+		fontColor: #cdcdcd;
+	}
+	edit{
+		fontFamily: Cambria;
+		transparent: true;
+		fontColor: #cdcdcd;
+	}
 </style>    
 
 	<layout align="top" height="30">
@@ -33,7 +33,7 @@ edit{
 		</rectangle>
 		
 		<edit field="rolagem" align="left" width="100" margins="{right=2}"/>
-		<dataLink defaultValue="xky" fields = "{'rankSkill',  'atributoSkill', 'stamina', 'willpower', 'strength', 'perception', 'reflexes', 'awareness', 'agility', 'intelligence', 'void'}">
+		<dataLink defaultValue="xky" field = "rolagem">
 			<!-- <event name = "onChange">
 				<![CDATA[
 					require ("ndb.lua");
